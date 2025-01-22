@@ -1,0 +1,65 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Inter", sans-serif;
+  --font-secondary: "InterTight", sans-serif;
+  --content-width: 1210px;
+  --container-offset: 1.25rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // sizes
+  --fs-base: .875rem;
+  --fw-base: 400;
+  --lh-base: normal;
+
+  @media (min-width: 991.98px) {
+    --fs-base: 1rem;
+  }
+
+  // colors
+  --title-color: #000;
+
+  --text-color: #000;
+
+  --primary-color: #000;
+
+  --secondary-color: #F1F1F1;
+
+  --magenta-color: #7D4ACF;
+  --magenta-color-100: #F7F3FE;
+  --magenta-color-200: #EDE5FC;
+  --magenta-color-500: #5E31A8;
+
+  --cold-color: #1E43C4;
+  --cold-color-100: #EDF2FC;
+  --cold-color-200: #DBE5F9;
+  --cold-color-500: #19369D;
+
+  --error-color: #DD2F2F;
+  --error-color-100: #FAF0F0;
+  --error-color-200: #F3E0E0;
+
+  --success-color: #1A8B4F;
+  --success-color-100: #EDF6F1;
+  --success-color-200: #DAECE3;
+
+  --light-color: #fff;
+
+  --gray-color: #8E8E96;
+  --gray-color-200: #F4F5F7;
+
+  // backgrounds
+  --body-bg: #fff;
+
+  // radius
+  --rounded: 1rem;
+
+  // shadows
+  --shadow: 0px 0px .625rem .125rem rgba(0,0,0,0.375);
+  --shadow-sm: 0px 0px .625rem .125rem rgba(0,0,0,0.25);
+
+  // transitions
+  --transition-duration: 300ms;
+  --transition-timing-function: ease-in-out;
+}

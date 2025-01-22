@@ -1,0 +1,80 @@
+.field-control,
+.fieldset {
+	position: relative;
+}
+
+.field-control {
+
+	+ .field-control,
+	+ .btn-submit {
+		margin-top: 1.5rem;
+	}
+}
+
+.field {
+	--_width: 100%;
+	--_height: 2.5rem;
+
+	--_fs: var(--fs-base);
+	--_fw: var(--fw-base);
+	--_lh: var(--lh-base);
+	--_ls: var(--ls-base);
+	--_color: var(--gray-300);
+	--_bg: transparent;
+	--_border-width: 1px;
+	--_border-solid: solid;
+	--_border-color: currentColor;
+	--_rounded: 1.5rem;
+	--_padding: .625rem 1rem;
+
+	--_color-hover: var(--gray-800);
+	--_bg-hover: transparent;
+	--_border-color-hover: currentColor;
+
+	--_color-active: var(--gray-800);
+	--_bg-active: transparent;
+	--_border-color-active: currentColor;
+
+	width: var(--_width);
+	min-height: var(--_height);
+	display: block;
+	font-size: var(--_fs);
+	font-weight: var(--_fw);
+	line-height: var(--_lh);
+	letter-spacing: var(--_ls, normal);
+	color: var(--_color);
+	background-color: var(--_bg);
+	border: var(--_border-width) var(--_border-solid) var(--_border-color);
+	border-radius: var(--_rounded);
+	padding: var(--_padding);
+	outline: none;
+	appearance: none;
+	transition-property: color, background, border;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: var(--transition-timing-function);
+
+	@media (min-width: 992px) {
+		--_height: 3.125rem;
+		--_padding: .78125rem 1rem;
+	}
+
+	&::placeholder {
+		font: inherit;
+		color: currentColor;
+	}
+
+	&:focus-visible {
+		color: var(--_color-active);
+		background-color: var(--_bg-active);
+		border-color: var(--_border-color-active);
+	}
+}
+
+textarea {
+	height: 7.5rem;
+	resize: none;
+
+	@media (min-width: 992px) {
+		height: 10rem;
+	}
+}

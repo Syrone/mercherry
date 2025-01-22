@@ -1,0 +1,15 @@
+// базовые подключения
+@use "vars";
+@use "fonts";
+@use "settings";
+
+// подключения компонентов страницы
+@use "./components/utilities";
+@use "./components/typography";
+@use "./components/containers";
+@use "./components/section";
+@use "./components/icons";
+@use "./components/buttons";
+@use "./components/field-control";
+@use "./components/form-check";
+@use "./components/header";

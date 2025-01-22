@@ -1,0 +1,296 @@
+.btn {
+	--_width: initial;
+	--_height: initial;
+	--_fs: var(--fs-base);
+	--_fw: 300;
+	--_lh: 1;
+	--_ls: normal;
+	--_color: var(--text-color);
+	--_bg: transparent;
+	--_border-width: 0;
+	--_border-style: solid;
+	--_border-color: transparent;
+	--_rounded: 0;
+	--_padding: 0;
+	--_transform: translateZ(0);
+	--_transition-duration: var(--transition-duration);
+	--_transition-timing-function: var(--transition-timing-function);
+
+	--_color-hover: var(--primary);
+	--_bg-hover: transparent;
+	--_border-color-hover: transparent;
+	--_transform-hover: translateZ(0);
+
+	--_color-active: var(--primary);
+	--_bg-active: transparent;
+	--_border-color-active: transparent;
+	--_transform-active: initial;
+
+	--_color-disabled: var(--primary);
+	--_bg-disabled: transparent;
+	--_border-color-disabled: transparent;
+	--_transform-disabled: initial;
+
+	--_icon-size: 1rem;
+	--_icon-color: currentColor;
+
+	width: var(--_width);
+	height: var(--_height);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+
+	font-size: var(--_fs);
+	font-weight: var(--_fw);
+	line-height: var(--_lh);
+	letter-spacing: var(--_ls);
+	color: var(--_color);
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color: var(--_bg);
+	border: var(--_border-width) var(--_border-style) var(--_border-color);
+	border-radius: var(--_rounded);
+	padding: var(--_padding);
+	outline: none;
+	transform: var(--_transform);
+	transition-property: color, text-shadow, background, border, transform, opacity;
+	transition-duration: var(--_transition-duration);
+	transition-timing-function: var(--_transition-timing-function);
+
+	@media (hover: hover) {
+		&:is(:hover, :focus-visible) {
+			color: var(--_color-hover);
+			background-color: var(--_bg-hover);
+			border-color: var(--_border-color-hover);
+			transform: var(--_transform-hover);
+		}
+	}
+
+	&:is(:active, .is-active) {
+		color: var(--_color-active);
+		background-color: var(--_bg-active);
+		border-color: var(--_border-color-active);
+		transform: var(--_transform-active);
+	}
+
+	&:disabled,
+	&[disabled],
+	&[inert] {
+		color: var(--_color-disabled);
+		background-color: var(--_bg-disabled);
+		border-color: var(--_border-color-disabled);
+		transform: var(--_transform-disabled);
+
+		user-select: none;
+		pointer-events: none;
+	}
+
+	.icon {
+		--_size: var(--_icon-size);
+		--_color: var(--_icon-color);
+	}
+}
+
+.btn-check {
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	pointer-events: none;
+
+	&:checked {
+		+ .btn {
+			--_color: var(--primary);
+			--_color-hover: var(--primary);
+			--_color-active: var(--primary);
+		}
+	}
+}
+
+.btn-inline {
+	--_color: inherit;
+}
+
+.btn-inherit {
+	--_fs: inherit;
+	--_fw: inherit;
+	--_lh: inherit;
+	--_ls: inherit;
+	--_color: inherit;
+	
+	display: inline;
+	text-transform: initial;
+}
+
+.btn-md {
+	--_height: 2rem;
+	--_fs: var(--fs-base);
+	--_fw: 500;
+	--_rounded: .75rem;
+	--_padding: .5rem 1.5rem;
+
+	@media (min-width: 991.98px) {
+		--_height: 2.5rem;
+		--_rounded: 1rem;
+		--_padding: .5rem 2rem;
+	}
+}
+
+.btn-base {
+	--_height: 2.5rem;
+	--_fs: var(--fs-base);
+	--_fw: 500;
+	--_rounded: 1rem;
+	--_padding: .75rem 1.5rem;
+
+	@media (min-width: 991.98px) {
+		--_height: 3.5rem;
+		--_rounded: 1.25rem;
+		--_padding: 1rem 2rem;
+	}
+}
+
+.btn-lg {
+	--_height: 3rem;
+	--_fs: var(--fs-base);
+	--_fw: 500;
+	--_rounded: 1rem;
+	--_padding: .875rem 1.5rem;
+
+	@media (min-width: 991.98px) {
+		--_height: 3.875rem;
+		--_rounded: 1.25rem;
+		--_padding: 1.25rem 2rem;
+	}
+}
+
+.btn-primary {
+	--_color: var(--light-color);
+	--_bg: var(--primary-color);
+
+	--_color-hover: var(--light-color);
+	--_bg-hover: var(--magenta-color);
+
+	--_color-active: var(--light-color);
+	--_bg-active: var(--magenta-color-500);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-outline-primary {
+	--_color: var(--primary-color);
+	--_bg: var(--light-color);
+	--_border-width: 1px;
+	--_border-color: var(--primary-color);
+
+	--_color-hover: var(--magenta-color);
+	--_bg-hover: var(--light-color);
+	--_border-color-hover: var(--magenta-color);
+
+	--_color-active: var(--magenta-color-500);
+	--_bg-active: var(--light-color);
+	--_border-color-active: var(--magenta-color-500);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--light-color);
+	--_border-color-disabled: var(--gray-color);
+}
+
+.btn-secondary {
+	--_color: var(--primary-color);
+	--_bg: var(--secondary-color);
+
+	--_color-hover: var(--light-color);
+	--_bg-hover: var(--magenta-color);
+
+	--_color-active: var(--light-color);
+	--_bg-active: var(--magenta-color-500);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-magenta {
+	--_color: var(--light-color);
+	--_bg: var(--magenta-color);
+
+	--_color-hover: var(--light-color);
+	--_bg-hover: var(--magenta-color-500);
+
+	--_color-active: var(--light-color);
+	--_bg-active: var(--magenta-color-500);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-magenta-100 {
+	--_color: var(--magenta-color);
+	--_bg: var(--magenta-color-100);
+
+	--_color-hover: var(--magenta-color);
+	--_bg-hover: var(--magenta-color-200);
+
+	--_color-active: var(--magenta-color);
+	--_bg-active: var(--magenta-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-cold {
+	--_color: var(--light-color);
+	--_bg: var(--cold-color);
+
+	--_color-hover: var(--light-color);
+	--_bg-hover: var(--cold-color-500);
+
+	--_color-active: var(--light-color);
+	--_bg-active: var(--cold-color-500);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-cold-100 {
+	--_color: var(--cold-color);
+	--_bg: var(--cold-color-100);
+
+	--_color-hover: var(--cold-color);
+	--_bg-hover: var(--cold-color-200);
+
+	--_color-active: var(--cold-color);
+	--_bg-active: var(--cold-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-error-100 {
+	--_color: var(--error-color);
+	--_bg: var(--error-color-100);
+
+	--_color-hover: var(--error-color);
+	--_bg-hover: var(--error-color-200);
+
+	--_color-active: var(--error-color);
+	--_bg-active: var(--error-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-success-100 {
+	--_color: var(--success-color);
+	--_bg: var(--success-color-100);
+
+	--_color-hover: var(--success-color);
+	--_bg-hover: var(--success-color-200);
+
+	--_color-active: var(--success-color);
+	--_bg-active: var(--success-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}

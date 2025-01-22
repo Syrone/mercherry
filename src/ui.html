@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'UI'})
+
+<style>
+  .ui-section > .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-block: 2rem;
+  }
+
+  .ui-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem 1.25rem;
+  }
+
+  .ui-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  h1, h2, h3, h4 {
+    width: 100%;
+  }
+</style>
+
+<body class="page-body">
+
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section ui-section">
+        <div class="container">
+
+          <div class="ui-item">
+            <h2>
+              Типографика
+            </h2>
+
+            <div class="ui-col">
+              <h1>
+                H1 Размер
+              </h1>
+              <h2>
+                H2 Размер
+              </h2>
+              <h3>
+                H3 Размер
+              </h3>
+              <h4>
+                H4 Размер
+              </h4>
+              <h5>
+                H5 Размер
+              </h5>
+              <h6>
+                H6 Размер
+              </h6>
+            </div>
+
+            <div class="ui-col">
+              <p class="text-base">
+                Обычный размер
+              </p>
+              <p class="text-md">
+                Средний размер
+              </p>
+              <p class="text-sm">
+                Мелкий размер
+              </p>
+            </div>
+
+            <div class="ui-col">
+              <p class="font-regular">
+                Жирность Regular
+              </p>
+              <p class="font-medium">
+                Жирность Medium
+              </p>
+              <p class="font-semibold">
+                Жирность Semibold
+              </p>
+              <p class="font-bold">
+                Жирность Bold
+              </p>
+            </div>
+          </div>
+
+          <div class="ui-item">
+            <h2>
+              Кнопки
+            </h2>
+
+            <h3>
+              Размеры
+            </h3>
+            <button type="button" class="btn btn-lg btn-primary">
+              Сбросить фильтры
+            </button>
+            <button type="button" class="btn btn-base btn-primary">
+              Сбросить фильтры
+            </button>
+            <button type="button" class="btn btn-md btn-primary">
+              Сбросить фильтры
+            </button>
+
+            <h3>
+              Состояния
+            </h3>
+            <div class="ui-col">
+              <button type="button" class="btn btn-base btn-primary">
+                Сбросить фильтры
+              </button>
+              <button type="button" class="btn btn-base btn-primary" disabled inert>
+                Сбросить фильтры
+              </button>
+            </div>
+            <div class="ui-col">
+              <button type="button" class="btn btn-base btn-secondary">
+                Сбросить фильтры
+              </button>
+              <button type="button" class="btn btn-base btn-secondary" disabled inert>
+                Сбросить фильтры
+              </button>
+            </div>
+            <div class="ui-col">
+              <button type="button" class="btn btn-base btn-outline-primary">
+                Загрузить логотип (png или jpeg, не более 4 mb)
+              </button>
+              <button type="button" class="btn btn-base btn-outline-primary" disabled inert>
+                Загрузить логотип (png или jpeg, не более 4 mb)
+              </button>
+            </div>
+
+            <div class="ui-col">
+              <button type="button" class="btn btn-md btn-magenta">
+                Принять отклик
+              </button>
+              <button type="button" class="btn btn-md btn-magenta-100">
+                Отклонить
+              </button>
+            </div>
+            <div class="ui-col">
+              <button type="button" class="btn btn-md btn-cold">
+                Отправить
+              </button>
+              <button type="button" class="btn btn-md btn-cold-100">
+                Редактировать
+              </button>
+            </div>
+            <div class="ui-col">
+              <button type="button" class="btn btn-md btn-error-100">
+                Хорошо
+              </button>
+              <button type="button" class="btn btn-md btn-success-100">
+                Супер!
+              </button>
+            </div>
+          </div>
+
+          <!-- <div class="ui-item">
+            <h2>
+              Уведомления
+            </h2>
+
+            <div class="ui-col">
+
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+  </div>
+</body>
+
+</html>

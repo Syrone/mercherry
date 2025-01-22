@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Навигационная страница'})
+
+<style>
+  ul + ul {
+    margin-top: 3rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+  }
+</style>
+
+<body class="page-body">
+
+  <div class="site-container">
+    @include('partials/header.html')
+
+    <main class="main">
+      <section class="section">
+        <div class="container">
+          <ul>
+            <li>
+              <a href="./ui.html">UI</a>
+            </li>
+            <li>
+              <a href="./home.html">Главная</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+  </div>
+</body>
+
+</html>
