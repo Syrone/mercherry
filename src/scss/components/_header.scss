@@ -1,0 +1,74 @@
+.header {
+	width: 100%;
+	background-color: var(--light-color);
+	border-bottom: 1px solid var(--gray-color-400);
+	padding-block: 1.25rem;
+	top: 0;
+	left: 0;
+	position: sticky;
+	z-index: 1040;
+
+	@media (min-width: 991.98px) {
+		padding-block: 1.5rem;
+	}
+
+	> .container {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+
+		@media (min-width: 991.98px) {
+			gap: 1.5rem;
+		}
+	}
+
+	&-nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+
+		@media (min-width: 991.98px) {
+			flex-direction: row;
+			gap: 1.5rem;
+		}
+
+		.btn-group {
+
+			@media (max-width: 991.98px) {
+				width: 100%;
+			}
+
+			.btn {
+
+				@media (max-width: 991.98px) {
+					min-width: unset;
+					flex: 1;
+				}
+			}
+		}
+	}
+
+	&-signin {
+		display: flex;
+		justify-content: center;
+		gap: 1.25rem;
+		margin-top: auto;
+
+		@media (min-width: 991.98px) {
+			align-items: center;
+			justify-content: initial;
+			gap: 1.5rem;
+			margin-left: auto;
+			margin-top: unset;
+		}
+	}
+
+	.btn-menu {
+		margin-left: auto;
+
+		@media (min-width: 991.98px) {
+			display: none;
+		}
+	}
+}

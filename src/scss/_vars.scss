@@ -4,7 +4,7 @@
   // base
   --font-family: "Inter", sans-serif;
   --font-secondary: "InterTight", sans-serif;
-  --content-width: 1210px;
+  --content-width: 1300px;
   --container-offset: 1.25rem;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
@@ -28,7 +28,10 @@
 
   --magenta-color: #7D4ACF;
   --magenta-color-100: #F7F3FE;
+  --magenta-color-150: #F3ECFF;
   --magenta-color-200: #EDE5FC;
+  --magenta-color-400: #C09AFF;
+  --magenta-color-450: #9663EB;
   --magenta-color-500: #5E31A8;
 
   --cold-color: #1E43C4;
@@ -43,11 +46,18 @@
   --success-color: #1A8B4F;
   --success-color-100: #EDF6F1;
   --success-color-200: #DAECE3;
+  --success-color-400: #32BD60;
 
   --light-color: #fff;
 
+  --dark-color: #000;
+  --dark-color-300: #545454;
+  --dark-color-500: #0F0F0F;
+
   --gray-color: #8E8E96;
+  --gray-color-100: #F1F1F1;
   --gray-color-200: #F4F5F7;
+  --gray-color-400: #E6E6E6;
 
   // backgrounds
   --body-bg: #fff;

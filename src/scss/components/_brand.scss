@@ -1,0 +1,13 @@
+.brand {
+	--_fs: 1.25rem;
+	--_fw: 700;
+	--_lh: normal;
+	--_color: var(--text-color);
+
+	font-family: var(--font-secondary);
+	font-style: italic;
+
+	@media (min-width: 991.98px) {
+		--_fs: 1.625rem;
+	}
+}

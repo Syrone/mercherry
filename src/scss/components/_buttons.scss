@@ -2,7 +2,7 @@
 	--_width: initial;
 	--_height: initial;
 	--_fs: var(--fs-base);
-	--_fw: 300;
+	--_fw: 500;
 	--_lh: 1;
 	--_ls: normal;
 	--_color: var(--text-color);
@@ -16,17 +16,17 @@
 	--_transition-duration: var(--transition-duration);
 	--_transition-timing-function: var(--transition-timing-function);
 
-	--_color-hover: var(--primary);
+	--_color-hover: var(--magenta-color);
 	--_bg-hover: transparent;
 	--_border-color-hover: transparent;
 	--_transform-hover: translateZ(0);
 
-	--_color-active: var(--primary);
+	--_color-active: var(--magenta-color);
 	--_bg-active: transparent;
 	--_border-color-active: transparent;
 	--_transform-active: initial;
 
-	--_color-disabled: var(--primary);
+	--_color-disabled: var(--magenta-color);
 	--_bg-disabled: transparent;
 	--_border-color-disabled: transparent;
 	--_transform-disabled: initial;
@@ -47,7 +47,6 @@
 	line-height: var(--_lh);
 	letter-spacing: var(--_ls);
 	color: var(--_color);
-	text-transform: uppercase;
 	cursor: pointer;
 	background-color: var(--_bg);
 	border: var(--_border-width) var(--_border-style) var(--_border-color);
@@ -105,6 +104,42 @@
 			--_color-active: var(--primary);
 		}
 	}
+}
+
+.btn-group {
+	display: flex;
+	align-items: center;
+	gap: .25rem;
+	background-color: var(--gray-color-100);
+	border-radius: 2.5rem;
+	padding: .25rem;
+
+	.btn {
+		--_fs: .875rem;
+		--_padding: .5rem 1.25rem;
+		--_color: var(--gray-color);
+		--_rounded: 2.25rem;
+
+		--_color-hover: var(--primary-color);
+		--_bg-hover: var(--light-color);
+
+		--_color-active: var(--primary-color);
+		--_bg-active: var(--light-color);
+
+		min-width: 10rem;
+	}
+}
+
+.btn-menu {
+	--_padding: .375rem;
+
+	--_icon-size: 1.25rem;
+
+	margin: calc(var(--_padding) * -1);
+}
+
+.btn-close {
+	--_icon-size: 1.5rem;
 }
 
 .btn-inline {

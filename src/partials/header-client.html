@@ -1,0 +1,61 @@
+<header class="header">
+  <div class="container">
+    @include('brand.html')
+
+    <div class="offcanvas offcanvas-end offcanvas-navbar"
+      id="offcanvas-header"
+      tabindex="-1"
+      aria-labelledby="offcanvas-header-label">
+      <div class="offcanvas-header">
+        @include('brand.html')
+
+        <button type="button" class="btn btn-icon btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/close.svg#svg-close"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <nav class="header-nav">
+          <div class="btn-group">
+            <a href="./home-client.html" class="btn btn-md is-active">
+              Я заказчик
+            </a>
+            <a href="./home-performer.html" class="btn btn-md">
+              Я исполнитель
+            </a>
+          </div>
+    
+          <a href="#" class="btn">
+            О проекте
+          </a>
+        </nav>
+    
+        <div class="header-signin">
+          <a href="#" class="btn">
+            Войти
+          </a>
+    
+          <a href="#" class="btn btn-base btn-primary">
+            Зарегистрироваться
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-icon btn-menu"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-header"
+      aria-controls="offcanvas-header">
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/menu.svg#svg-menu"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,258 @@
+.why {
+	overflow: hidden;
+
+	> .container {
+		display: grid;
+		gap: 3rem;
+		
+		@media (min-width: 767.98px) {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@media (min-width: 1199.98px) {
+			grid-template-columns: .875fr 1fr;
+		}
+	}
+
+	&-content,
+	&-features {
+
+		@media (min-width: 1199.98px) {
+			margin-top: 3rem;
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 2rem;
+		
+		@media (min-width: 767.98px) {
+			align-items: flex-start;
+			gap: 3rem;
+			text-align: start;
+		}
+		
+		@media (min-width: 1399.98px) {
+			padding-left: 5rem;
+		}
+
+		.btn {
+			--_width: 100%;
+
+			@media (min-width: 575.98px) {
+				--_width: auto;
+			}
+		}
+	}
+
+	&-features {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	&-feature {
+		display: flex;
+		gap: 2rem;
+		position: relative;
+
+		&-item {
+			width: max-content;
+
+			&-inner {
+				font-size: .75rem;
+				background-color: var(--magenta-color-150);
+				border-radius: 1.25rem;
+				padding: 1rem 1.25rem 1rem 1.75rem;
+				position: relative;
+				z-index: 1;
+				overflow: hidden;
+
+				@media (min-width: 991.98px) {
+					font-size: var(--fs-base);
+					border-radius: 1.5rem;
+					padding: 1.5rem 1.875rem 1.5rem 2.5rem;
+				}
+
+				&::before {
+					content: '';
+					display: block;
+					width: .625rem;
+					height: 100%;
+					background-image: linear-gradient(180deg, rgba(180, 135, 255, 0.68) -18.23%, #7B40DD 119.27%);
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: -1;
+				}
+			}
+
+			@media (max-width: 768px) {
+				margin-inline: auto;
+			}
+		}
+
+		.image {
+			display: none;
+
+			@media (min-width: 1199.98px) {
+				display: block;
+			}
+		}
+
+		&-double {
+			display: none;
+
+			@media (min-width: 1199.98px) {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: flex-end;
+			}
+
+			.image {
+				display: block;
+				border: .125rem solid var(--light-color);
+				border-radius: 50%;
+			}
+
+			picture {
+
+				&:first-child {
+
+					.image {
+						transform: translate(-2rem, -3.25rem);
+					}
+				}
+
+				&:last-child {
+
+					.image {
+						transform: translate(0rem, -2rem);
+					}
+				}
+			}
+		}
+
+		&-review {
+			display: none;
+
+			@media (min-width: 1199.98px) {
+				display: flex;
+				align-items: center;
+			}
+
+			.image {
+				border-radius: 50%;
+				position: static;
+			}
+
+			&-content {
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				gap: .375rem;
+				line-height: 1.5;
+				background-color: rgba(255, 255, 255, 0.7);
+				backdrop-filter: blur(.125rem);
+				margin-left: -1.25rem;
+				border-radius: 2.5rem;
+				padding: .25rem .625rem;
+			}
+		}
+
+		&-indicator {
+			display: none;
+
+			@media (min-width: 1199.98px) {
+				align-self: end;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+			}
+
+			.image {
+				display: block;
+				border-radius: 1.25rem;
+				position: static;
+			}
+
+			&-display {
+				width: 1rem;
+				height: 1rem;
+				display: block;
+				background-color: var(--success-color-400);
+				border-radius: 50%;
+				border: .25rem solid var(--light-color);
+				position: absolute;
+				bottom: -.25rem;
+				right: -.25rem;
+			}
+		}
+
+		&:first-child {
+
+			
+			.why-feature-item {
+				position: relative;
+
+				@media (min-width: 767.98px) {
+					margin-left: 1.25rem;
+				}
+				
+				@media (min-width: 991.98px) {
+					margin-left: 2.5rem;
+				}
+
+				@media (min-width: 1199.98px) {
+					margin-left: 3.75rem;
+				}
+
+				&::after {	
+					@media (min-width: 1199.98px) {
+						content: '';
+						display: block;
+						width: 2.375rem;
+						height: 2.75rem;
+						background-image: url(../img/decorations/stars-pic.svg);
+						background-repeat: no-repeat;
+						background-size: contain;
+						background-position: center;
+						position: absolute;
+						top: -1rem;
+						right: 0;
+						z-index: 1;
+					}
+				}
+			}
+
+
+		}
+
+		&:nth-child(2) {
+
+			
+		}
+
+		&:nth-child(3) {
+
+			.why-feature-item {
+
+				@media (min-width: 767.98px) {
+					margin-left: 2rem;
+				}
+
+				@media (min-width: 991.98px) {
+					margin-left: 5rem;
+				}
+				
+				@media (min-width: 1199.98px) {
+					margin-left: 6.25rem;
+				}
+			}
+		}
+	}
+}
