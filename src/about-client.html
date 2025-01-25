@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'О проекте'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'О проекте заказчику'})
+
+  <div class="site-container">
+    @include('partials/header-client.html')
+
+    <main class="main">
+      <section class="section about">
+        <div class="about-main">
+          <div class="container">
+            <div class="about-picture">
+              <span class="about-picture-decoration">
+                <img loading="lazy" src="./img/decorations/pic-5.svg" class="image" width="97" height="70" alt="Иконка">
+              </span>
+  
+              <picture>
+                <source srcset=".webp" type="image/webp">
+                <img loading="lazy" src="." class="about-picture-image" width="" height="" alt="">
+              </picture>
+            </div>
+  
+            <div class="about-content">
+              <h2 class="h3 about-title">
+                О проекте
+              </h2>
+  
+              <p class="about-text">
+                Мерчерри — платформа с искусственным интеллектом для эффективного мерчандайзинга FMCG товаров. Мы помогаем производителям и магазинам оптимизировать затраты, контролировать качество работы мерчандайзеров и улучшать видимость продукции на полках. Мерчандайзерам платформа предлагает гибкий выбор заданий, обучение и стабильные выплаты, обеспечивая удобные условия для профессионального роста и заработка.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-features">
+          <div class="container">
+            <h2 class="h3 about-features-title">
+              Почему производителям стоит выбрать <span class="font-style-italic text-magenta-450">Мерчерри</span>
+              для мерчандайзинга своих товаров?
+            </h2>
+
+            <ul class="list-reset about-list">
+              <li class="about-list-item">
+                <div class="about-list-item-current"></div>
+
+                <h3 class="about-list-item-title">
+                  Прямой контроль и прозрачность процесса
+                </h3>
+
+                <p class="about-list-item-text">
+                  С Мерчерри вам больше не нужны агентства — вся работа по мерчандайзингу становится полностью управляемой. Наша платформа позволяет в режиме реального времени отслеживать, как и где представлены ваши товары, контролировать качество работы мерчандайзеров и быстро корректировать задачи.
+                </p>
+              </li>
+              <li class="about-list-item">
+                <div class="about-list-item-current"></div>
+
+                <h3 class="about-list-item-title">
+                  Снижение затрат на мерчандайзинг
+                </h3>
+
+                <p class="about-list-item-text">
+                  Мы разработали систему, которая сокращает логистические и административные расходы, уменьшая необходимость в постоянных перемещениях мерчандайзеров между торговыми точками. Мерчерри позволяет оптимизировать бюджет, направляя его на нужные задачи, а не на посреднические услуги
+                </p>
+              </li>
+              <li class="about-list-item">
+                <div class="about-list-item-current"></div>
+
+                <h3 class="about-list-item-title">
+                  Поиск и обучение лучших сотрудников
+                </h3>
+
+                <p class="about-list-item-text">
+                  Мерчерри использует искусственный интеллект для подбора и обучения мерчандайзеров, гарантируя, что каждый сотрудник обладает необходимыми навыками и готов работать эффективно. Автоматизированные процессы обучения и оценки позволяют быстро формировать команду, соответствующую вашим требованиям
+                </p>
+              </li>
+              <li class="about-list-item">
+                <div class="about-list-item-current"></div>
+
+                <h3 class="about-list-item-title">
+                  Повышение продаж и лояльности к бренду
+                </h3>
+
+                <p class="about-list-item-text">
+                  Качественный мерчандайзинг — это залог лучшей видимости и привлекательности ваших товаров на полках. Мерчерри помогает вашему бренду выделиться среди конкурентов и увеличить продажи благодаря грамотной презентации продукции.
+                </p>
+              </li>
+            </ul>
+
+            <div class="about-features-bottom">
+              <a href="#" class="btn btn-base btn-primary">
+                Зарегистрироваться
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

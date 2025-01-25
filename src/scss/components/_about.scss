@@ -1,0 +1,247 @@
+.about {
+	margin-top: 3rem;
+	
+	@media (min-width: 991.98px) {
+		margin-top: 3.75rem;
+	}
+
+	&-main {
+
+		> .container {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+
+			@media (min-width: 767.98px) {
+				grid-template-columns: 5fr 7fr;
+				gap: 2rem;
+			}
+
+			@media (min-width: 991.98px) {
+				grid-template-columns: 4fr 8fr;
+				gap: 2.5rem;
+			}
+		}
+	}
+
+	&-picture {
+		min-height: 17.5rem;
+		position: relative;
+
+		&-decoration {
+			pointer-events: none;
+			user-select: none;
+			position: absolute;
+			inset: 0;
+
+			:first-child {
+				position: absolute;
+				top: -.75rem;
+				right: -1.25rem;
+
+				@media (min-width: 767.98px) {
+					right: -1.5rem;
+				}
+			}
+		}
+
+		&-image {
+			width: 100%;
+			height: 100%;
+			display: block;
+			background-color: var(--cold-color-300);
+			border-radius: 2.5rem;
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		gap: .75rem;
+		align-self: center;
+
+		@media (min-width: 767.98px) {
+			gap: 1rem;
+		}
+
+		@media (min-width: 991.98px) {
+			gap: 1.25rem;
+		}
+	}
+
+	&-title {
+		line-height: 1.85;
+	}
+
+	&-features {
+
+		&:not(:first-child) {
+			margin-top: 4rem;
+			
+			@media (min-width: 991.98px) {
+				margin-top: 5rem;
+			}
+		}
+
+		> .container {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+			
+			@media (min-width: 991.98px) {
+				gap: 3.75rem;
+			}
+		}
+
+		&-title {
+			max-width: 1000px;
+			margin-inline: auto;
+			line-height: 1.3;
+			text-align: center;
+			position: relative;
+
+			&-decoration {
+				pointer-events: none;
+				user-select: none;
+				position: absolute;
+				inset: 0;
+
+				:first-child {
+					display: none;
+					position: absolute;
+					top: 1.5rem;
+					right: calc(100% + 6.25rem);
+
+					@media (min-width: 991.98px) {
+						display: block;
+					}
+				}
+			}
+		}
+
+		&-bottom {
+			display: flex;
+			justify-content: center;
+
+			.btn {
+
+				@media (max-width: 576px) {
+					--_width: 100%;
+				}
+			}
+		}
+	}
+
+	&-list {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1.25rem;
+		
+		counter-reset: step-counter;
+
+		@media (min-width: 767.98px) {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+		
+		@media (min-width: 991.98px) {
+			gap: 1.5rem;
+		}
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: .75rem;
+			padding: 1.5rem 1.75rem 1.75rem;
+			position: relative;
+			
+			&:not(.about-list-finally) {
+				justify-content: stretch;
+				border: 1px solid var(--gray-color-400);
+				border-radius: 2rem;
+				counter-increment: step-counter;
+			}
+			
+			@media (min-width: 991.98px) {
+				gap: 1rem;
+				border-radius: 2.5rem;
+				padding: 1.75rem 2.25rem 2.25rem;
+			}
+
+			&-current {
+				min-width: 3rem;
+				min-height: 3rem;
+				display: flex;
+				align-self: start;
+				align-items: center;
+				justify-content: center;
+				font-size: 1rem;
+				font-weight: 700;
+				color: var(--magenta-color-450);
+				background-color: var(--magenta-color-150);
+				margin-bottom: .5rem;
+				border-radius: 50%;
+				padding: .75rem;
+
+				@media (min-width: 991.98px) {
+					min-width: 3.75rem;
+					min-height: 3.75rem;
+					font-size: 1.125rem;
+					padding: 1rem;
+				}
+
+				&::after {
+					content: counter(step-counter);
+				}
+			}
+
+			&-title {
+				font-size: 1.125rem;
+				line-height: 1.5;
+			}
+
+			&-decoration {
+				position: absolute;
+				inset: 0;
+
+				:first-child {
+					display: block;
+					position: absolute;
+				}
+			}
+
+			&:nth-child(4) {
+
+				.about-list-item-decoration {
+
+					:first-child {
+						top: .75rem;
+						right: -1.25rem;
+
+						@media (min-width: 1399.98px) {
+							top: 1.875rem;
+							right: -2.5rem;
+						}
+					}
+				}
+			}
+
+			&:nth-child(5) {
+
+				.about-list-item-decoration {
+
+					:first-child {
+						top: -2rem;
+						right: 4rem;
+						transform: rotate(-24deg);
+
+						@media (min-width: 1399.98px) {
+							top: -2rem;
+							right: 4rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
