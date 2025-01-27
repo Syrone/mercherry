@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Главная'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    @include('partials/header-client.html')
+
+    <main class="main">
+      <section class="section section-widget sign">
+        <div class="container">
+          <div class="sign-content">
+            <form action="#" class="form sign-form">
+              <div class="form-header">
+                <h2 class="h3 form-title">
+                  С возвращением!
+                </h2>
+                <p class="form-subtitle">
+                  ИИ подберет подходящих специалистов для вашего задания
+                </p>
+              </div>
+
+              <div class="form-body">
+                <div class="field-group field-group--floating">
+                  <input type="text" class="field field-has-btn" name="email_or_inn" placeholder="">
+                  <span class="field-floating">Email или ИНН</span>
+
+                  <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="field-group field-group--floating">
+                  <input type="password" class="field field-has-btn" name="password" placeholder="">
+                  <span class="field-floating">Пароль</span>
+
+                  <button type="button" class="btn field-btn field-show">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/visible.svg#svg-visible"></use>
+                      </svg>
+                    </span>
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/invisible.svg#svg-invisible"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="field-hint">
+                  <label class="form-check">
+                    <div class="form-check-checkbox">
+                      <input type="checkbox" class="form-check-input" name="remember">
+                      <span class="form-check-checkbox-span"></span>
+                    </div>
+                    <span class="form-check-label">
+                      Запомнить меня
+                    </span>
+                  </label>
+
+                  <a href="password-restore.html" class="btn btn-link">
+                    Забыли пароль?
+                  </a>
+                </div>
+              </div>
+
+              <div class="form-footer">
+                <div class="form-buttons">
+                  <button type="submit" class="btn btn-base btn-primary">
+                    Авторизоваться
+                  </button>
+                </div>
+
+                <p class="form-hint">
+                  Нет аккаунта? <a href="signup.html" class="btn btn-inherit btn-link">Зарегистрируйтесь</a>
+                </p>
+              </div>
+            </form>
+          </div>
+
+          <div class="sign-picture">
+            <picture>
+              <source srcset=".webp" type="image/webp">
+              <img loading="lazy" src="." class="image" width="692" height="595" alt="">
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

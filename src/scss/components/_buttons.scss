@@ -54,7 +54,7 @@
 	padding: var(--_padding);
 	outline: none;
 	transform: var(--_transform);
-	transition-property: color, text-shadow, background, border, transform, opacity;
+	transition-property: color, background, border, transform, opacity, visibility;
 	transition-duration: var(--_transition-duration);
 	transition-timing-function: var(--_transition-timing-function);
 
@@ -142,19 +142,21 @@
 	--_icon-size: 1.5rem;
 }
 
-.btn-inline {
-	--_color: inherit;
-}
-
 .btn-inherit {
 	--_fs: inherit;
 	--_fw: inherit;
 	--_lh: inherit;
 	--_ls: inherit;
 	--_color: inherit;
-	
+
 	display: inline;
-	text-transform: initial;
+}
+
+.btn-link {
+	--_fw: 600;
+	--_color: var(--magenta-color-450);
+	--_color-hover: var(--magenta-color);
+	--_color-active: var(--magenta-color);
 }
 
 .btn-md {

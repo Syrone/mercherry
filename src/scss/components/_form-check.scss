@@ -1,51 +1,77 @@
 .form-check {
-	--bs-form-check-bg: transparent;
-
-	font-size: .625rem;
+	display: inline-flex;
+	align-items: center;
+	gap: .75rem;
+	font-size: .875rem;
+	font-weight: 500;
+	line-height: 1.75;
 	color: var(--gray);
+	cursor: pointer;
 
-	@media (min-width: 992px) {
-		font-size: .75rem;
+	transition-property: color;
+	transition-duration: var(--transition-duration);
+	transition-timing-function: var(--transition-timing-function);
+
+	@media (hover: hover) {
+
+		&:is(:hover, :focus-visible) {
+			color: var(--magenta-color);
+		}
 	}
 
-	&:not(:first-child) {
-		margin-top: 1.5rem;
-	}
-
-	&-label,
-	&-input {
-		cursor: pointer;
-	}
-
-	&-label {
-		display: flex;
-		align-items: center;
-		gap: 1em;
+	&:active {
+		color: var(--magenta-color);
 	}
 
 	&-input {
 		flex-shrink: 0;
-    width: 1.25em;
-    height: 1.25em;
-    appearance: none;
+		width: 1.25rem;
+		height: 1.25rem;
+		appearance: none;
 		color: inherit;
-    background-color: var(--bs-form-check-bg);
-    background-image: var(--bs-form-check-bg-image);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: .5em;
-    border: 1px solid currentColor;
-		border-radius: 50%;
-    color-adjust: exact;
-    print-color-adjust: exact;
+		background-color: var(--bs-form-check-bg);
+		border: 1px solid var(--gray-color-425);
+		border-radius: .375rem;
+		color-adjust: exact;
+		print-color-adjust: exact;
+		cursor: pointer;
 
-		@media (min-width: 992px) {
-			width: 1em;
-			height: 1em;
-		}
+		// @media (min-width: 991.98px) {
+		// 	width: 1.25rem;
+		// 	height: 1.25rem;
+		// }
 
 		&:checked {
-			--bs-form-check-bg-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"%3E%3Ccircle cx="10" cy="10" r="8" stroke="none" fill="%23808080" /%3E%3C/svg%3E');
+			
+			~ .form-check-checkbox-span {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&-checkbox {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+
+		&-span {
+			content: '';
+			display: block;
+			background-color: currentColor;
+			border-radius: .25rem;
+			pointer-events: none;
+			user-select: none;
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			inset: .25rem;
+
+			transition-property: opacity, visibility;
+			transition-duration: var(--transition-duration);
+			transition-timing-function: var(--transition-timing-function);
 		}
 	}
 }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Главная'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    @include('partials/header-client.html')
+
+    <main class="main">
+      <section class="section section-widget sign">
+        <div class="container">
+          <div class="sign-content">
+            <div class="sign-message">
+              <div class="sign-message-header">
+                <img loading="lazy" src="img/icons/success.svg" class="image" width="60" height="60" alt="Иконка">
+
+                <p class="sign-message-header-text">
+                  Ссылка для авторизации отправлена на почту <b>tvoyakosmetica@me.com</b>
+                </p>
+              </div>
+
+              <a href="#" class="btn btn-base btn-primary">
+                На главную
+              </a>
+
+              <p class="form-hint">
+                Ничего не пришло?
+                <span class="form-hint-message">Отправить повторно через 00:59 сек</span>
+                <button type="button" class="btn btn-inherit btn-link">Отправить повторно</button>
+              </p>
+            </div>
+          </div>
+
+          <div class="sign-picture">
+            <picture>
+              <source srcset=".webp" type="image/webp">
+              <img loading="lazy" src="." class="image" width="692" height="595" alt="">
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
