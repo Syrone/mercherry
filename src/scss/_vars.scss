@@ -13,10 +13,6 @@
   --fw-base: 400;
   --lh-base: normal;
 
-  @media (min-width: 991.98px) {
-    --fs-base: 1rem;
-  }
-
   // colors
   --title-color: #000;
 
@@ -30,6 +26,7 @@
   --magenta-color-100: #F7F3FE;
   --magenta-color-150: #F3ECFF;
   --magenta-color-200: #EDE5FC;
+  --magenta-color-250: #DECFFA;
   --magenta-color-400: #C09AFF;
   --magenta-color-450: #9663EB;
   --magenta-color-500: #5E31A8;
@@ -54,11 +51,15 @@
 
   --dark-color: #000;
   --dark-color-300: #545454;
+  --dark-color-400: #292929;
   --dark-color-500: #0F0F0F;
 
   --gray-color: #8E8E96;
   --gray-color-100: #F1F1F1;
+  --gray-color-150: #fafafa;
   --gray-color-200: #F4F5F7;
+  --gray-color-250: #f5f5f5;
+  --gray-color-300: #E9EBF0;
   --gray-color-400: #E6E6E6;
   --gray-color-425: #D0D5DD;
   --gray-color-450: #C7C9CD;
@@ -77,4 +78,10 @@
   // transitions
   --transition-duration: 300ms;
   --transition-timing-function: ease-in-out;
+}
+
+@media (min-width: 991.98px) {
+  :root {
+    --fs-base: 1rem;
+  }
 }

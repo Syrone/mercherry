@@ -183,6 +183,174 @@
             </div>
           </div>
 
+          <div class="ui-item">
+            <h2>
+              Input
+            </h2>
+
+            <h3>
+              Default
+            </h3>
+            <div class="ui-col">
+              <div class="field-group field-group--floating">
+                <input type="text" class="field field-has-btn" name="email_or_inn" placeholder="">
+                <span class="field-floating">Email или ИНН</span>
+
+                <button type="button" class="btn field-btn field-clear">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div class="field-group field-group--floating">
+                <input type="password" class="field field-has-btn" name="password" placeholder="">
+                <span class="field-floating">Пароль</span>
+
+                <button type="button" class="btn field-btn field-show">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/visible.svg#svg-visible"></use>
+                    </svg>
+                  </span>
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/invisible.svg#svg-invisible"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <h3>
+              Select One
+            </h3>
+            <div class="ui-col">
+              <select name="ui-select"
+                data-select-choices="default"
+                data-choices-class="choices--floating">
+                <option value="">Город вакансии</option>
+                <option value="1">Москва</option>
+                <option value="2">Санкт-Петербург</option>
+                <option value="3">Казань</option>
+                <option value="4">Уфа</option>
+                <option value="5">Пермь</option>
+              </select>
+            </div>
+
+            <h3>
+              Checkbox
+            </h3>
+            <div class="ui-col">
+              <label class="form-check">
+                <div class="form-check-checkbox">
+                  <input type="checkbox" class="form-check-input" name="remember">
+                  <span class="form-check-checkbox-span"></span>
+                </div>
+                <span class="form-check-label">
+                  Запомнить меня
+                </span>
+              </label>
+
+              <label class="form-check form-check--default">
+                <div class="form-check-checkbox">
+                  <input type="checkbox" class="form-check-input" name="remember">
+                  <span class="form-check-checkbox-span">
+                    <span class="icon icon-check">
+                      <svg>
+                        <use xlink:href="img/icons/check.svg#svg-check"></use>
+                      </svg>
+                    </span>
+
+                    <span class="icon icon-disabled">
+                      <svg>
+                        <use xlink:href="img/icons/minus.svg#svg-minus"></use>
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <span class="form-check-label">
+                  Default checkbox
+                </span>
+              </label>
+
+              <label class="form-check form-check--default">
+                <div class="form-check-checkbox">
+                  <input type="checkbox" class="form-check-input" name="remember" disabled>
+                  <span class="form-check-checkbox-span">
+                    <span class="icon icon-check">
+                      <svg>
+                        <use xlink:href="img/icons/check.svg#svg-check"></use>
+                      </svg>
+                    </span>
+
+                    <span class="icon icon-disabled">
+                      <svg>
+                        <use xlink:href="img/icons/minus.svg#svg-minus"></use>
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <span class="form-check-label">
+                  Disabled checkbox
+                </span>
+              </label>
+
+              <label class="form-check form-check--default">
+                <div class="form-check-checkbox">
+                  <input type="checkbox" class="form-check-input" name="remember" checked disabled>
+                  <span class="form-check-checkbox-span">
+                    <span class="icon icon-check">
+                      <svg>
+                        <use xlink:href="img/icons/check.svg#svg-check"></use>
+                      </svg>
+                    </span>
+
+                    <span class="icon icon-disabled">
+                      <svg>
+                        <use xlink:href="img/icons/minus.svg#svg-minus"></use>
+                      </svg>
+                    </span>
+                  </span>
+                </div>
+                <span class="form-check-label">
+                  Disabled Checked checkbox
+                </span>
+              </label>
+
+              <label class="form-check form-radio--default">
+                <div class="form-check-checkbox">
+                  <input type="checkbox" class="form-check-input" name="remember">
+                  <span class="form-check-checkbox-span"></span>
+                </div>
+                <span class="form-check-label">
+                  Default Radio
+                </span>
+              </label>
+
+              <label class="form-check form-radio--default">
+                <div class="form-check-checkbox">
+                  <input type="checkbox" class="form-check-input" name="remember" disabled>
+                  <span class="form-check-checkbox-span"></span>
+                </div>
+                <span class="form-check-label">
+                  Disabled Radio
+                </span>
+              </label>
+
+              <label class="form-check form-radio--default">
+                <div class="form-check-checkbox">
+                  <input type="checkbox" class="form-check-input" name="remember" checked disabled>
+                  <span class="form-check-checkbox-span"></span>
+                </div>
+                <span class="form-check-label">
+                  Disabled Radio checkbox
+                </span>
+              </label>
+            </div>
+          </div>
+
           <!-- <div class="ui-item">
             <h2>
               Уведомления
