@@ -51,7 +51,7 @@
 
 	&::placeholder {
 		font: inherit;
-		color: currentColor;
+		color: var(--gray-color);
 	}
 
 	&:focus-visible {
@@ -149,6 +149,17 @@
 
 	.btn-link {
 		--_fs: .875rem;
+	}
+}
+
+.field--md {
+	--_fs: .875rem;
+	--_rounded: 1rem;
+	--_padding: .59375rem 1rem;
+
+	~ .field-btn {
+		--_icon-size: 1.25rem;
+		--_padding: .625rem 1rem;
 	}
 }
 
