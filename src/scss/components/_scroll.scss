@@ -1,0 +1,22 @@
+/* Кастомный скролл */
+::-webkit-scrollbar {
+  width: .25rem; /* Ширина скроллбара */
+  height: .25rem; /* Высота для горизонтального скролла */
+  background-color: var(--gray-color-250); /* Цвет контейнера */
+  border-radius: .75rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-color-450); /* Цвет ползунка */
+  border-radius: .75rem;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray-color-500); /* Цвет ползунка при наведении */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--gray-color-250); /* Цвет фона дорожки */
+  border-radius: .75rem;
+}

@@ -1,0 +1,32 @@
+.badge {
+	--_fs: .875rem;
+	--_fw: 500;
+	--_lh: 1;
+	--_color: inherit;
+	--_bg: transparent;
+	--_rounded: .625rem;
+	--_padding: .375rem;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: var(--_fs);
+	font-weight: var(--_fw);
+	line-height: var(--_lg);
+	color: var(--_color);
+	background-color: var(--_bg);
+	border-radius: var(--_rounded);
+	padding: var(--_padding);
+	text-align: center;
+
+	&--md {
+		--_fs: .75rem;
+		--_rounded: .5rem;
+		--_padding: .15625rem .5rem;
+	}
+
+	&--magenta-250 {
+		--_color: var(--magenta-color);
+		--_bg: var(--magenta-color-200);
+	}
+}

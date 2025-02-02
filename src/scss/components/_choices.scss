@@ -139,6 +139,12 @@ $choices-z-index: 1 !default;
 	}
 }
 
+.#{$choices-selector}[data-type*="select-multiple"] {
+	.#{$choices-selector}__inner {
+		cursor: pointer;
+	}
+}
+
 .#{$choices-selector}__inner {
 	width: 100%;
 	min-height: 3.25rem;
@@ -202,6 +208,7 @@ $choices-z-index: 1 !default;
 .#{$choices-selector}__list--single {
 	width: 100%;
 	display: inline-block;
+	font-weight: 500;
 	// padding: 4px 16px 4px 4px;
 
 	// [dir="rtl"] & {
@@ -229,8 +236,12 @@ $choices-z-index: 1 !default;
 		box-sizing: border-box;
 
 		&:not(:last-child) {
-			&::after {
-				content: ',';
+
+			.#{$choices-selector}__item-value {
+
+				&::after {
+					content: ',';
+				}
 			}
 		}
 
@@ -306,6 +317,7 @@ $choices-z-index: 1 !default;
 	.#{$choices-selector}__list {
 		position: relative;
 		max-height: 15rem;
+		margin: 0;
 		padding-right: .5rem;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
@@ -439,7 +451,11 @@ $choices-z-index: 1 !default;
 	.#{$choices-selector}__inner {
 		min-height: 2.5rem;
 		border-radius: 1rem;
-		padding: .5rem 1rem;
+		padding: .5rem 2.25rem .5rem 1rem;
+
+		&-dropdown {
+			right: 1rem;
+		}
 	}
 }
 
@@ -478,10 +494,6 @@ $choices-z-index: 1 !default;
 	&.#{$choices-selector}--md {
 
 		.#{$choices-selector}__inner {
-
-			&-dropdown {
-				right: 1rem;
-			}
 
 			.field-floating {
 				left: 1.125rem;
@@ -540,6 +552,57 @@ $choices-z-index: 1 !default;
 						}
 					}
 				}
+			}
+		}
+	}
+}
+
+.#{$choices-selector}--checkbox {
+
+	.#{$choices-selector}__list--dropdown {
+
+		.#{$choices-selector}__item {
+
+			&.is-selected {
+
+				.form-check {
+
+					&-checkbox-span {
+						color: var(--magenta-color);
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+
+.#{$choices-selector}--filter {
+
+	.#{$choices-selector}__inner {
+		gap: .25rem;
+
+		&-filter {
+
+			&-placeholder {
+				flex: 1;
+				font-weight: 500;
+				color: var(--gray-color);
+			}
+		}
+	}
+
+	.#{$choices-selector}__list {
+
+		&--single {
+			width: auto;
+		}
+
+		&--multiple {
+
+			.#{$choices-selector}__item {
+				margin: 0;
 			}
 		}
 	}

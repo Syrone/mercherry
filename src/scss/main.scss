@@ -4,6 +4,7 @@
 @use "settings";
 
 // подключения компонентов страницы
+@use "./components/scroll";
 @use "./components/utilities";
 @use "./components/typography";
 @use "./components/containers";
@@ -12,6 +13,7 @@
 @use "./components/buttons";
 @use "./components/field-control";
 @use "./components/form-check";
+@use "./components/badge";
 @use "./components/brand";
 @use "./components/form";
 @use "./components/header";
