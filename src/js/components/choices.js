@@ -1,26 +1,35 @@
 import Choices from 'choices.js'
 
+window.choiceElements = Array.from(document.querySelectorAll('[data-select-choices]')).map(select => ({
+	element: select,
+}))
+
+window.getChoiceValue = (choice) => {
+	return Array.isArray(choice.getValue())
+		? choice.getValue()
+		: [choice.getValue()]
+}
 
 window.initializeChoices = () => {
 	const createSelectConfig = (element) => {
 		function getContainerOuterClassNames() {
 			let baseClasses = ['choices']
 			let additionalClasses = []
-	
+
 			if (element.getAttribute('data-choices-class')) {
 				additionalClasses.push(element.getAttribute('data-choices-class'))
 				// additionalClasses = element.getAttribute('data-choices-class').split(' ')
 			}
-	
+
 			return additionalClasses.length > 0
 				? `${baseClasses} ${additionalClasses.join(' ')}`
 				: baseClasses
 		}
-	
+
 		function shouldEnableSearch(element) {
 			return element.options.length > 10
 		}
-	
+
 		return {
 			allowHTML: true,
 			placeholder: true,
@@ -40,18 +49,18 @@ window.initializeChoices = () => {
 				return {
 					item: ({ classNames }, data) => {
 						let itemTemplate = ``
-	
+
 						const dataSelectChoices = this.passedElement.element.getAttribute('data-select-choices') || ''
 						const choicesTypes = dataSelectChoices.split(' ').filter(Boolean)
-	
+
 						if (choicesTypes.includes('filter')) {
 							itemTemplate = `
 								<div class="${classNames.item} ${data.highlighted
-										? classNames.highlightedState
-										: classNames.itemSelectable
-									} ${data.placeholder ? classNames.placeholder : ''
-									}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''
-									} ${data.disabled ? 'aria-disabled="true"' : ''}>
+									? classNames.highlightedState
+									: classNames.itemSelectable
+								} ${data.placeholder ? classNames.placeholder : ''
+								}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''
+								} ${data.disabled ? 'aria-disabled="true"' : ''}>
 									<span>${data.label}</span>
 								</div>
 							`
@@ -59,24 +68,24 @@ window.initializeChoices = () => {
 						else {
 							itemTemplate = `
 								<div class="${classNames.item} ${data.highlighted
-										? classNames.highlightedState
-										: classNames.itemSelectable
-									} ${data.placeholder ? classNames.placeholder : ''
-									}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''
-									} ${data.disabled ? 'aria-disabled="true"' : ''}>
+									? classNames.highlightedState
+									: classNames.itemSelectable
+								} ${data.placeholder ? classNames.placeholder : ''
+								}" data-item data-id="${data.id}" data-value="${data.value}" ${data.active ? 'aria-selected="true"' : ''
+								} ${data.disabled ? 'aria-disabled="true"' : ''}>
 									<span class="${classNames.item}-value">${data.label}</span>
 								</div>
 							`
 						}
-	
+
 						return template(itemTemplate)
 					},
 					choice: ({ classNames }, data) => {
 						let choiceTemplate = ``
-	
+
 						const dataSelectChoices = this.passedElement.element.getAttribute('data-select-choices') || ''
 						const choicesTypes = dataSelectChoices.split(' ').filter(Boolean)
-	
+
 						if (choicesTypes.includes('default-radio')) {
 							choiceTemplate = `
 								<div class="${classNames.item} ${classNames.itemChoice} ${data.selected ? 'is-selected' : ''} ${data.disabled ? classNames.itemDisabled : classNames.itemSelectable} ${data.placeholder ? 'is-placeholder' : ''}"
@@ -165,7 +174,7 @@ window.initializeChoices = () => {
 			},
 		}
 	}
-	
+
 	const createDropdownSvg = (choice) => {
 		let iconSpan = document.createElement('span')
 		iconSpan.classList.add('icon', `${choice.config.classNames.containerInner}-dropdown`)
@@ -183,17 +192,17 @@ window.initializeChoices = () => {
 		el.textContent = choice._placeholderValue
 		return el
 	}
-	
+
 	const createFilterBadge = (choice) => {
 		const el = document.createElement('span')
 		el.className = `badge badge--md badge--magenta-250 ${choice.config.classNames.containerInner}-filter-badge is-hidden`
 		return el
 	}
-	
+
 	const createClearButton = (choice) => {
 		const el = document.createElement('button')
 		el.type = 'button'
-		el.className = `btn btn-md btn-clear ${choice.config.classNames.containerInner}-clear is-hidden`
+		el.className = `btn btn-sm btn-clear ${choice.config.classNames.containerInner}-clear is-hidden`
 		el.innerHTML = `
 			<span class="icon">
 				<svg>
@@ -203,28 +212,22 @@ window.initializeChoices = () => {
 		`
 		return el
 	}
-	
+
 	const addFloatingLabel = (choice) => {
 		// Проверяем, есть ли у choice.containerOuter.element класс `choices--floating`
 		if (choice.containerOuter.element.classList.contains('choices--floating')) {
 			// Создаём span с классом `field-floating`
 			const floatingLabel = document.createElement('span')
 			floatingLabel.classList.add('field-floating')
-	
+
 			// Устанавливаем значение из choice._placeholderValue
 			floatingLabel.textContent = choice._placeholderValue
-	
+
 			// Добавляем span внутрь choice.containerInner.element после всех элементов
 			choice.containerInner.element.appendChild(floatingLabel)
 		}
 	}
-	
-	const getChoiceValue = (choice) => {
-		return Array.isArray(choice.getValue())
-			? choice.getValue()
-			: [choice.getValue()]
-	}
-	
+
 	// Функция для обработки логики выбора "all"
 	// Параметры:
 	// - choice: экземпляр Choices для конкретного селекта
@@ -233,7 +236,7 @@ window.initializeChoices = () => {
 	const processAllSelection = (choice, prevSelectedValues) => {
 		// Получаем текущий выбор в виде массива строк
 		let currentSelected = getChoiceValue(choice).map(item => item.value)
-	
+
 		// Если "all" выбран сейчас, а ранее его не было — удаляем все остальные варианты
 		if (!prevSelectedValues.includes('all') && currentSelected.includes('all')) {
 			currentSelected
@@ -246,22 +249,22 @@ window.initializeChoices = () => {
 		else if (prevSelectedValues.includes('all') && currentSelected.includes('all') && currentSelected.length > 1) {
 			choice.removeActiveItemsByValue('all')
 		}
-	
+
 		// Если выбраны все индивидуальные варианты (т.е. все варианты, кроме "all"),
 		// то снимаем весь выбор и устанавливаем только "all"
 		const allOptions = choice.config.choices
 			.map(ch => ch.value)
 			.filter(val => val && val !== 'all')
-	
+
 		if (allOptions.length && allOptions.every(val => currentSelected.includes(val))) {
 			choice.removeActiveItems()
 			choice.setChoiceByValue('all')
 		}
-	
+
 		// Возвращаем обновлённый массив выбранных значений
 		return getChoiceValue(choice).map(item => item.value)
 	}
-	
+
 	const handleChoiceClass = (choice, getSelected) => {
 		if (getSelected.length) {
 			getSelected[0].placeholder === true
@@ -275,26 +278,22 @@ window.initializeChoices = () => {
 	const handleChoiceFilter = (choice, dropdownSvg, choiceItemList, filterBadge, clearButton) => {
 		const getChoiceSelected = getChoiceValue(choice)
 
-		filterBadge.textContent = `${getChoiceSelected.length}`;
+		filterBadge.textContent = `${getChoiceSelected.length}`
 
 		if (getChoiceSelected.length > 1) {
-				// dropdownSvg.classList.add('is-hidden')
-				choiceItemList.classList.add('is-hidden')
-				filterBadge.classList.remove('is-hidden')
-				clearButton.classList.remove('is-hidden')
+			// dropdownSvg.classList.add('is-hidden')
+			choiceItemList.classList.add('is-hidden')
+			filterBadge.classList.remove('is-hidden')
+			clearButton.classList.remove('is-hidden')
 		} else if (getChoiceSelected.length < 2) {
-				// dropdownSvg.classList.remove('is-hidden')
-				choiceItemList.classList.remove('is-hidden')
-				filterBadge.classList.add('is-hidden')
-				clearButton.classList.add('is-hidden')
+			// dropdownSvg.classList.remove('is-hidden')
+			choiceItemList.classList.remove('is-hidden')
+			filterBadge.classList.add('is-hidden')
+			clearButton.classList.add('is-hidden')
 		}
 	}
 
-	const choiceElements = Array.from(document.querySelectorAll('[data-select-choices]')).map(select => ({
-		element: select,
-	}))
-
-	choiceElements?.forEach((select) => {
+	window.choiceElements?.forEach((select) => {
 
 		if (select.element.closest('.choices')) { return }
 
@@ -393,7 +392,7 @@ window.initializeChoices = () => {
 			choiceContainerInner.append(filterBadge, clearButton)
 
 			// Обработчик клика на clearButton
-			clearButton.addEventListener('click', function() {
+			clearButton.addEventListener('click', function () {
 				// Очищаем выбор
 				choice.removeActiveItems()
 
@@ -404,11 +403,112 @@ window.initializeChoices = () => {
 				filterBadge.classList.add('is-hidden')
 				clearButton.classList.add('is-hidden')
 				choiceItemList.classList.remove('is-hidden')
+
+				// Скрываем общую кнопку сброса
+				if (choice.passedElement.element.closest('[data-filter-choices]')) {
+					const event = new Event("clearButtonHidden")
+					choice.passedElement.element.closest('[data-filter-choices]').dispatchEvent(event)
+				}
 			})
 
 			handleChoiceFilter(choice, dropdownSvg, choiceItemList, filterBadge, clearButton)
 		}
+
+		if (select.element.closest('[data-filter-choices]')) {
+			// Сохраняем экземпляр в свойстве элемента, чтобы потом его можно было найти
+			select.choicesInstance = choice
+		}
+
+		document.addEventListener('show.bs.dropdown', event => {
+			choice.hideDropdown()
+		})
 	})
 }
 
 initializeChoices()
+
+// Проходим по всем контейнерам с data-filter-choices
+document.querySelectorAll('[data-filter-choices]').forEach(container => {
+	const pushArrayInArray = (arrayMain, arrayOut, choiceId) => {
+		const existingEntry = arrayMain.find(item => item.id === choiceId)
+
+		if (existingEntry) {
+			// Обновляем данные
+			existingEntry.selected = arrayOut
+		} else {
+			// Если вдруг не нашли, добавляем (на всякий случай)
+			arrayMain.push({
+				id: choiceId,
+				selected: arrayOut
+			})
+		}
+	}
+
+	const toggleClearButton = (array) => {
+		const hasSelected = array.some(item => item && item.selected.length > 0)
+		clearButton ? clearButton.classList.toggle('is-hidden', !hasSelected) : null
+	}
+
+	const filterChoicesArray = []
+	// Ищем кнопку очистки внутри контейнера
+	const clearButton = container.querySelector('.filter-header-clear')
+
+	window.choiceElements.forEach(item => {
+		// Проверяем, что этот select находится в данном контейнере
+		if (item.element.closest('[data-filter-choices]') === container && item.choicesInstance) {
+			const choicesInstance = item.choicesInstance
+
+			let getChoiceSelected = getChoiceValue(choicesInstance).filter(item => item && item.value !== "all")
+
+			pushArrayInArray(filterChoicesArray, getChoiceSelected, choicesInstance._baseId)
+
+			choicesInstance.passedElement.element.addEventListener("change", function (event) {
+				getChoiceSelected = getChoiceValue(choicesInstance).filter(item => item && item.value !== "all")
+
+				pushArrayInArray(filterChoicesArray, getChoiceSelected, choicesInstance._baseId)
+
+				toggleClearButton(filterChoicesArray)
+			})
+		}
+	})
+
+	if (clearButton) {
+		clearButton.addEventListener('click', () => {
+			// Проходим по всем Choice, сохранённым в глобальной переменной
+			window.choiceElements.forEach(item => {
+				// Проверяем, что этот select находится в данном контейнере
+				if (item.element.closest('[data-filter-choices]') === container && item.choicesInstance) {
+					const choicesInstance = item.choicesInstance
+
+					// Сбрасываем выбранные элементы
+					choicesInstance.removeActiveItems()
+
+					// Если в конфигурации присутствует вариант "all", выбираем его
+					if (choicesInstance.config.choices.some(choice => choice.value === "all")) {
+						choicesInstance.setChoiceByValue('all')
+					}
+
+					const event = new Event("change")
+					choicesInstance.passedElement.element.dispatchEvent(event)
+				}
+			})
+		})
+	}
+
+	toggleClearButton(filterChoicesArray)
+
+	container.addEventListener('clearButtonHidden', () => {
+		window.choiceElements.forEach(item => {
+			// Проверяем, что этот select находится в данном контейнере
+			if (item.element.closest('[data-filter-choices]') === container && item.choicesInstance) {
+				const choicesInstance = item.choicesInstance
+
+				let getChoiceSelected = getChoiceValue(choicesInstance).filter(item => item && item.value !== "all")
+
+				pushArrayInArray(filterChoicesArray, getChoiceSelected, choicesInstance._baseId)
+			}
+		})
+
+		toggleClearButton(filterChoicesArray)
+	})
+})

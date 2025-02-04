@@ -92,16 +92,49 @@
 	}
 }
 
+.label-check {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+	user-select: none;
+
+	> * {
+		pointer-events: none;
+	}
+}
+
 .btn-check {
 	position: absolute;
 	clip: rect(0, 0, 0, 0);
-	pointer-events: none;
+
+	+ .btn {
+		--_padding: .25rem;
+	}
 
 	&:checked {
 		+ .btn {
 			--_color: var(--primary);
 			--_color-hover: var(--primary);
 			--_color-active: var(--primary);
+
+			.icon-container {
+
+				> .icon,
+				> .image {
+
+					&:first-child {
+						opacity: 0;
+						visibility: hidden;
+					}
+
+					&:last-child {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
 		}
 	}
 }
@@ -130,6 +163,21 @@
 	}
 }
 
+.btn-group--plaintext {
+	gap: 2rem;
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0;
+
+	.btn {
+		--_padding: .25rem 0;
+		--_bg-hover: transparent;
+		--_bg-active: transparent;
+
+		min-width: initial;
+	}
+}
+
 .btn-menu {
 	--_padding: .375rem;
 
@@ -152,13 +200,51 @@
 	--_color-active: var(--light-color);
 	--_bg-active: var(--magenta-color-500);
 
-	&.btn-md {
+	&.btn-sm {
 		--_width: 1.25rem;
 		--_height: 1.25rem;
 		--_padding: 0;
 		--_icon-size: 1.125rem;
 
 		flex-shrink: 0;
+	}
+
+	&.btn-md {
+		--_width: 2.5rem;
+		--_height: 2.5rem;
+		--_bg: var(--magenta-color-200);
+		--_padding: 0;
+		--_icon-size: 1.125rem;
+
+		--_bg-hover: var(--magenta-color-200);
+		--_bg-active: var(--magenta-color-200);
+
+		flex-shrink: 0;
+		box-shadow: 0px 2px 4px 0px rgba(17, 12, 8, 0.02);
+
+		.icon {
+			background-color: var(--magenta-color);
+			border-radius: 50%;
+			transition-property: background;
+			transition-duration: var(--_transition-duration);
+			transition-timing-function: var(--_transition-timing-function);
+		}
+
+		@media (hover: hover) {
+			&:is(:hover, :focus-visible) {
+
+				.icon {
+					background-color: var(--magenta-color-500);
+				}
+			}
+		}
+	
+		&:is(:active, .is-active) {
+
+			.icon {
+				background-color: var(--magenta-color-500);
+			}
+		}
 	}
 }
 

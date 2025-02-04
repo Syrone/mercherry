@@ -1,0 +1,63 @@
+<header class="header">
+  <div class="container">
+    @include('brand.html')
+
+    <div class="offcanvas offcanvas-end offcanvas-navbar"
+      id="offcanvas-header"
+      tabindex="-1"
+      aria-labelledby="offcanvas-header-label">
+      <div class="offcanvas-header">
+        @include('brand.html')
+
+        <button type="button" class="btn btn-icon btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/close.svg#svg-close"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="header-end">
+          <nav class="header-nav">
+            <a href="#" class="btn">
+              Вакансии
+            </a>
+  
+            <a href="#" class="btn">
+              Отчёты
+            </a>
+  
+            <a href="#" class="btn">
+              Чаты
+            </a>
+          </nav>
+      
+          <div class="header-user">
+            <a href="#" class="btn">
+              <picture>
+                <source srcset="img/avatar.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar.jpg" class="image" width="48" height="48" alt="Аватар">
+              </picture>
+  
+              Василиса
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-icon btn-menu"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-header"
+      aria-controls="offcanvas-header">
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/menu.svg#svg-menu"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</header>

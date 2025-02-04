@@ -1,0 +1,135 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	background-color: var(--light-color);
+	border-radius: 1.25rem;
+	padding: 1rem;
+	box-shadow: 0px 0.3px 0px 0px rgba(0, 0, 0, 0.01), 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+
+	@media (min-width: 991.98px) {
+		gap: 1.5rem;
+		border-radius: 1.5rem;
+		padding: 1.25rem;
+	}
+
+	&-header {
+		display: flex;
+		gap: .75rem;
+
+		@media (min-width: 991.98px) {
+			gap: 1rem;
+		}
+
+		&-picture {
+			flex-shrink: 0;
+
+			.image {
+				width: 4.5rem;
+				height: 4.5rem;
+				display: block;
+				border-radius: 1rem;
+				
+				@media (min-width: 991.98px) {
+					width: 5.5rem;
+					height: 5.5rem;
+					border-radius: 1.25rem;
+				}
+			}
+		}
+
+		&-content {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: .375rem;
+
+			@media (min-width: 991.98px) {
+				gap: .5rem;
+			}
+		}
+
+		&-title {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: .25rem;
+			font-family: var(--font-family);
+			font-size: 1rem;
+			line-height: 1.3;
+			color: var(--dark-color-550);
+			
+			@media (min-width: 991.98px) {
+				font-size: 1.125rem;
+			}
+		}
+
+		&-subtitle {
+			font-size: .75rem;
+			font-weight: 500;
+			color: var(--gray-color);
+
+			@media (min-width: 991.98px) {
+				font-size: .875rem;
+			}
+		}
+
+		.blanks {
+			margin-top: auto;
+		}
+
+		.label-check {
+			flex-shrink: 0;
+			margin: -.25rem -.25rem 0 0;
+		}
+	}
+
+	&-footer {
+		margin-top: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&-price {
+		font-weight: 600;
+
+		&-time {
+			font-size: .625rem;
+			font-weight: 500;
+			color: var(--gray-color);
+			
+			@media (min-width: 991.98px) {
+				font-size: .75rem;
+			}
+		}
+	}
+
+	&-rating {
+		display: flex;
+		align-items: center;
+		gap: .25rem;
+		font-size: .75rem;
+		font-weight: 600;
+		line-height: normal;
+		color: var(--dark-color-475);
+		
+		@media (min-width: 991.98px) {
+			font-size: .875rem;
+		}
+
+		&-icon {
+			--_size: .625rem;
+			--_color: #FFE142;
+			
+			@media (min-width: 991.98px) {
+				--_size: .75rem;
+			}
+		}
+
+		&-current {
+			font-weight: 500;
+			color: var(--gray-color-475);
+		}
+	}
+}

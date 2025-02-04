@@ -22,6 +22,41 @@
 		}
 	}
 
+	&-end {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+
+		@media (min-width: 991.98px) {
+			flex: initial;
+			flex-direction: row;
+			align-items: center;
+			gap: 3rem;
+			margin-left: auto;
+		}
+	}
+
+	&-user {
+		display: flex;
+		justify-content: center;
+		margin-top: auto;
+		
+		@media (min-width: 991.98px) {
+			justify-content: initial;
+			margin-top: initial;
+		}
+
+		.btn {
+			gap: .75rem;
+
+			.image {
+				display: block;
+				border-radius: 50%;
+			}
+		}
+	}
+
 	&-nav {
 		display: flex;
 		flex-direction: column;

@@ -1,0 +1,131 @@
+.banner {
+	min-height: 18.75rem;
+	background-color: var(--magenta-color-150);
+	border-radius: 2rem;
+	padding: 1.5rem;
+	position: relative;
+	
+	@media (min-width: 991.98px) {
+		background-image: url(../img/banner/banner.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		border-radius: 2.5rem;
+	}
+
+	&-steps {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		counter-reset: step-counter;
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 1.25rem;
+			
+			counter-increment: step-counter;
+			
+			@media (min-width: 991.98px) {
+				justify-content: initial;
+				gap: 1.5rem;
+				position: absolute;
+			}
+
+			&-step {
+				flex-shrink: 0;
+				font-weight: 700;
+				line-height: normal;
+				color: var(--magenta-color-450);
+				background-color: var(--light-color);
+				border-radius: 8.75rem;
+				padding: .5rem 1rem;
+
+				@media (min-width: 991.98px) {
+					font-size: 1.125rem;
+					line-height: inherit;
+					padding: 1rem 1.5rem;
+				}
+
+				&::after {
+					content: counter(step-counter);
+				}
+			}
+
+			&-title {
+				font-size: var(--fs-base);
+			}
+
+			&:nth-child(1) {
+				text-align: center;
+				
+				@media (min-width: 991.98px) {
+					flex-direction: row;
+					align-items: flex-start;
+					text-align: start;
+					top: calc(6.5rem - 5vw);
+					left: calc(-5rem + 10vw);
+				}
+
+				@media (min-width: 1339.98px) {
+					top: 3rem;
+					left: 3.5rem;
+				}
+
+				.banner-steps-item-content {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					gap: 1.25rem;
+					
+					@media (min-width: 991.98px) {
+						max-width: 25rem;
+						align-items: flex-start;
+						gap: 2rem;
+					}
+				}
+
+				.banner-steps-item-title {
+					font-size: 1.5rem;
+					line-height: 1.25;
+					
+					@media (min-width: 991.98px) {
+						font-size: 2rem;
+						line-height: 1.375;
+					}
+				}
+			}
+
+			&:nth-child(2) {
+
+				@media (min-width: 991.98px) {
+					top: calc(9rem - 5vw);
+					right: 30vw;
+				}
+
+				@media (min-width: 1339.98px) {
+					top: 5rem;
+					left: 45rem;
+					right: auto;
+				}
+			}
+
+			&:nth-child(3) {
+
+				@media (min-width: 991.98px) {
+					top: calc(8rem - 5vw);
+					right: 9vw;
+				}
+
+				@media (min-width: 1339.98px) {
+					top: 4rem;
+					left: 65rem;
+					right: auto;
+				}
+			}
+		}
+	}
+}

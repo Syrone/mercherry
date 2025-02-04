@@ -5,7 +5,7 @@
 	--_color: inherit;
 	--_bg: transparent;
 	--_rounded: .625rem;
-	--_padding: .375rem;
+	--_padding: .375rem .625rem;
 
 	display: inline-flex;
 	align-items: center;
@@ -28,5 +28,9 @@
 	&--magenta-250 {
 		--_color: var(--magenta-color);
 		--_bg: var(--magenta-color-200);
+	}
+
+	&--gray-125 {
+		--_bg: var(--gray-color-125);
 	}
 }

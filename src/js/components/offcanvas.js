@@ -12,14 +12,15 @@ document.querySelectorAll('.offcanvas').forEach((element) => {
 })
 
 document.body.addEventListener('click', (event) => {
-	const target = event.target
-	if (target.getAttribute('data-bs-toggle') === 'offcanvas') {
-		const targetElement = document.querySelector(target.getAttribute('data-bs-target'))
+	const target = event.target.closest('[data-bs-toggle="dropdown"]')
+	if (!target) return
 
-		if (!offcanvasInstances.has(targetElement)) {
-			initializeOffcanvas(targetElement)
-		}
+	event.preventDefault()
+	event.stopPropagation()
 
-		offcanvasInstances.get(targetElement).show()
+	if (!dropdownInstances.has(target)) {
+		initializeDropdown(target)
 	}
+
+	dropdownInstances.get(target).toggle()
 })

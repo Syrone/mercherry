@@ -1,0 +1,73 @@
+.blanks {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .25rem;
+}
+
+.blank {
+	max-width: max-content;
+	min-height: 1.25rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: .625rem;
+	font-weight: 500;
+	line-height: normal;
+	
+	@media (min-width: 991.98px) {
+		min-height: 1.5rem;
+		font-size: .75rem;
+	}
+}
+
+.blank-employment {
+	border-radius: .625rem;
+	padding: .125rem .625rem;
+
+	&--tasks {
+		color: #D77429;
+		background-color: #FFEBE3;
+	}
+
+	&--partly {
+		color: #2D67C6;
+		background-color: #E3F2FF;
+	}
+
+	&--full {
+		color: #7C4AAA;
+		background-color: #F3ECFF;
+	}
+
+	&--any {
+		color: #38A169;
+		background-color: #E1F6E8;
+	}
+}
+
+.blank-jobs {
+	font-weight: 600;
+	color: var(--gray-color);
+	background-color: #F9F8F8;
+	border-radius: .75rem;
+	padding: .125rem .5rem;
+
+	&--search {
+		color: var(--light-color);
+		background-color: #38A169;
+	}
+
+	&--on {
+		color: var(--light-color);
+		background-color: #FF823B;
+	}
+}
+
+.blank-payment {
+	color: var(--gray-color);
+	background-color: var(--light-color);
+	border: 1px solid #E4E4E4;
+	border-radius: .625rem;
+	padding: .125rem .625rem;
+}

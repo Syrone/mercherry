@@ -581,6 +581,8 @@ $choices-z-index: 1 !default;
 .#{$choices-selector}--filter {
 
 	.#{$choices-selector}__inner {
+		background-color: var(--light-color);
+		border-color: var(--gray-color-400);
 		gap: .25rem;
 
 		&-filter {
@@ -589,21 +591,38 @@ $choices-z-index: 1 !default;
 				flex: 1;
 				font-weight: 500;
 				color: var(--gray-color);
+				margin-right: .25rem;
 			}
 		}
 	}
 
 	.#{$choices-selector}__list {
 
+		&--single,
+		&--multiple {
+			text-align: end;
+		}
+
 		&--single {
 			width: auto;
 		}
 
 		&--multiple {
+			white-space: initial;
+			text-overflow: initial;
 
 			.#{$choices-selector}__item {
+				word-break: initial;
 				margin: 0;
 			}
+		}
+	}
+
+	&.is-focused,
+	&.is-open {
+
+		.#{$choices-selector}__inner {
+			border-color: var(--primary-color);
 		}
 	}
 }

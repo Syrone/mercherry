@@ -181,6 +181,27 @@
                 Супер!
               </button>
             </div>
+
+            <div class="ui-col">
+              <label class="label-check">
+                <input type="checkbox" class="btn-check">
+                <button type="button" class="btn">
+                  <span class="icon-container">
+                    <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                    <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                  </span>
+                </button>
+              </label>
+              <label class="label-check">
+                <input type="checkbox" class="btn-check" checked>
+                <button type="button" class="btn">
+                  <span class="icon-container">
+                    <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                    <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                  </span>
+                </button>
+              </label>
+            </div>
           </div>
 
           <div class="ui-item">
@@ -426,6 +447,57 @@
             </div>
 
             <h3>
+              Dropdown
+            </h3>
+            <div class="ui-col" style="width: 15rem;">
+              <div class="dropdown dropdown--filter">
+                <button type="button" class="btn btn-md dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false">
+                  <span class="dropdown-toggle-placeholder">
+                    Оплата
+                  </span>
+
+                  <span class="dropdown-toggle-value">
+                    Все
+                  </span>
+
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div class="dropdown-menu">
+                  <div class="slider-container">
+                    <label>Позадачно, от</label>
+                    <div class="slider-wrapper">
+                      <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
+                    </div>
+                    <div class="slider-value">7 000 ₽</div>
+                  </div>
+
+                  <div class="slider-container">
+                    <label>Частичная занятость, от</label>
+                    <div class="slider-wrapper">
+                      <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
+                    </div>
+                    <div class="slider-value">7 000 ₽</div>
+                  </div>
+
+                  <div class="slider-container">
+                    <label>Полная занятость, от</label>
+                    <div class="slider-wrapper">
+                      <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
+                    </div>
+                    <div class="slider-value">7 000 ₽</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3>
               Checkbox
             </h3>
             <div class="ui-col">
@@ -524,6 +596,94 @@
                   Disabled Radio
                 </span>
               </label>
+            </div>
+          </div>
+
+          <div class="ui-item">
+            <h2>
+              Blanks
+            </h2>
+
+            <div class="ui-col">
+              <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+              <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+              <div class="blank blank-employment blank-employment--full">Полная занятость</div>
+              <div class="blank blank-employment blank-employment--any">Любая занятость</div>
+            </div>
+
+            <div class="ui-col">
+              <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+              <div class="blank blank-jobs blank-jobs--on">В работе</div>
+              <div class="blank blank-jobs">В архиве</div>
+            </div>
+
+            <div class="ui-col">
+              <div class="blank blank-payment">Почасовая оплата</div>
+              <div class="blank blank-payment">Оплата за день</div>
+              <div class="blank blank-payment">Оплата за месяц</div>
+            </div>
+          </div>
+
+          <div class="ui-item">
+            <h2>
+              Card
+            </h2>
+
+            <div class="ui-col" style="max-width: 416px; width: 100%;">
+              <article class="card">
+                <div class="card-header">
+                  <div class="card-header-picture">
+                    <picture>
+                      <source srcset="img/avatar--md.webp" type="image/webp">
+                      <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+                    </picture>
+                  </div>
+
+                  <div class="card-header-content">
+                    <h3 class="card-header-title">
+                      Константин, 32
+
+                      <label class="label-check">
+                        <input type="checkbox" class="btn-check">
+                        <button type="button" class="btn">
+                          <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                          </span>
+                        </button>
+                      </label>
+                    </h3>
+                    <p class="card-header-subtitle">
+                      Мерчендайзер • Интервьюер
+                    </p>
+
+                    <div class="blanks">
+                      <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                      <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <div class="card-price">
+                    1500 ₽<span class="card-price-time">/час</span>
+                  </div>
+
+                  <div class="card-rating">
+                    <span class="icon card-rating-icon">
+                      <svg>
+                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                      </svg>
+                    </span>
+                    <p class="card-rating-value">
+                      4.9
+                      <span class="card-rating-current">
+                        (60 отзывов)
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
 

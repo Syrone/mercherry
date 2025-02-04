@@ -18,3 +18,27 @@
 		object-position: center;
 	}
 }
+
+.icon-container {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	> .icon,
+	> .image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition-property: opacity, visibility;
+		transition-duration: var(--transition-duration);
+		transition-timing-function: var(--transition-timing-function);
+
+		&:last-child {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			inset: 0;
+		}
+	} 
+}
