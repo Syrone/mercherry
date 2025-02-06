@@ -111,8 +111,8 @@
             </h3>
           </div>
 
-          <div class="section-body">
-            <form action="#" class="form default-form">
+          <form class="section-body">
+            <div class="form default-form">
               <div class="form-body">
                 <select name="country_resume"
                   data-select-choices="default-radio"
@@ -212,8 +212,60 @@
                   </button>
                 </div>
               </div>
-            </form>
-          </div>
+            </div>
+
+            <aside class="vacancy-aside">
+              <div class="section-subheader">
+                <h3 class="h6 section-title">
+                  О компании
+                </h3>
+              </div>
+
+              <div class="form-body">
+                <div class="field-group field-group--floating">
+                  <input type="text" class="field field-has-btn" name="company_name" placeholder="">
+                  <span class="field-floating">Название</span>
+
+                  <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="field-group field-group--floating">
+                  <input type="text" class="field field-has-btn" name="company_address" placeholder="">
+                  <span class="field-floating">Адрес</span>
+
+                  <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="field-toggles">
+                  <h4 class="field-toggles-title">Логотип</h4>
+
+                  <div class="upload">
+                    <input type="file" accept="image/png, image/jpeg"
+                      data-upload="file">
+                    <input type="hidden" name="selected_logo"
+                      data-upload="selected">
+                    <div class="upload-container"></div>
+                    <div class="upload-footer">
+                      <button type="button" class="btn btn-base btn-outline-primary"
+                        data-upload="button">
+                        Загрузить логотип (png или jpeg, не более 4 mb)
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </form>
         </div>
       </section>
     </main>

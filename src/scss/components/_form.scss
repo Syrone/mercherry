@@ -102,25 +102,6 @@
 		line-height: 2.15;
 	}
 
-	.field-toggles {
-		display: flex;
-		flex-wrap: wrap;
-		gap: .5rem 1.5rem;
-		margin-top: .25rem;
-		
-		@media (min-width: 991.98px) {
-			gap: .75rem 2.5rem;
-		}
-
-		&-title {
-			width: 100%;
-			font-size: var(--fs-base);
-			font-weight: 500;
-			line-height: 1.4;
-			color: var(--gray-color);
-		}
-	}
-
 	.form-footer {
 		margin-top: 2.5rem;
 

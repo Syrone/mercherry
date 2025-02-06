@@ -12032,9 +12032,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fields_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/fields.js */ "./src/js/components/fields.js");
 /* harmony import */ var _components_form_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form-slider.js */ "./src/js/components/form-slider.js");
 /* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_choices_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/choices.js */ "./src/js/components/choices.js");
-/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
-/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
+/* harmony import */ var _components_upload_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/upload.js */ "./src/js/components/upload.js");
+/* harmony import */ var _components_choices_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/choices.js */ "./src/js/components/choices.js");
+/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
+
 
 
 
@@ -12745,6 +12747,80 @@ document.querySelectorAll(".slider").forEach(slider => {
   updateValue(); // Обновляем при загрузке страницы
 });
 
+/***/ }),
+
+/***/ "./src/js/components/upload.js":
+/*!*************************************!*\
+  !*** ./src/js/components/upload.js ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+document.querySelectorAll('.upload').forEach(element => {
+  const logoInput = element.querySelector('[data-upload="file"]');
+  const logoList = element.querySelector('.upload-container');
+  const selectedLogoInput = element.querySelector('[data-upload="selected"]');
+  const uploadButton = element.querySelector('[data-upload="button"]');
+  uploadButton.addEventListener('click', () => {
+    logoInput.click();
+  });
+  logoInput.addEventListener('change', event => {
+    const file = event.target.files[0];
+    const validFormats = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp', 'image/avif'];
+    if (!file) return;
+    if (!validFormats.includes(file.type)) {
+      alert('Неподдерживаемый формат файла.');
+      return;
+    }
+    if (file.size > 4 * 1024 * 1024) {
+      alert('Файл слишком большой. Максимальный размер — 4 MB.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = () => {
+      const logoId = Date.now();
+      const logoHTML = `
+							<label class="upload-item form-check form-radio--default" data-logo-id="${logoId}">
+									<div class="form-check-checkbox">
+											<input type="radio" class="form-check-input" name="logo" value="${logoId}" onchange="selectLogo('${logoId}')">
+											<span class="form-check-checkbox-span"></span>
+									</div>
+									<div class="upload-item-content">
+											<div class="upload-item-picture">
+													<img loading="lazy" src="${reader.result}" class="image" alt="Логотип">
+											</div>
+											<span class="form-check-label">
+													${file.name}
+											</span>
+											<button type="button" class="btn btn-remove" onclick="removeLogo('${logoId}')">
+													<span class="icon">
+															<svg>
+																	<use xlink:href="img/icons/remove.svg#svg-remove"></use>
+															</svg>
+													</span>
+											</button>
+									</div>
+							</label>
+					`;
+      logoList.insertAdjacentHTML('beforeend', logoHTML);
+    };
+    reader.readAsDataURL(file);
+  });
+  window.selectLogo = function (logoId) {
+    selectedLogoInput.value = logoId;
+  };
+  window.removeLogo = function (logoId) {
+    const logoItem = document.querySelector(`[data-logo-id="${logoId}"]`);
+    if (logoItem) {
+      logoItem.remove();
+      if (selectedLogoInput.value === logoId) {
+        selectedLogoInput.value = '';
+      }
+    }
+  };
+});
+
 /***/ })
 
 /******/ 	});
@@ -12817,4 +12893,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map

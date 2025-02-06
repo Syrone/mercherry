@@ -1,0 +1,14 @@
+.vacancy {
+
+	&-aside {
+		align-self: start;
+		border: 1px solid var(--gray-color-450);
+		border-radius: 2rem;
+		padding: 1.25rem 1.75rem 1.75rem;
+
+		@media (min-width: 991.98px) {
+			border-radius: 2.5rem;
+			padding: 2rem 2.25rem 2.25rem;
+		}
+	}
+}

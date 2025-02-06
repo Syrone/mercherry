@@ -195,7 +195,7 @@
 	user-select: none;
 	pointer-events: none;
 	position: absolute;
-	top: 1.25rem;
+	top: 1.1625rem;
 	left: 1.375rem;
 	transition-property: font-size, transform, top, left;
 	transition-duration: var(--transition-duration);
@@ -213,5 +213,24 @@ textarea {
 
 	@media (min-width: 991.98px) {
 		height: 10rem;
+	}
+}
+
+.field-toggles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5rem 1.5rem;
+	margin-top: .25rem;
+	
+	@media (min-width: 991.98px) {
+		gap: .75rem 2.5rem;
+	}
+
+	&-title {
+		width: 100%;
+		font-size: var(--fs-base);
+		font-weight: 500;
+		line-height: 1.4;
+		color: var(--gray-color);
 	}
 }
