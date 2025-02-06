@@ -5,6 +5,32 @@
 		margin-bottom: 7.5rem;
 	}
 
+	&-header {
+		margin-bottom: 1.25rem;
+
+		@media (min-width: 991.98px) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	&-subheader {
+		margin-bottom: .75rem;
+
+		@media (min-width: 991.98px) {
+			margin-bottom: 1rem;
+		}
+
+		.section-title {
+			font-family: var(--font-family);
+			line-height: 2.15;
+		}
+	}
+
+	&-title {
+		line-height: 1.85;
+		letter-spacing: .02em;
+	}
+
 	&.section-widget {
 		margin-block: 2.5rem;
 	}

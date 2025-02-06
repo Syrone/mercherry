@@ -496,6 +496,7 @@ $choices-z-index: 1 !default;
 		.#{$choices-selector}__inner {
 
 			.field-floating {
+				top: .7875rem;
 				left: 1.125rem;
 			}
 		}

@@ -1,0 +1,23 @@
+.default {
+
+	.section-body {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 2rem;
+
+		@media (min-width: 991.98px) {
+			grid-template-columns: minmax(0, 25rem) minmax(0, 1fr);
+			gap: 3rem;
+		}
+
+		@media (min-width: 1199.98px) {
+			grid-template-columns: minmax(0, 28rem) minmax(0, 1fr);
+			gap: 4.375rem;
+		}
+
+		@media (min-width: 1399.98px) {
+			grid-template-columns: minmax(0, 31.25rem) minmax(0, 1fr);
+			gap: 8.75rem;
+		}
+	}
+}

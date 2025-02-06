@@ -195,14 +195,14 @@
 	user-select: none;
 	pointer-events: none;
 	position: absolute;
-	top: 50%;
+	top: 1.25rem;
 	left: 1.375rem;
-	transform: translateY(-50%);
 	transition-property: font-size, transform, top, left;
 	transition-duration: var(--transition-duration);
 	transition-timing-function: var(--transition-timing-function);
 
 	@media (min-width: 991.98px) {
+		top: 1.4375rem;
 		left: 1.875rem;
 	}
 }

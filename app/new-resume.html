@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <title>Новая вакансия</title>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page-body">
+  <h1 class="visually-hidden">
+    Новая вакансия
+</h1>
+
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <a href="#" class="btn brand">
+    mercherry
+</a>
+
+    <div class="offcanvas offcanvas-end offcanvas-navbar"
+      id="offcanvas-header"
+      tabindex="-1"
+      aria-labelledby="offcanvas-header-label">
+      <div class="offcanvas-header">
+        <a href="#" class="btn brand">
+    mercherry
+</a>
+
+        <button type="button" class="btn btn-icon btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/close.svg#svg-close"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <nav class="header-nav">
+          <div class="btn-group">
+            <a href="./home-client.html" class="btn btn-md is-active">
+              Я заказчик
+            </a>
+            <a href="./home-performer.html" class="btn btn-md">
+              Я исполнитель
+            </a>
+          </div>
+
+          <a href="./about-client.html" class="btn">
+            О проекте
+          </a>
+        </nav>
+
+        <div class="header-signin">
+          <a href="#" class="btn">
+            Войти
+          </a>
+
+          <a href="#" class="btn btn-base btn-primary">
+            Зарегистрироваться
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-icon btn-menu"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-header"
+      aria-controls="offcanvas-header">
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/menu.svg#svg-menu"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</header>
+
+    <main class="main">
+      <section class="section section-widget default">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="h3 section-title">
+              Новая вакансия
+            </h2>
+          </div>
+
+          <div class="section-subheader">
+            <h3 class="h6 section-title">
+              О вакансии
+            </h3>
+          </div>
+
+          <div class="section-body">
+            <form action="#" class="form default-form">
+              <div class="form-body">
+                <select name="country_resume"
+                  data-select-choices="default-radio"
+                  data-choices-class="choices--floating choices--radio">
+                  <option value="">Страна вакансии</option>
+                  <option value="1">Россия</option>
+                  <option value="2">Что-то</option>
+                  <option value="3">Что-то</option>
+                  <option value="4">Что-то</option>
+                  <option value="5">Что-то</option>
+                </select>
+                <select name="town_resume"
+                  data-select-choices="default-radio"
+                  data-choices-class="choices--floating choices--radio">
+                  <option value="">Город вакансии</option>
+                  <option value="1">Москва</option>
+                  <option value="2">Санкт-Петербург</option>
+                  <option value="3">Казань</option>
+                  <option value="4">Уфа</option>
+                  <option value="5">Пермь</option>
+                </select>
+                <select name="metro_station"
+                  data-select-choices="default-radio"
+                  data-choices-class="choices--floating choices--radio">
+                  <option value="">Станция метро</option>
+                  <option value="1">Что-то</option>
+                  <option value="2">Что-то</option>
+                  <option value="3">Что-то</option>
+                  <option value="4">Что-то</option>
+                  <option value="5">Что-то</option>
+                </select>
+                <div class="field-group field-group--floating">
+                  <input type="text" class="field field-has-btn" name="cost_job" placeholder="">
+                  <span class="field-floating">Стоимость работы</span>
+
+                  <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="field-group field-group--floating">
+                  <input type="text" class="field field-has-btn" name="format_job" placeholder="">
+                  <span class="field-floating">Формат работы</span>
+
+                  <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="field-group field-group--floating">
+                  <textarea class="field field-has-btn" name="ui-textarea" placeholder=""></textarea>
+                  <span class="field-floating">Описание задачи</span>
+
+                  <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+                <div class="field-toggles">
+                  <h4 class="field-toggles-title">Позиция</h4>
+
+                  <label class="label-toggle">
+                    <div class="label-toggle-container">
+                      <input type="checkbox" class="btn-toggle">
+                      <span class="label-toggle-slider"></span>
+                    </div>
+                    <div class="label-toggle-content">
+                      Мерчендайзер
+                    </div>
+                  </label>
+
+                  <label class="label-toggle">
+                    <div class="label-toggle-container">
+                      <input type="checkbox" class="btn-toggle">
+                      <span class="label-toggle-slider"></span>
+                    </div>
+                    <div class="label-toggle-content">
+                      Интервьюер
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-footer">
+                <div class="form-buttons">
+                  <button type="submit" class="btn btn-base btn-primary">
+                    Создать вакансию
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <nav class="footer-navbar">
+      <ul class="list-reset footer-list">
+        <li class="footer-list-item">
+          <h2 class="footer-list-item-title">
+            Полезное
+          </h2>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            О проекте
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            База знаний
+          </a>
+        </li>
+      </ul>
+
+      <ul class="list-reset footer-list">
+        <li class="footer-list-item">
+          <h2 class="footer-list-item-title">
+            Инструкции
+          </h2>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Как создать вакансию
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Как выбрать специалиста
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Как оплатить работу
+          </a>
+        </li>
+      </ul>
+
+      <ul class="list-reset footer-list">
+        <li class="footer-list-item">
+          <h2 class="footer-list-item-title">
+            Информация
+          </h2>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Политика конфиденциальности
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Пользовательское соглашение
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        2024 ООО Мерчерри
+      </p>
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>
