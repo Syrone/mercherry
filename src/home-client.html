@@ -10,191 +10,197 @@
     @include('partials/header-client.html')
 
     <main class="main">
-      <section class="section hero">
-        <span class="hero-decorations">
-          <img loading="lazy" src="./img/decorations/pic-1.svg" class="image" width="94" height="70" alt="pic-1">
-          <img loading="lazy" src="./img/decorations/pic-2.svg" class="image" width="108" height="82" alt="pic-1">
-          <img loading="lazy" src="./img/decorations/pic-3.svg" class="image" width="68" height="68" alt="pic-1">
-          <img loading="lazy" src="./img/decorations/pic-4.svg" class="image" width="74" height="70" alt="pic-1">
-          <img loading="lazy" src="./img/decorations/pic-5.svg" class="image" width="97" height="70" alt="pic-1">
-        </span>
+      <div class="alert-container"></div>
 
-        <div class="container">
-          <div class="hero-content">
-            <h2 class="h1 hero-title">
-              Начните поиск
-              мерчендайзеров
-            </h2>
-
-            <p class="hero-text">
-              Работаем на базе искусственного интеллекта 
-              <span class="icon">
-                <svg>
-                  <use xlink:href="img/icons/wand-and-rays.svg#svg-wand-and-rays"></use>
-                </svg>
-              </span>
-            </p>
-          </div>
-
-          <ul class="list-reset hero-steps">
-            <li class="hero-step">
-              <div class="hero-step-current">
-                Шаг
-              </div>
-              <h3 class="hero-step-title">
-                Зарегистрируйтесь
-              </h3>
-              <p class="hero-step-text">
-                И получите доступ к тысячам резюме кандидатов
-              </p>
-            </li>
-            <li class="hero-step">
-              <div class="hero-step-current">
-                Шаг
-              </div>
-              <h3 class="hero-step-title">
-                Разместите задание
-              </h3>
-              <p class="hero-step-text">
-                «Необходимо разложить печенье домиком»
-              </p>
-            </li>
-            <li class="hero-step">
-              <div class="hero-step-current">
-                Шаг
-              </div>
-              <h3 class="hero-step-title">
-                Выпейте кофе ☕️
-              </h3>
-              <p class="hero-step-text">
-                ИИ подберет подходящих специалистов для вашего задания
-              </p>
-            </li>
-          </ul>
-
-          <div class="hero-buttons">
-            <a href="#" class="btn btn-base btn-primary">
-              Начать!
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section example">
-        <div class="container">
-          <div class="example-picture">
-            <picture>
-              <source srcset="./img/example.webp" type="image/webp">
-              <img loading="lazy" src="./img/example.jpg" class="image" width="648" height="278" alt="Картинка">
-            </picture>
-          </div>
-
-          <div class="example-content">
-            <div class="example-container">
-              <h2 class="example-container-title">
-                Как Uber, только
-                в мерчендайзинге
-              </h2>
-              <p class="example-container-text">
-                Mercherry помогает достичь оптимальной стоимости мерчендайзинга в точке. Хотите узнать, как именно?
-              </p>
-            </div>
-
-            <a href="#" class="btn btn-base btn-primary">
-              Подробнее о проекте
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section why">
-        <div class="container">
-          <div class="why-content">
-            <h2 class="why-content-title">
-              Почему стоит 
-              разместить вакансию
-              на Mercherry.ru?
-            </h2>
-
-            <a href="#" class="btn btn-base btn-primary">
-              Создать вакансию
-            </a>
-          </div>
-
-          <div class="why-features">
-            <div class="why-feature">
-              <div class="why-feature-item">
-                <div class="why-feature-item-inner">
-                  <p>
-                    ИИ подберет подходящих
-                    <br>
-                    исполнителей для вашего задания
-                  </p>
-                </div>
-              </div>
-
-              <div class="why-feature-double">
-                <picture>
-                  <source srcset="./img/why/avatar.webp" type="image/webp">
-                  <img loading="lazy" src="./img/why/avatar.jpg" class="image" width="92" height="92" alt="Картинка">
-                </picture>
-                <picture>
-                  <source srcset="./img/why/avatar-2.webp" type="image/webp">
-                  <img loading="lazy" src="./img/why/avatar-2.jpg" class="image" width="46" height="46" alt="Картинка">
-                </picture>
-              </div>
-            </div>
-            <div class="why-feature">
-              <div class="why-feature-review">
-                <picture>
-                  <source srcset="./img/why/avatar-3.webp" type="image/webp">
-                  <img loading="lazy" src="./img/why/avatar-3.jpg" class="image" width="92" height="92" alt="Картинка">
-                </picture>
-
-                <div class="why-feature-review-content">
-                  <span class="icon">
-                    <svg>
-                      <use xlink:href="img/icons/star.svg#svg-star"></use>
-                    </svg>
-                  </span>
+      <div class="section-container">
+        <section class="section hero">
+          <span class="hero-decorations">
+            <img loading="lazy" src="./img/decorations/pic-1.svg" class="image" width="94" height="70" alt="pic-1">
+            <img loading="lazy" src="./img/decorations/pic-2.svg" class="image" width="108" height="82" alt="pic-1">
+            <img loading="lazy" src="./img/decorations/pic-3.svg" class="image" width="68" height="68" alt="pic-1">
+            <img loading="lazy" src="./img/decorations/pic-4.svg" class="image" width="74" height="70" alt="pic-1">
+            <img loading="lazy" src="./img/decorations/pic-5.svg" class="image" width="97" height="70" alt="pic-1">
+          </span>
   
-                  5.0
-                </div>
-              </div>
-
-              <div class="why-feature-item">
-                <div class="why-feature-item-inner">
-                  <p>
-                    Делайте выбор на основе рейтинга
-                    <br>
-                    и отзывов
-                  </p>
-                </div>
-              </div>
+          <div class="container">
+            <div class="hero-content">
+              <h2 class="h1 hero-title">
+                Начните поиск
+                мерчендайзеров
+              </h2>
+  
+              <p class="hero-text">
+                Работаем на базе искусственного интеллекта 
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/wand-and-rays.svg#svg-wand-and-rays"></use>
+                  </svg>
+                </span>
+              </p>
             </div>
-            <div class="why-feature">
-              <div class="why-feature-item">
-                <div class="why-feature-item-inner">
-                  <p>
-                    Общайтесь в чате, следите
-                    <br>
-                    за статусом по задаче 
-                  </p>
+  
+            <ul class="list-reset hero-steps">
+              <li class="hero-step">
+                <div class="hero-step-current">
+                  Шаг
+                </div>
+                <h3 class="hero-step-title">
+                  Зарегистрируйтесь
+                </h3>
+                <p class="hero-step-text">
+                  И получите доступ к тысячам резюме кандидатов
+                </p>
+              </li>
+              <li class="hero-step">
+                <div class="hero-step-current">
+                  Шаг
+                </div>
+                <h3 class="hero-step-title">
+                  Разместите задание
+                </h3>
+                <p class="hero-step-text">
+                  «Необходимо разложить печенье домиком»
+                </p>
+              </li>
+              <li class="hero-step">
+                <div class="hero-step-current">
+                  Шаг
+                </div>
+                <h3 class="hero-step-title">
+                  Выпейте кофе ☕️
+                </h3>
+                <p class="hero-step-text">
+                  ИИ подберет подходящих специалистов для вашего задания
+                </p>
+              </li>
+            </ul>
+  
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-base btn-primary">
+                Начать!
+              </a>
+            </div>
+          </div>
+        </section>
+  
+        <section class="section example">
+          <div class="container">
+            <div class="example-picture">
+              <picture>
+                <source srcset="./img/example.webp" type="image/webp">
+                <img loading="lazy" src="./img/example.jpg" class="image" width="648" height="278" alt="Картинка">
+              </picture>
+            </div>
+  
+            <div class="example-content">
+              <div class="example-container">
+                <h2 class="example-container-title">
+                  Как Uber, только
+                  в мерчендайзинге
+                </h2>
+                <p class="example-container-text">
+                  Mercherry помогает достичь оптимальной стоимости мерчендайзинга в точке. Хотите узнать, как именно?
+                </p>
+              </div>
+  
+              <a href="#" class="btn btn-base btn-primary">
+                Подробнее о проекте
+              </a>
+            </div>
+          </div>
+        </section>
+  
+        <section class="section why">
+          <div class="container">
+            <div class="why-content">
+              <h2 class="why-content-title">
+                Почему стоит 
+                разместить вакансию
+                на Mercherry.ru?
+              </h2>
+  
+              <a href="#" class="btn btn-base btn-primary">
+                Создать вакансию
+              </a>
+            </div>
+  
+            <div class="why-features">
+              <div class="why-feature">
+                <div class="why-feature-item">
+                  <div class="why-feature-item-inner">
+                    <p>
+                      ИИ подберет подходящих
+                      <br>
+                      исполнителей для вашего задания
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="why-feature-double">
+                  <picture>
+                    <source srcset="./img/why/avatar.webp" type="image/webp">
+                    <img loading="lazy" src="./img/why/avatar.jpg" class="image" width="92" height="92" alt="Картинка">
+                  </picture>
+                  <picture>
+                    <source srcset="./img/why/avatar-2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/why/avatar-2.jpg" class="image" width="46" height="46" alt="Картинка">
+                  </picture>
                 </div>
               </div>
-
-              <div class="why-feature-indicator">
-                <picture>
-                  <source srcset="./img/why/avatar-4.webp" type="image/webp">
-                  <img loading="lazy" src="./img/why/avatar-4.jpg" class="image" width="64" height="64" alt="Картинка">
-                </picture>
-
-                <span class="why-feature-indicator-display"></span>
+              <div class="why-feature">
+                <div class="why-feature-review">
+                  <picture>
+                    <source srcset="./img/why/avatar-3.webp" type="image/webp">
+                    <img loading="lazy" src="./img/why/avatar-3.jpg" class="image" width="92" height="92" alt="Картинка">
+                  </picture>
+  
+                  <div class="why-feature-review-content">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/star.svg#svg-star"></use>
+                      </svg>
+                    </span>
+    
+                    5.0
+                  </div>
+                </div>
+  
+                <div class="why-feature-item">
+                  <div class="why-feature-item-inner">
+                    <p>
+                      Делайте выбор на основе рейтинга
+                      <br>
+                      и отзывов
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="why-feature">
+                <div class="why-feature-item">
+                  <div class="why-feature-item-inner">
+                    <p>
+                      Общайтесь в чате, следите
+                      <br>
+                      за статусом по задаче 
+                    </p>
+                  </div>
+                </div>
+  
+                <div class="why-feature-indicator">
+                  <picture>
+                    <source srcset="./img/why/avatar-4.webp" type="image/webp">
+                    <img loading="lazy" src="./img/why/avatar-4.jpg" class="image" width="64" height="64" alt="Картинка">
+                  </picture>
+  
+                  <span class="why-feature-indicator-display"></span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
     </main>
 
     @include('partials/footer.html')

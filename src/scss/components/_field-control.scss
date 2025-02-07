@@ -8,7 +8,7 @@
 
 	--_fs: var(--fs-base);
 	--_fw: 500;
-	--_lh: 1;
+	--_lh: 1.4;
 	--_ls: var(--ls-base);
 	--_color: var(--primary-color);
 	--_bg: var(--gray-color-150);
@@ -16,7 +16,7 @@
 	--_border-solid: solid;
 	--_border-color: var(--gray-color);
 	--_rounded: 1.25rem;
-	--_padding: .96875rem 1.25rem;
+	--_padding: .9125rem 1.25rem;
 
 	--_color-hover: var(--gray-800);
 	--_bg-hover: var(--gray-color-150);
@@ -46,7 +46,7 @@
 
 	@media (min-width: 991.98px) {
 		--_height: auto;
-		--_padding: 1.1875rem 1.75rem;
+		--_padding: 1.125rem 1.75rem;
 	}
 
 	&::placeholder {
@@ -208,12 +208,7 @@
 }
 
 textarea {
-	height: 7.5rem;
 	resize: none;
-
-	@media (min-width: 991.98px) {
-		height: 10rem;
-	}
 }
 
 .field-toggles {

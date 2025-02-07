@@ -10,177 +10,183 @@
     @include('partials/header-client.html')
 
     <main class="main">
-      <section class="section section-widget default">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="h3 section-title">
-              Новая вакансия
-            </h2>
-          </div>
+      <div class="alert-container"></div>
 
-          <div class="section-subheader">
-            <h3 class="h6 section-title">
-              О вакансии
-            </h3>
-          </div>
-
-          <form class="section-body">
-            <div class="form default-form">
-              <div class="form-body">
-                <select name="country_resume"
-                  data-select-choices="default-radio"
-                  data-choices-class="choices--floating choices--radio">
-                  <option value="">Страна вакансии</option>
-                  <option value="1">Россия</option>
-                  <option value="2">Что-то</option>
-                  <option value="3">Что-то</option>
-                  <option value="4">Что-то</option>
-                  <option value="5">Что-то</option>
-                </select>
-                <select name="town_resume"
-                  data-select-choices="default-radio"
-                  data-choices-class="choices--floating choices--radio">
-                  <option value="">Город вакансии</option>
-                  <option value="1">Москва</option>
-                  <option value="2">Санкт-Петербург</option>
-                  <option value="3">Казань</option>
-                  <option value="4">Уфа</option>
-                  <option value="5">Пермь</option>
-                </select>
-                <select name="metro_station"
-                  data-select-choices="default-radio"
-                  data-choices-class="choices--floating choices--radio">
-                  <option value="">Станция метро</option>
-                  <option value="1">Что-то</option>
-                  <option value="2">Что-то</option>
-                  <option value="3">Что-то</option>
-                  <option value="4">Что-то</option>
-                  <option value="5">Что-то</option>
-                </select>
-                <div class="field-group field-group--floating">
-                  <input type="text" class="field field-has-btn" name="cost_job" placeholder="">
-                  <span class="field-floating">Стоимость работы</span>
-  
-                  <button type="button" class="btn field-btn field-clear">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="field-group field-group--floating">
-                  <input type="text" class="field field-has-btn" name="format_job" placeholder="">
-                  <span class="field-floating">Формат работы</span>
-  
-                  <button type="button" class="btn field-btn field-clear">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="field-group field-group--floating">
-                  <textarea class="field field-has-btn" name="ui-textarea" placeholder=""></textarea>
-                  <span class="field-floating">Описание задачи</span>
-  
-                  <button type="button" class="btn field-btn field-clear">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="field-toggles">
-                  <h4 class="field-toggles-title">Позиция</h4>
-
-                  <label class="label-toggle">
-                    <div class="label-toggle-container">
-                      <input type="checkbox" class="btn-toggle">
-                      <span class="label-toggle-slider"></span>
-                    </div>
-                    <div class="label-toggle-content">
-                      Мерчендайзер
-                    </div>
-                  </label>
-
-                  <label class="label-toggle">
-                    <div class="label-toggle-container">
-                      <input type="checkbox" class="btn-toggle">
-                      <span class="label-toggle-slider"></span>
-                    </div>
-                    <div class="label-toggle-content">
-                      Интервьюер
-                    </div>
-                  </label>
-                </div>
-              </div>
-  
-              <div class="form-footer">
-                <div class="form-buttons">
-                  <button type="submit" class="btn btn-base btn-primary">
-                    Создать вакансию
-                  </button>
-                </div>
-              </div>
+      <div class="section-container">
+        <section class="section section-widget default">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="h3 section-title">
+                Новая вакансия
+              </h2>
             </div>
-
-            <aside class="vacancy-aside">
-              <div class="section-subheader">
-                <h3 class="h6 section-title">
-                  О компании
-                </h3>
-              </div>
-
-              <div class="form-body">
-                <div class="field-group field-group--floating">
-                  <input type="text" class="field field-has-btn" name="company_name" placeholder="">
-                  <span class="field-floating">Название</span>
   
-                  <button type="button" class="btn field-btn field-clear">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
-                      </svg>
-                    </span>
-                  </button>
-                </div>
-                <div class="field-group field-group--floating">
-                  <input type="text" class="field field-has-btn" name="company_address" placeholder="">
-                  <span class="field-floating">Адрес</span>
+            <div class="section-subheader">
+              <h3 class="h6 section-title">
+                О вакансии
+              </h3>
+            </div>
   
-                  <button type="button" class="btn field-btn field-clear">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
-                      </svg>
-                    </span>
-                  </button>
+            <form class="section-body">
+              <div class="form default-form">
+                <div class="form-body">
+                  <select name="country_resume"
+                    data-select-choices="default-radio"
+                    data-choices-class="choices--floating choices--radio">
+                    <option value="">Страна вакансии</option>
+                    <option value="1">Россия</option>
+                    <option value="2">Что-то</option>
+                    <option value="3">Что-то</option>
+                    <option value="4">Что-то</option>
+                    <option value="5">Что-то</option>
+                  </select>
+                  <select name="town_resume"
+                    data-select-choices="default-radio"
+                    data-choices-class="choices--floating choices--radio">
+                    <option value="">Город вакансии</option>
+                    <option value="1">Москва</option>
+                    <option value="2">Санкт-Петербург</option>
+                    <option value="3">Казань</option>
+                    <option value="4">Уфа</option>
+                    <option value="5">Пермь</option>
+                  </select>
+                  <select name="metro_station"
+                    data-select-choices="default-radio"
+                    data-choices-class="choices--floating choices--radio">
+                    <option value="">Станция метро</option>
+                    <option value="1">Что-то</option>
+                    <option value="2">Что-то</option>
+                    <option value="3">Что-то</option>
+                    <option value="4">Что-то</option>
+                    <option value="5">Что-то</option>
+                  </select>
+                  <div class="field-group field-group--floating">
+                    <input type="text" class="field field-has-btn" name="cost_job" placeholder="">
+                    <span class="field-floating">Стоимость работы</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="field-group field-group--floating">
+                    <input type="text" class="field field-has-btn" name="format_job" placeholder="">
+                    <span class="field-floating">Формат работы</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="field-group field-group--floating">
+                    <textarea class="field field-has-btn" name="ui-textarea" placeholder=""></textarea>
+                    <span class="field-floating">Описание задачи</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="field-toggles">
+                    <h4 class="field-toggles-title">Позиция</h4>
+  
+                    <label class="label-toggle">
+                      <div class="label-toggle-container">
+                        <input type="checkbox" class="btn-toggle">
+                        <span class="label-toggle-slider"></span>
+                      </div>
+                      <div class="label-toggle-content">
+                        Мерчендайзер
+                      </div>
+                    </label>
+  
+                    <label class="label-toggle">
+                      <div class="label-toggle-container">
+                        <input type="checkbox" class="btn-toggle">
+                        <span class="label-toggle-slider"></span>
+                      </div>
+                      <div class="label-toggle-content">
+                        Интервьюер
+                      </div>
+                    </label>
+                  </div>
                 </div>
-                <div class="field-toggles">
-                  <h4 class="field-toggles-title">Логотип</h4>
-
-                  <div class="upload">
-                    <input type="file" accept="image/png, image/jpeg"
-                      data-upload="file">
-                    <input type="hidden" name="selected_logo"
-                      data-upload="selected">
-                    <div class="upload-container"></div>
-                    <div class="upload-footer">
-                      <button type="button" class="btn btn-base btn-outline-primary"
-                        data-upload="button">
-                        Загрузить логотип (png или jpeg, не&nbsp;более 4 mb)
-                      </button>
-                    </div>
+    
+                <div class="form-footer">
+                  <div class="form-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                      Создать вакансию
+                    </button>
                   </div>
                 </div>
               </div>
-            </aside>
-          </form>
-        </div>
-      </section>
+  
+              <aside class="vacancy-aside">
+                <div class="section-subheader">
+                  <h3 class="h6 section-title">
+                    О компании
+                  </h3>
+                </div>
+  
+                <div class="form-body">
+                  <div class="field-group field-group--floating">
+                    <input type="text" class="field field-has-btn" name="company_name" placeholder="">
+                    <span class="field-floating">Название</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="field-group field-group--floating">
+                    <input type="text" class="field field-has-btn" name="company_address" placeholder="">
+                    <span class="field-floating">Адрес</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="field-toggles">
+                    <h4 class="field-toggles-title">Логотип</h4>
+  
+                    <div class="upload">
+                      <input type="file" accept="image/png, image/jpeg"
+                        data-upload="file">
+                      <input type="hidden" name="selected_logo"
+                        data-upload="selected">
+                      <div class="upload-container"></div>
+                      <div class="upload-footer">
+                        <button type="button" class="btn btn-base btn-outline-primary"
+                          data-upload="button">
+                          Загрузить логотип (png или jpeg, не&nbsp;более 4 mb)
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
     </main>
 
     @include('partials/footer.html')

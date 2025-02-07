@@ -74,8 +74,24 @@
 			}
 		}
 
-		.blanks {
+		&-bottom {
+			display: flex;
+			flex-direction: column;
+			gap: .5rem 1rem;
 			margin-top: auto;
+
+			@media (min-width: 767.98px) {
+				flex-direction: row;
+				align-items: center;
+			}
+		}
+
+		&-town {
+			font-weight: 600;
+		}
+
+		.blanks {
+			flex: 1;
 		}
 
 		.label-check {
@@ -136,4 +152,88 @@
 			color: var(--gray-color-475);
 		}
 	}
+
+	&-town {
+		min-width: max-content;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: .375rem;
+		background-color: var(--secondary-color-100);
+		border-radius: 1rem;
+		padding: .75rem 1.25rem;
+
+		@media (min-width: 767.98px) {
+			max-width: 12.5rem;
+		}
+
+		@media (min-width: 991.98px) {
+			gap: .625rem;
+			border-radius: 1.25rem;
+			padding: 1rem 1.5rem;
+		}
+
+		&-name {
+			font-weight: 600;
+			line-height: 1.4;
+		}
+
+		&-label {
+			font-size: .75rem;
+			font-weight: 500;
+			line-height: 1.3;
+			color: var(--gray-color);
+
+			@media (min-width: 991.98px) {
+				font-size: .875rem;
+			}
+		}
+	}
+}
+
+.card-label {
+	cursor: pointer;
+	position: relative;
+
+	.btn-check {
+
+		&:checked {
+
+			+ .card {
+				border-color: var(--primary-color);
+			}
+		}
+	}
+
+	.card {
+		border: 2px solid var(--light-color);
+		transition-property: border;
+		transition-duration: var(--transition-duration);
+		transition-timing-function: var(--transition-timing-function);
+	}
+}
+
+.card--row {
+	
+	@media (min-width: 767.98px) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.card-header {
+
+		@media (min-width: 991.98px) {
+			gap: 1.5rem;
+		}
+
+		&-title {
+			justify-content: initial;
+			gap: 1.25rem;
+		}
+	}
+}
+
+.card--readonly {
+	padding-inline: 0;
+	box-shadow: none;
 }

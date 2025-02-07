@@ -13,6 +13,7 @@
 @use "./components/buttons";
 @use "./components/field-control";
 @use "./components/form-check";
+@use "./components/alert";
 @use "./components/badge";
 @use "./components/blank";
 @use "./components/card";
@@ -34,3 +35,4 @@
 @use "./components/choices";
 @use "./components/dropdown";
 @use "./components/offcanvas";
+@use "./components/modal";

@@ -10,38 +10,44 @@
     @include('partials/header-client.html')
 
     <main class="main">
-      <section class="section section-widget sign">
-        <div class="container">
-          <div class="sign-content">
-            <div class="sign-message">
-              <div class="sign-message-header">
-                <img loading="lazy" src="img/icons/success.svg" class="image" width="60" height="60" alt="Иконка">
+      <div class="alert-container"></div>
 
-                <p class="sign-message-header-text">
-                  Ссылка для авторизации отправлена на почту <b>tvoyakosmetica@me.com</b>
+      <div class="section-container">
+        <section class="section section-widget sign">
+          <div class="container">
+            <div class="sign-content">
+              <div class="sign-message">
+                <div class="sign-message-header">
+                  <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+  
+                  <p class="sign-message-header-text">
+                    Ссылка для авторизации отправлена на почту <b>tvoyakosmetica@me.com</b>
+                  </p>
+                </div>
+  
+                <a href="#" class="btn btn-base btn-primary">
+                  На главную
+                </a>
+  
+                <p class="form-hint">
+                  Ничего не пришло?
+                  <span class="form-hint-message">Отправить повторно через 00:59 сек</span>
+                  <button type="button" class="btn btn-inherit btn-link">Отправить повторно</button>
                 </p>
               </div>
-
-              <a href="#" class="btn btn-base btn-primary">
-                На главную
-              </a>
-
-              <p class="form-hint">
-                Ничего не пришло?
-                <span class="form-hint-message">Отправить повторно через 00:59 сек</span>
-                <button type="button" class="btn btn-inherit btn-link">Отправить повторно</button>
-              </p>
+            </div>
+  
+            <div class="sign-picture">
+              <picture>
+                <source srcset=".webp" type="image/webp">
+                <img loading="lazy" src="." class="image" width="692" height="595" alt="">
+              </picture>
             </div>
           </div>
+        </section>
+      </div>
 
-          <div class="sign-picture">
-            <picture>
-              <source srcset=".webp" type="image/webp">
-              <img loading="lazy" src="." class="image" width="692" height="595" alt="">
-            </picture>
-          </div>
-        </div>
-      </section>
+      @include('partials/modals.html')
     </main>
 
     @include('partials/footer.html')

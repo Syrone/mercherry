@@ -33,8 +33,57 @@
 
   <div class="site-container">
     <main class="main">
+      <div class="alert-container">
+        <!-- Уведомление вызывается функцией 
+          showAlert('success', 'Пароль успешно изменён');
+          или
+          showAlert('error', 'Произошла ошибка. Попробуйте ещё раз.');
+        -->
+        <div class="alert alert--success">
+          <div class="alert-content">
+            <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="24" height="24" alt="Иконка">
+            <p>Пароль успешно изменён</p>
+          </div>
+          <button type="button" class="btn btn-close">
+            <span class="icon">
+              <svg>
+                <use xlink:href="img/icons/close.svg#svg-close"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+
       <section class="section ui-section">
+
         <div class="container">
+
+          <div class="ui-item">
+            <h2>
+              Modals
+            </h2>
+
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_job_responses">
+              Отклики на вакансию
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_choose_job">
+              Выберите вакансию
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_write_candidate">
+              Напишите кандидату 
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_invite_vacancy">
+              Приглашение на вакансию
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_created_vacancy">
+              Вакансия создана
+            </button>
+          </div>
 
           <div class="ui-item">
             <h2>
@@ -218,6 +267,9 @@
                     </svg>
                   </span>
                 </button>
+              </div>
+              <div class="field-group">
+                <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
               </div>
             </div>
 
@@ -700,6 +752,8 @@
           </div> -->
         </div>
       </section>
+
+      @include('partials/modals.html')
     </main>
 
   </div>
