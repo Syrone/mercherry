@@ -12,6 +12,7 @@
   --text-color: #000;
   --primary-color: #000;
   --secondary-color: #F1F1F1;
+  --secondary-color-100: #F9F8F8;
   --magenta-color: #7D4ACF;
   --magenta-color-100: #F7F3FE;
   --magenta-color-150: #F3ECFF;
@@ -28,6 +29,7 @@
   --error-color: #DD2F2F;
   --error-color-100: #FAF0F0;
   --error-color-200: #F3E0E0;
+  --error-color-500: #FB4E4E;
   --success-color: #1A8B4F;
   --success-color-100: #EDF6F1;
   --success-color-200: #DAECE3;
@@ -836,6 +838,134 @@ p + p {
   background-color: var(--magenta-color-500);
 }
 
+.btn-resume {
+  --_color: var(--primary-color);
+  --_bg: var(--secondary-color-100);
+  --_color-hover: var(--light-color);
+  --_bg-hover: var(--primary-color);
+  --_color-active: var(--light-color);
+  --_bg-active: var(--primary-color);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.btn-resume.btn-base {
+  --_padding: .75rem 1rem;
+}
+@media (min-width: 991.98px) {
+  .btn-resume.btn-base {
+    --_padding: 1rem 1.5rem;
+  }
+}
+.btn-resume .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-resume .content--user {
+  text-align: end;
+}
+.btn-resume .content-toggle {
+  font-size: 0.75rem;
+  color: var(--gray-color);
+}
+@media (min-width: 991.98px) {
+  .btn-resume .content-toggle {
+    font-size: 0.875rem;
+  }
+}
+.btn-resume .content-toggle > *:last-child {
+  display: none;
+}
+.btn-resume .content-current {
+  font-weight: 600;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: var(--_transition-duration);
+  transition-duration: var(--_transition-duration);
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.btn-resume .pictures {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.btn-resume .pictures .image {
+  display: block;
+  border: 2px solid var(--secondary-color-100);
+  border-radius: 50%;
+  -webkit-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: var(--_transition-duration);
+  transition-duration: var(--_transition-duration);
+  -webkit-transition-timing-function: var(--_transition-timing-function);
+  transition-timing-function: var(--_transition-timing-function);
+}
+.btn-resume .pictures .image:not(:first-child) {
+  margin-left: -0.625rem;
+}
+.btn-resume .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+.btn-resume .user .image {
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color-100);
+  -webkit-transition-property: border;
+  transition-property: border;
+  -webkit-transition-duration: var(--_transition-duration);
+  transition-duration: var(--_transition-duration);
+  -webkit-transition-timing-function: var(--_transition-timing-function);
+  transition-timing-function: var(--_transition-timing-function);
+}
+@media (hover: hover) {
+  .btn-resume:is(:hover, :focus-visible) .content:not(.content--user) .content-toggle {
+    color: var(--light-color);
+  }
+  .btn-resume:is(:hover, :focus-visible) .content-toggle > *:first-child {
+    display: none;
+  }
+  .btn-resume:is(:hover, :focus-visible) .content-toggle > *:last-child {
+    display: inline;
+  }
+  .btn-resume:is(:hover, :focus-visible) .content-current {
+    color: var(--gray-color);
+  }
+  .btn-resume:is(:hover, :focus-visible) .pictures .image,
+  .btn-resume:is(:hover, :focus-visible) .user .image {
+    border-color: var(--primary-color);
+  }
+}
+.btn-resume:is(:active, .is-active) .content:not(.content--user) .content-toggle {
+  color: var(--light-color);
+}
+.btn-resume:is(:active, .is-active) .content-toggle > *:first-child {
+  display: none;
+}
+.btn-resume:is(:active, .is-active) .content-toggle > *:last-child {
+  display: inline;
+}
+.btn-resume:is(:active, .is-active) .content-current {
+  color: var(--gray-color);
+}
+.btn-resume:is(:active, .is-active) .pictures .image,
+.btn-resume:is(:active, .is-active) .user .image {
+  border-color: var(--primary-color);
+}
+
 .btn-inherit {
   --_fs: inherit;
   --_fw: inherit;
@@ -1505,12 +1635,21 @@ textarea {
   --_rounded: .5rem;
   --_padding: .15625rem .5rem;
 }
+.badge--circle {
+  --_rounded: 1rem;
+  --_padding: .375rem .375rem;
+  min-width: 1.625rem;
+}
 .badge--magenta-250 {
   --_color: var(--magenta-color);
   --_bg: var(--magenta-color-200);
 }
 .badge--gray-125 {
   --_bg: var(--gray-color-125);
+}
+.badge--error-500 {
+  --_color: var(--light-color);
+  --_bg: var(--error-color-500);
 }
 
 .blanks {
@@ -1711,6 +1850,11 @@ textarea {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.card-footer .btn-resume {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .card-price {
   font-weight: 600;
@@ -3241,6 +3385,8 @@ textarea {
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 0.75rem 1rem;
+  border-bottom: 1px solid var(--gray-color-400);
+  padding-bottom: 1.125rem;
 }
 @media (min-width: 991.98px) {
   .filter-header-top {
@@ -3264,9 +3410,29 @@ textarea {
     --_fs: 1.5rem;
   }
 }
-.filter-header-top + .filter-header-bottom {
-  margin-top: 1.125rem;
-  border-top: 1px solid var(--gray-color-400);
+.filter-header-top-selects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.filter-header-top-selects .choices {
+  min-width: 16.25rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 991.98px) {
+  .filter-header-top-selects .choices {
+    min-width: initial;
+    -webkit-box-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
+  }
+}
+.filter-header-bottom {
   padding-top: 1.125rem;
 }
 .filter-header-bottom .filter-header-scrollable {
@@ -3856,6 +4022,9 @@ textarea {
   margin-top: 0;
   margin-bottom: 0.5rem;
   border-radius: 1.25rem;
+}
+.is-flipped-x .choices__list--dropdown, .is-flipped-x .choices__list[aria-expanded] {
+  right: 0;
 }
 .choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list {
   position: relative;

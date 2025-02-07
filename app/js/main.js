@@ -12302,6 +12302,7 @@ window.initializeChoices = () => {
     const choicesAttr = choice.passedElement.element.getAttribute('data-select-choices').split(' ') || '';
     const choiceHasMultiple = choice.passedElement.element.hasAttribute('multiple');
     const choiceHasFilter = choicesAttr.includes('filter');
+    const choiceContainerOuter = choice.containerOuter.element;
     const choiceContainerInner = choice.containerInner.element;
     const choiceItemList = choice.itemList.element;
     const choiceDropdown = choice.dropdown.element;
@@ -12338,6 +12339,20 @@ window.initializeChoices = () => {
       if (choiceHasFilter) {
         handleChoiceFilter(choice, dropdownSvg, choiceItemList, filterBadge, clearButton);
       }
+    });
+    choice.passedElement.element.addEventListener("showDropdown", function (event) {
+      const dropdownRect = choiceDropdown.getBoundingClientRect();
+      const windowWidth = window.innerWidth;
+
+      // Если выпадающий список выходит за правую границу экрана
+      if (dropdownRect.right > windowWidth) {
+        choiceContainerOuter.classList.add('is-flipped-x');
+      } else {
+        choiceContainerOuter.classList.remove('is-flipped-x');
+      }
+    });
+    choice.passedElement.element.addEventListener("hideDropdown", function (event) {
+      choiceContainerOuter.classList.remove('is-flipped-x');
     });
     if (choiceHasMultiple) {
       const choiceInput = choice.input.element;

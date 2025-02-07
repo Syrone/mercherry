@@ -314,6 +314,11 @@ $choices-z-index: 1 !default;
 		margin-bottom: .5rem;
 		border-radius: $choices-border-radius;
 	}
+
+	.is-flipped-x & {
+		right: 0;
+	}
+
 	.#{$choices-selector}__list {
 		position: relative;
 		max-height: 15rem;

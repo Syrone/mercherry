@@ -25,6 +25,13 @@
 		--_padding: .15625rem .5rem;
 	}
 
+	&--circle {
+		--_rounded: 1rem;
+		--_padding: .375rem .375rem;
+
+		min-width: 1.625rem;
+	}
+
 	&--magenta-250 {
 		--_color: var(--magenta-color);
 		--_bg: var(--magenta-color-200);
@@ -32,5 +39,10 @@
 
 	&--gray-125 {
 		--_bg: var(--gray-color-125);
+	}
+
+	&--error-500 {
+		--_color: var(--light-color);
+		--_bg: var(--error-color-500);
 	}
 }
