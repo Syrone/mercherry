@@ -5,6 +5,16 @@
 		margin-bottom: 7.5rem;
 	}
 
+	&-supheader {
+		display: flex;
+		align-items: center;
+		margin-bottom: .75rem;
+
+		@media (min-width: 991.98px) {
+			margin-bottom: 1rem;
+		}
+	}
+
 	&-header {
 		margin-bottom: 1.25rem;
 

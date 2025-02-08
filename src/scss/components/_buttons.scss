@@ -268,6 +268,14 @@
 	--_icon-size: 1.5rem;
 }
 
+.btn-back {
+	--_color: var(--magenta-color);
+	--_color-hover: var(--magenta-color-500);
+	--_color-active: var(--magenta-color-500);
+
+	--_icon-size: 1.5rem;
+}
+
 .btn-clear {
 	--_color: var(--light-color);
 	--_bg: var(--magenta-color);
@@ -506,6 +514,14 @@
 	--_color-active: var(--magenta-color);
 }
 
+.btn-sm {
+	--_height: 2rem;
+	--_fs: .875rem;
+	--_fw: 500;
+	--_rounded: .875rem;
+	--_padding: .5rem 1rem;
+}
+
 .btn-md {
 	--_height: 2rem;
 	--_fs: var(--fs-base);
@@ -677,4 +693,15 @@
 
 	--_color-disabled: var(--gray-color);
 	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-gray-250 {
+	--_color: var(--gray-color);
+	--_bg: var(--gray-color-250);
+
+	--_color-hover: var(--primary-color);
+	--_bg-hover: var(--gray-color-250);
+
+	--_color-active: var(--primary-color);
+	--_bg-active: var(--gray-color-250);
 }

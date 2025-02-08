@@ -12,17 +12,31 @@
 	justify-content: center;
 	font-size: var(--_fs);
 	font-weight: var(--_fw);
-	line-height: var(--_lg);
+	line-height: var(--_lh);
 	color: var(--_color);
 	background-color: var(--_bg);
 	border-radius: var(--_rounded);
 	padding: var(--_padding);
 	text-align: center;
 
+	&--sm {
+		--_fs: .625rem;
+		--_rounded: .5rem;
+		--_padding: .1625rem .4375rem;
+
+		min-height: 1rem;
+
+		&.badge--circle {
+			--_padding: .1625rem .1625rem;
+
+			min-width: 1rem;
+		}
+	}
+
 	&--md {
 		--_fs: .75rem;
 		--_rounded: .5rem;
-		--_padding: .15625rem .5rem;
+		--_padding: .25rem .5rem;
 	}
 
 	&--circle {

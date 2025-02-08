@@ -10,308 +10,57 @@
     @include('partials/header-authorized.html')
 
     <main class="main">
-      <section class="section section-widget">
-        <div class="container">
-          <div class="filter-header">
-            <div class="filter-header-top">
-              <div class="btn-group btn-group--plaintext filter-header-scrollable">
-                <button type="button" class="btn is-active">
-                  Мои вакансии <span class="badge badge--gray-125">12</span>
-                </button>
-              </div>
+      <div class="alert-container"></div>
 
-              <div class="filter-header-top-selects">
-                <select name="example-name"
-                  data-select-choices="filter default-radio"
-                  data-choices-class="choices--filter choices--radio choices--md">
-                  <option value="">Рейтинг</option>
-                  <option value="all" selected>Все</option>
-                  <option value="1">Новые</option>
-                  <option value="2">Популярные</option>
-                  <option value="3">Уже общались</option>
-                  <option value="4">Уже сотрудничали</option>
-                </select>
-                <select name="example-name"
-                  data-select-choices="filter default-radio"
-                  data-choices-class="choices--filter choices--radio choices--md">
-                  <option value="">Сначала показывать</option>
-                  <option value="1" selected>Новые</option>
-                  <option value="2">Популярные</option>
-                  <option value="3">Уже общались</option>
-                  <option value="4">Уже сотрудничали</option>
-                </select>
+      <div class="section-container">
+        <section class="section section-widget">
+          <div class="container">
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <h2 class="h5 filter-header-title">
+                  Мои вакансии
+                  <span class="badge badge--gray-125">12</span>
+                </h2>
+  
+                <div class="filter-header-top-selects">
+                  <select name="example-name"
+                    data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Рейтинг</option>
+                    <option value="all" selected>Все</option>
+                    <option value="1">Новые</option>
+                    <option value="2">Популярные</option>
+                    <option value="3">Уже общались</option>
+                    <option value="4">Уже сотрудничали</option>
+                  </select>
+                  <select name="example-name"
+                    data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Сначала показывать</option>
+                    <option value="1" selected>Новые</option>
+                    <option value="2">Популярные</option>
+                    <option value="3">Уже общались</option>
+                    <option value="4">Уже сотрудничали</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-body">
+              <div class="filter-content">
+                @include('partials/card-vacancy/card-type-1.html')
+                @include('partials/card-vacancy/card-type-2.html')
+                @include('partials/card-vacancy/card-type-1.html')
+                @include('partials/card-vacancy/card-type-2.html')
+                @include('partials/card-vacancy/card-type-1.html')
+                @include('partials/card-vacancy/card-type-2.html')
               </div>
             </div>
           </div>
+        </section>
+      </div>
 
-          <div class="filter-content">
-            <article class="card">
-              <div class="card-header">
-                <div class="card-header-picture">
-                  <picture>
-                    <source srcset="img/vacancies/image-1.webp" type="image/webp">
-                    <img loading="lazy" src="img/vacancies/image-1.jpg" class="image" width="88" height="88" alt="Avatar">
-                  </picture>
-                </div>
-
-                <div class="card-header-content">
-                  <h3 class="card-header-title">
-                    Магнит
-
-                    <div class="blank blank-jobs blank-jobs--search">Поиск</div>
-                  </h3>
-                  <p class="card-header-subtitle">
-                    Мерчендайзер • Интервьюер
-                  </p>
-
-                  <div class="card-header-bottom">
-                    <div class="blanks">
-                      <div class="blank blank-payment">Почасовая оплата</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <a href="#" class="btn btn-base btn-resume">
-                  <span class="content">
-                    <span class="content-toggle">
-                      <span>Откликов</span>
-                      <span>К откликам</span>
-                    </span>
-                    <span class="content-current">21</span>
-                  </span>
-
-                  <span class="pictures">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                  </span>
-                </a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-header">
-                <div class="card-header-picture">
-                  <picture>
-                    <source srcset="img/vacancies/image-2.webp" type="image/webp">
-                    <img loading="lazy" src="img/vacancies/image-2.jpg" class="image" width="88" height="88" alt="Avatar">
-                  </picture>
-                </div>
-
-                <div class="card-header-content">
-                  <h3 class="card-header-title">
-                    Магнит
-
-                    <div class="blank blank-jobs blank-jobs--on">В работе</div>
-                  </h3>
-                  <p class="card-header-subtitle">
-                    Мерчендайзер • Интервьюер
-                  </p>
-
-                  <div class="card-header-bottom">
-                    <div class="blanks">
-                      <div class="blank blank-payment">Почасовая оплата</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <a href="#" class="btn btn-base btn-resume">
-                  <span class="user">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <span class="user-name">Дмитрий</span>
-                  </span>
-                  <span class="content content--user">
-                    <span class="content-toggle">
-                      <span>Выбран специалист</span>
-                      <span>В чат</span>
-                    </span>
-                  </span>
-                </a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-header">
-                <div class="card-header-picture">
-                  <picture>
-                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
-                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="88" height="88" alt="Avatar">
-                  </picture>
-                </div>
-
-                <div class="card-header-content">
-                  <h3 class="card-header-title">
-                    Магнит
-
-                    <div class="blank blank-jobs blank-jobs--search">Поиск</div>
-                  </h3>
-                  <p class="card-header-subtitle">
-                    Мерчендайзер • Интервьюер
-                  </p>
-
-                  <div class="card-header-bottom">
-                    <div class="blanks">
-                      <div class="blank blank-payment">Почасовая оплата</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <a href="#" class="btn btn-base btn-resume">
-                  <span class="content">
-                    <span class="content-toggle">
-                      <span>Откликов</span>
-                      <span>К откликам</span>
-                    </span>
-                    <span class="content-current">21</span>
-                  </span>
-
-                  <span class="pictures">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                  </span>
-                </a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-header">
-                <div class="card-header-picture">
-                  <picture>
-                    <source srcset="img/vacancies/image-4.webp" type="image/webp">
-                    <img loading="lazy" src="img/vacancies/image-4.jpg" class="image" width="88" height="88" alt="Avatar">
-                  </picture>
-                </div>
-
-                <div class="card-header-content">
-                  <h3 class="card-header-title">
-                    Магнит
-
-                    <div class="blank blank-jobs blank-jobs--on">В работе</div>
-                  </h3>
-                  <p class="card-header-subtitle">
-                    Мерчендайзер • Интервьюер
-                  </p>
-
-                  <div class="card-header-bottom">
-                    <div class="blanks">
-                      <div class="blank blank-payment">Почасовая оплата</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <a href="#" class="btn btn-base btn-resume">
-                  <span class="user">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <span class="user-name">Дмитрий</span>
-                  </span>
-                  <span class="content content--user">
-                    <span class="content-toggle">
-                      <span>Выбран специалист</span>
-                      <span>В чат</span>
-                    </span>
-                  </span>
-                </a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-header">
-                <div class="card-header-picture">
-                  <picture>
-                    <source srcset="img/vacancies/image-5.webp" type="image/webp">
-                    <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
-                  </picture>
-                </div>
-
-                <div class="card-header-content">
-                  <h3 class="card-header-title">
-                    Магнит
-
-                    <div class="blank blank-jobs blank-jobs--search">Поиск</div>
-                  </h3>
-                  <p class="card-header-subtitle">
-                    Мерчендайзер • Интервьюер
-                  </p>
-
-                  <div class="card-header-bottom">
-                    <div class="blanks">
-                      <div class="blank blank-payment">Почасовая оплата</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <a href="#" class="btn btn-base btn-resume">
-                  <span class="content">
-                    <span class="content-toggle">
-                      <span>Откликов</span>
-                      <span>К откликам</span>
-                    </span>
-                    <span class="content-current">21</span>
-                  </span>
-
-                  <span class="pictures">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                  </span>
-                </a>
-              </div>
-            </article>
-            <article class="card">
-              <div class="card-header">
-                <div class="card-header-picture">
-                  <picture>
-                    <source srcset="img/vacancies/image-6.webp" type="image/webp">
-                    <img loading="lazy" src="img/vacancies/image-6.jpg" class="image" width="88" height="88" alt="Avatar">
-                  </picture>
-                </div>
-
-                <div class="card-header-content">
-                  <h3 class="card-header-title">
-                    Магнит
-
-                    <div class="blank blank-jobs blank-jobs--search">Поиск</div>
-                  </h3>
-                  <p class="card-header-subtitle">
-                    Мерчендайзер • Интервьюер
-                  </p>
-
-                  <div class="card-header-bottom">
-                    <div class="blanks">
-                      <div class="blank blank-payment">Почасовая оплата</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card-footer">
-                <a href="#" class="btn btn-base btn-resume">
-                  <span class="content">
-                    <span class="content-toggle">
-                      <span>Откликов</span>
-                      <span>К откликам</span>
-                    </span>
-                    <span class="content-current">21</span>
-                  </span>
-
-                  <span class="pictures">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                  </span>
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      @include('partials/modals.html')
     </main>
 
     @include('partials/footer.html')

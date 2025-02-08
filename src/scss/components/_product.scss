@@ -1,0 +1,56 @@
+.product {
+
+	&-body {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 2rem;
+		position: relative;
+		padding-bottom: 5rem;
+
+		@media (min-width: 991.98px) {
+			grid-template-columns: 1fr .54375fr;
+			gap: 3rem;
+			padding-bottom: 0;
+		}
+
+		@media (min-width: 1199.98px) {
+			gap: 4rem;
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		.card--readonly {
+			padding: 0;
+			box-shadow: none;
+		}
+	}
+
+	&-aside {
+		display: flex;
+		flex-direction: column;
+
+		pointer-events: none;
+		position: absolute;
+		inset: 0;
+
+		@media (min-width: 991.98px) {
+			position: relative;
+		}
+
+		.btn-chat {
+			pointer-events: auto;
+			position: sticky;
+			top: calc(100vh - 4.5rem);
+			right: 0;
+			left: 0;
+
+			@media (min-width: 991.98px) {
+				top: calc(100vh - 5.5rem);
+			}
+		}
+	}
+}

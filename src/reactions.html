@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Отклики на вакансию'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Отклики на вакансию'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget">
+          <div class="container">
+            <div class="section-supheader">
+              <button class="btn btn-back">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <h2 class="h5 filter-header-title">
+                  Отклики на вакансию
+                </h2>
+  
+                <div class="filter-header-top-selects"
+                  data-filter-choices="">
+                  <div class="filter-header-scrollable">
+                    <button type="button" class="btn btn-md btn-clear filter-header-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-clear.svg#svg-close-clear"></use>
+                        </svg>
+                      </span>
+                    </button>
+
+                    <select name="example-name" multiple
+                      data-select-choices="filter multiple-checkbox"
+                      data-choices-class="choices--filter choices--checkbox choices--md">
+                      <option value="">Формат работы</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Позадачно</option>
+                      <option value="2">Частичная занятость</option>
+                      <option value="3">Полная занятость</option>
+                    </select>
+
+                    <select name="example-name"
+                      data-select-choices="filter default-radio"
+                      data-choices-class="choices--filter choices--radio choices--md">
+                      <option value="">Позиция</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Мерчендайзер</option>
+                      <option value="2">Интервьюер</option>
+                    </select>
+
+                    <select name="example-name"
+                      data-select-choices="filter default-radio"
+                      data-choices-class="choices--filter choices--radio choices--md">
+                      <option value="">Рейтинг</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Новые</option>
+                      <option value="2">Популярные</option>
+                      <option value="3">Уже общались</option>
+                      <option value="4">Уже сотрудничали</option>
+                    </select>
+
+                    <select name="example-name"
+                      data-select-choices="filter default-radio"
+                      data-choices-class="choices--filter choices--radio choices--md">
+                      <option value="">Сначала показывать</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Новые</option>
+                      <option value="2">Популярные</option>
+                      <option value="3">Уже общались</option>
+                      <option value="4">Уже сотрудничали</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-body">
+              @include('partials/card-vacancy/card-type-row-2.html')
+
+              <div class="filter-content">
+                <h3 class="h5 filter-content-title">
+                  Откликнулись кандидаты
+                  <span class="badge badge--gray-125">
+                    3
+                  </span>
+                </h3>
+
+                @include('partials/card-resume/card-type-chat.html')
+                @include('partials/card-resume/card-type-chat.html')
+                @include('partials/card-resume/card-type-chat.html')
+              </div>
+              <div class="filter-content">
+                <h3 class="h5 filter-content-title">
+                  <img loading="lazy" src="img/icons/stars-pic.svg" class="image" width="32" height="32" alt="Иконка">
+                  AI рекомендует специалистов
+                  <span class="badge badge--gray-125">
+                    6
+                  </span>
+                </h3>
+
+                @include('partials/card-resume/card-type-1.html')
+                @include('partials/card-resume/card-type-2.html')
+                @include('partials/card-resume/card-type-3.html')
+                @include('partials/card-resume/card-type-1.html')
+                @include('partials/card-resume/card-type-2.html')
+                @include('partials/card-resume/card-type-3.html')
+              </div>
+              <div class="filter-content">
+                <h3 class="h5 filter-content-title">
+                  Другие резюме
+                  <span class="badge badge--gray-125">
+                    6
+                  </span>
+                </h3>
+
+                @include('partials/card-resume/card-type-1.html')
+                @include('partials/card-resume/card-type-2.html')
+                @include('partials/card-resume/card-type-3.html')
+                @include('partials/card-resume/card-type-1.html')
+                @include('partials/card-resume/card-type-2.html')
+                @include('partials/card-resume/card-type-3.html')
+              </div>
+
+              <div class="filter-body-buttons">
+                <a href="#" class="btn btn-lg btn-primary">
+                  Искать по фильтрам
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

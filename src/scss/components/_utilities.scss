@@ -38,17 +38,9 @@ a {
 }
 
 .stretched-link {
+  border-radius: inherit;
 	position: absolute;
 	inset: 0;
-
-	&::after {
-		content: '';
-		display: block;
-		cursor: pointer;
-		position: absolute;
-		inset: 0;
-		z-index: 1;
-	}
 }
 
 .list-reset {

@@ -65,6 +65,10 @@
   }
 }
 
+.dropdown-menu-end {
+  --bs-position: end;
+}
+
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
 // Just add .dropup after the standard .dropdown class and you're set.
 .dropup {
@@ -211,5 +215,12 @@
         transform: rotateX(180deg);
       }
     }
+  }
+}
+
+.dropdown--more {
+
+  .dropdown-toggle {
+    --_icon-size: 1.5rem;
   }
 }

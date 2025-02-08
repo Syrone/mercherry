@@ -1,10 +1,6 @@
 .filter-header {
 	margin-bottom: 1.75rem;
 
-	&:not(:first-child) {
-		margin-top: 2.25rem;
-	}
-
 	&-scrollable {
 		margin-inline: calc(var(--container-offset) * -1);
 		padding-inline: var(--container-offset);
@@ -15,6 +11,29 @@
 			width: 0;
 			height: 0;
 			display: none;
+		}
+	}
+
+	&-title {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		line-height: 1.5;
+	}
+
+	&-top-selects,
+	&-bottom {
+		.filter-header-scrollable {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-bottom: -20rem;
+			padding-bottom: 20rem;
+	
+			> *:not(.btn-clear) {
+				min-width: 14rem;
+				flex: 1;
+			}
 		}
 	}
 
@@ -59,23 +78,35 @@
 					flex: initial;
 				}
 			}
+
+			.filter-header-scrollable {
+				> *:not(.btn-clear) {
+					min-width: max-content;
+				}
+			}
 		}
 	}
 
 	&-bottom {
 		padding-top: 1.125rem;
+	}
+}
 
-		.filter-header-scrollable {
-			display: flex;
-			align-items: center;
-			gap: 1rem;
-			margin-bottom: -20rem;
-			padding-bottom: 20rem;
+.filter-body {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
 	
-			> *:not(.btn-clear) {
-				min-width: 14rem;
-				flex: 1;
-			}
+	@media (min-width: 991.98px) {
+		gap: 3.5rem;
+	}
+
+	&-buttons {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: 991.98px) {
+			align-items: center;
 		}
 	}
 }
@@ -95,5 +126,24 @@
 
 	@media (min-width: 1199.98px) {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+
+	&-title {
+		display: flex;
+		align-items: center;
+		gap: .5rem;
+		grid-column: -1 / 1;
+		margin-bottom: .5rem;
+
+		.image {
+			width: 1.75rem;
+			height: 1.75rem;
+			display: block;
+
+			@media (min-width: 991.98px) {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
 	}
 }
