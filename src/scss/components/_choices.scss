@@ -485,13 +485,9 @@ $choices-z-index: 1040 !default;
 			}
 
 			.field-floating {
-				font-size: .75rem;
+				font-size: var(--fs-md);
 				top: .625rem;
 				transform: translateY(0%);
-		
-				@media (min-width: 991.98px) {
-					font-size: .875rem;
-				}
 			}
 		}
 	}

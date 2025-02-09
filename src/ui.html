@@ -87,6 +87,21 @@
 
           <div class="ui-item">
             <h2>
+              Alert
+            </h2>
+
+            <button type="button" class="btn btn-base btn-primary"
+              onclick="showAlert('success', 'Успешное уведомление!')">
+              Успешно
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              onclick="showAlert('error', 'Ошибочное уведомление!')">
+              Ошибка
+            </button>
+          </div>
+
+          <div class="ui-item">
+            <h2>
               Типографика
             </h2>
 
@@ -684,72 +699,37 @@
             </h2>
 
             <div class="ui-col" style="max-width: 416px; width: 100%;">
-              <article class="card">
-                <div class="card-header">
-                  <div class="card-header-picture">
-                    <picture>
-                      <source srcset="img/avatar--md.webp" type="image/webp">
-                      <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-                    </picture>
-                  </div>
-
-                  <div class="card-header-content">
-                    <h3 class="card-header-title">
-                      Константин, 32
-
-                      <label class="label-check">
-                        <input type="checkbox" class="btn-check">
-                        <button type="button" class="btn">
-                          <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                          </span>
-                        </button>
-                      </label>
-                    </h3>
-                    <p class="card-header-subtitle">
-                      Мерчендайзер • Интервьюер
-                    </p>
-
-                    <div class="blanks">
-                      <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
-                      <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card-footer">
-                  <div class="card-price">
-                    1500 ₽<span class="card-price-time">/час</span>
-                  </div>
-
-                  <div class="card-rating">
-                    <span class="icon card-rating-icon">
-                      <svg>
-                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                      </svg>
-                    </span>
-                    <p class="card-rating-value">
-                      4.9
-                      <span class="card-rating-current">
-                        (60 отзывов)
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </article>
+              @include('partials/card-resume/card-type-1.html')
+              @include('partials/card-resume/card-type-chat.html')
+              @include('partials/card-vacancy/card-type-1.html')
+              @include('partials/card-vacancy/card-type-2.html')
+              @include('partials/card-resume/card-type-readonly.html')
+              @include('partials/card-vacancy/card-type-readonly.html')
             </div>
           </div>
 
-          <!-- <div class="ui-item">
+          <div class="ui-item">
+            <h2>
+              Review
+            </h2>
+
+            <div class="ui-col" style="max-width: 416px; width: 100%;">
+              @include('partials/reviews/review.html')
+            </div>
+          </div>
+
+          <div class="ui-item">
             <h2>
               Уведомления
             </h2>
 
-            <div class="ui-col">
-
+            <div class="ui-col" style="max-width: 50rem;">
+              @include('partials/notify/notify--info.html')
+              @include('partials/notify/notify--magenta.html')
+              @include('partials/notify/notify--error.html')
+              @include('partials/notify/notify--success.html')
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
 

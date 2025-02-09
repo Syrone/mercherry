@@ -96,6 +96,14 @@ p {
   font-size: .75rem;
 }
 
+.family-default {
+  font-family: var(--font-family);
+}
+
+.family-secondary {
+  font-family: var(--font-secondary);
+}
+
 .font-regular {
   font-weight: normal;
 }

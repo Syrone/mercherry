@@ -1,0 +1,105 @@
+.notify {
+	--_n-fs: var(--fs-md);
+	--_n-fw: 500;
+	--_n-lh: 1.5;
+	--_n-color: var(--primary-color);
+	--_n-bg: var(--light-color);
+	--_n-border-width: .4375rem;
+	--_n-border-color: var(--gray-color);
+	--_n-rounded: 1rem;
+	--_n-padding: .75rem 1rem .75rem 1.5rem;
+
+	@media (min-width: 991.98px) {
+		--_n-border-width: .625rem;
+		--_n-rounded: 1.25rem;
+		--_n-padding: 1rem 1.25rem 1rem 2rem;
+	}
+
+	border-radius: var(--_n-rounded);
+	position: relative;
+	overflow: hidden;
+
+	&-body {
+		display: flex;
+		flex-direction: column;
+		gap: .875rem;
+		background-color: var(--_n-bg);
+		padding: var(--_n-padding);
+
+		@media (min-width: 991.98px) {
+			flex-direction: row;
+			align-items: center;
+			gap: 1.25rem;
+		}
+
+		&::after {
+			content: '';
+			width: var(--_n-border-width);
+			height: 100%;
+			display: block;
+			background: var(--_n-border-color);
+			pointer-events: none;
+			user-select: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&-content {
+		flex: 1;
+		font-size: var(--_n-fs);
+		font-weight: var(--_n-fw);
+		line-height: var(--_n-lh);
+		color: var(--_n-color);
+
+		* {
+			font: inherit;
+			color: inherit;
+		}
+	}
+
+	&-buttons {
+		flex-shrink: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: .75rem;
+
+		@media (min-width: 991.98px) {
+			flex-wrap: nowrap;
+			gap: 1rem;
+		}
+
+		.btn {
+			flex: 1;
+
+			@media (min-width: 991.98px) {
+				flex: initial;
+			}
+		}
+	}
+}
+
+.notify--info {
+	--_n-color: var(--cold-color);
+	--_n-bg: var(--cold-color-300);
+	--_n-border-color: linear-gradient(180deg, rgba(30, 67, 196, 0.65) -20%, var(--cold-color) 120%);
+}
+
+.notify--magenta {
+	--_n-bg: var(--magenta-color-150);
+	--_n-border-color: linear-gradient(180deg, rgba(180, 135, 255, 0.65) -20%, var(--magenta-color) 100%);
+}
+
+.notify--error {
+	--_n-color: var(--error-color);
+	--_n-bg: var(--error-color-300);
+	--_n-border-color: linear-gradient(180deg, rgba(221, 47, 47, 0.65) -20%, var(--error-color) 120%);
+}
+
+.notify--success {
+	--_n-color: var(--success-color);
+	--_n-bg: var(--success-color-250);
+	--_n-border-color: linear-gradient(180deg, rgba(26, 139, 79, 0.65) -20%, var(--success-color) 120%);
+}

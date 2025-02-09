@@ -363,14 +363,14 @@
 		}
 
 		&-toggle {
-			font-size: .75rem;
+			font-size: var(--fs-md);
 			color: var(--gray-color);
 
-			@media (min-width: 991.98px) {
-				font-size: .875rem;
-			}
-
 			> * {
+				display: inline-flex;
+				align-items: center;
+				gap: .75rem;
+				
 				&:last-child {
 					display: none;
 				}
@@ -438,7 +438,7 @@
 						}
 
 						&:last-child {
-							display: inline;
+							display: inline-flex;
 						}
 					}
 				}
@@ -477,7 +477,7 @@
 					}
 
 					&:last-child {
-						display: inline;
+						display: inline-flex;
 					}
 				}
 			}
@@ -494,6 +494,38 @@
 				border-color: var(--primary-color);
 			}
 		}
+	}
+}
+
+.btn-vacancy {
+	--_bg: var(--light-color);
+
+	justify-content: space-between;
+	box-shadow: 0px .025rem 0px 0px rgba(0, 0, 0, 0.01), 0px .25rem 1.5rem 0px rgba(0, 0, 0, 0.08);
+
+	&.btn-lg {
+		--_fs: 1rem;
+		--_fw: 600;
+		--_padding: .5rem 1rem;
+
+		@media (min-width: 991.98px) {
+			--_fs: 1.125rem;
+			--_padding: 1rem 1.25rem;
+		}
+	}
+
+	.content {
+		display: flex;
+		align-items: center;
+		gap: .75rem;
+
+		@media (min-width: 991.98px) {
+			gap: 1rem;
+		}
+	}
+
+	.blank {
+		font-weight: var(--_fw);
 	}
 }
 
@@ -639,6 +671,20 @@
 	--_bg-disabled: var(--gray-color-200);
 }
 
+.btn-magenta-225 {
+	--_color: var(--magenta-color);
+	--_bg: var(--magenta-color-225);
+
+	--_color-hover: var(--magenta-color);
+	--_bg-hover: var(--magenta-color-200);
+
+	--_color-active: var(--magenta-color);
+	--_bg-active: var(--magenta-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
 .btn-cold {
 	--_color: var(--light-color);
 	--_bg: var(--cold-color);
@@ -667,6 +713,20 @@
 	--_bg-disabled: var(--gray-color-200);
 }
 
+.btn-cold-225 {
+	--_color: var(--cold-color);
+	--_bg: var(--cold-color-225);
+
+	--_color-hover: var(--cold-color);
+	--_bg-hover: var(--cold-color-200);
+
+	--_color-active: var(--cold-color);
+	--_bg-active: var(--cold-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
 .btn-error-100 {
 	--_color: var(--error-color);
 	--_bg: var(--error-color-100);
@@ -681,9 +741,37 @@
 	--_bg-disabled: var(--gray-color-200);
 }
 
+.btn-error-225 {
+	--_color: var(--error-color);
+	--_bg: var(--error-color-225);
+
+	--_color-hover: var(--error-color);
+	--_bg-hover: var(--error-color-200);
+
+	--_color-active: var(--error-color);
+	--_bg-active: var(--error-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
 .btn-success-100 {
 	--_color: var(--success-color);
 	--_bg: var(--success-color-100);
+
+	--_color-hover: var(--success-color);
+	--_bg-hover: var(--success-color-200);
+
+	--_color-active: var(--success-color);
+	--_bg-active: var(--success-color-200);
+
+	--_color-disabled: var(--gray-color);
+	--_bg-disabled: var(--gray-color-200);
+}
+
+.btn-success-225 {
+	--_color: var(--success-color);
+	--_bg: var(--success-color-225);
 
 	--_color-hover: var(--success-color);
 	--_bg-hover: var(--success-color-200);

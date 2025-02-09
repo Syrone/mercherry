@@ -10,6 +10,7 @@
 
   // sizes
   --fs-base: .875rem;
+  --fs-md: .75rem;
   --fw-base: 400;
   --lh-base: normal;
 
@@ -27,6 +28,7 @@
   --magenta-color-100: #F7F3FE;
   --magenta-color-150: #F3ECFF;
   --magenta-color-200: #EDE5FC;
+  --magenta-color-225: #ECE1FE;
   --magenta-color-250: #DECFFA;
   --magenta-color-400: #C09AFF;
   --magenta-color-450: #9663EB;
@@ -35,17 +37,22 @@
   --cold-color: #1E43C4;
   --cold-color-100: #EDF2FC;
   --cold-color-200: #DBE5F9;
+  --cold-color-225: #DBE6FC;
   --cold-color-300: #E5EEFF;
   --cold-color-500: #19369D;
 
   --error-color: #DD2F2F;
   --error-color-100: #FAF0F0;
   --error-color-200: #F3E0E0;
+  --error-color-225: #FAE3E3;
+  --error-color-300: #FFF2F2;
   --error-color-500: #FB4E4E;
 
   --success-color: #1A8B4F;
   --success-color-100: #EDF6F1;
   --success-color-200: #DAECE3;
+  --success-color-225: #D1EEDC;
+  --success-color-250: #E1F6E8;
   --success-color-300: #8AF0A1;
   --success-color-400: #32BD60;
 
@@ -89,5 +96,6 @@
 @media (min-width: 991.98px) {
   :root {
     --fs-base: 1rem;
+    --fs-md: .875rem;
   }
 }

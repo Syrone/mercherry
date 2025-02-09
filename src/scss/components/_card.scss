@@ -72,13 +72,9 @@
 		}
 
 		&-subtitle {
-			font-size: .75rem;
+			font-size: var(--fs-md);
 			font-weight: 500;
 			color: var(--gray-color);
-
-			@media (min-width: 991.98px) {
-				font-size: .875rem;
-			}
 		}
 
 		&-bottom {
@@ -136,14 +132,10 @@
 		display: flex;
 		align-items: center;
 		gap: .25rem;
-		font-size: .75rem;
+		font-size: var(--fs-md);
 		font-weight: 600;
 		line-height: normal;
 		color: var(--dark-color-475);
-		
-		@media (min-width: 991.98px) {
-			font-size: .875rem;
-		}
 
 		&-icon {
 			--_size: .625rem;
@@ -213,6 +205,10 @@
 		&-title {
 			justify-content: initial;
 			gap: 1.25rem;
+		}
+
+		.label-check {
+			margin: 0 0 0 -.5rem;
 		}
 	}
 

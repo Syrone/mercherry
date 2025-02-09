@@ -67,13 +67,9 @@
 	}
 
 	&-hint {
-		font-size: .75rem;
+		font-size: var(--fs-md);
 		color: var(--gray-color);
 		text-align: center;
-
-		@media (min-width: 991.98px) {
-			font-size: .875rem;
-		}
 
 		&-message {
 			display: block;

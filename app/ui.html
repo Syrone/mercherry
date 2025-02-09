@@ -108,6 +108,21 @@
 
           <div class="ui-item">
             <h2>
+              Alert
+            </h2>
+
+            <button type="button" class="btn btn-base btn-primary"
+              onclick="showAlert('success', 'Успешное уведомление!')">
+              Успешно
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              onclick="showAlert('error', 'Ошибочное уведомление!')">
+              Ошибка
+            </button>
+          </div>
+
+          <div class="ui-item">
+            <h2>
               Типографика
             </h2>
 
@@ -706,71 +721,421 @@
 
             <div class="ui-col" style="max-width: 416px; width: 100%;">
               <article class="card">
-                <div class="card-header">
-                  <div class="card-header-picture">
-                    <picture>
-                      <source srcset="img/avatar--md.webp" type="image/webp">
-                      <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-                    </picture>
-                  </div>
+    <a href="#" class="stretched-link"></a>
 
-                  <div class="card-header-content">
-                    <h3 class="card-header-title">
-                      Константин, 32
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
 
-                      <label class="label-check">
-                        <input type="checkbox" class="btn-check">
-                        <button type="button" class="btn">
-                          <span class="icon-container">
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check" checked>
+                    <button type="button" class="btn">
+                        <span class="icon-container">
                             <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
                             <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                          </span>
-                        </button>
-                      </label>
-                    </h3>
-                    <p class="card-header-subtitle">
-                      Мерчендайзер • Интервьюер
-                    </p>
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
 
-                    <div class="blanks">
-                      <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
-                      <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
-                    </div>
-                  </div>
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="card-footer">
-                  <div class="card-price">
-                    1500 ₽<span class="card-price-time">/час</span>
-                  </div>
+    <div class="card-footer">
+        <div class="card-price">
+            1500 ₽<span class="card-price-time">/час</span>
+        </div>
 
-                  <div class="card-rating">
-                    <span class="icon card-rating-icon">
-                      <svg>
-                        <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                      </svg>
-                    </span>
-                    <p class="card-rating-value">
-                      4.9
-                      <span class="card-rating-current">
-                        (60 отзывов)
-                      </span>
-                    </p>
-                  </div>
+        <div class="card-rating">
+            <span class="icon card-rating-icon">
+                <svg>
+                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+                </svg>
+            </span>
+            <p class="card-rating-value">
+                4.9
+                <span class="card-rating-current">
+                    (60 отзывов)
+                </span>
+            </p>
+        </div>
+    </div>
+</article>
+              <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check" checked>
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
                 </div>
-              </article>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <div class="card-price">
+            1500 ₽<span class="card-price-time">/час</span>
+        </div>
+
+        <div class="card-chat">
+            <a href="#" class="btn btn-sm btn-gray-250">
+                В чат
+                <span class="badge badge--sm badge--circle badge--error-500">
+                    1
+                </span>
+            </a>
+        </div>
+    </div>
+</article>
+              <article class="card">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-1.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-1.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-lg btn-resume"
+			data-bs-toggle="modal"
+			data-bs-target="#modal_job_responses">
+            <span class="content">
+                <span class="content-toggle">
+                    <span>Откликов</span>
+                    <span>К откликам</span>
+                </span>
+                <span class="content-current">21</span>
+            </span>
+
+            <span class="pictures">
+                <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
+                <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
+                <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
+            </span>
+        </button>
+    </div>
+</article>
+              <article class="card">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-2.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-2.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--on">В работе</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <a href="#" class="btn btn-lg btn-resume">
+            <span class="user">
+                <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
+                <span class="user-name">Дмитрий</span>
+            </span>
+            <span class="content content--user">
+                <span class="content-toggle">
+                    <span>Выбран специалист</span>
+                    <span>В чат</span>
+                </span>
+            </span>
+        </a>
+    </div>
+</article>
+              <article class="card card--row card--readonly">
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+              <article class="card card--row card--readonly">
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
             </div>
           </div>
 
-          <!-- <div class="ui-item">
+          <div class="ui-item">
+            <h2>
+              Review
+            </h2>
+
+            <div class="ui-col" style="max-width: 416px; width: 100%;">
+              <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+            </div>
+          </div>
+
+          <div class="ui-item">
             <h2>
               Уведомления
             </h2>
 
-            <div class="ui-col">
+            <div class="ui-col" style="max-width: 50rem;">
+              <div class="notify notify--info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы создали отчёт по данной вакансии. Хотите отправить его работодателю?
+            </p>
+        </div>
 
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-cold">
+                Отправить
+            </button>
+            <button type="button" class="btn btn-md btn-cold-225">
+                Редактировать
+            </button>
+        </div>
+    </div>
+</div>
+              <div class="notify notify--magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Кандидат отправил отклик на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-magenta">
+                Принять отклик
+            </button>
+
+            <button type="button" class="btn btn-md btn-magenta-225">
+                Отклонить
+            </button>
+        </div>
+    </div>
+</div>
+              <div class="notify notify--error">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы отклонили предложение кандидата на вакансию «Перекрёсток». Можете пригласить кандидата на другую вакансию.
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-error-225">
+                Хорошо
+            </button>
+        </div>
+    </div>
+</div>
+              <div class="notify notify--success">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы приняли предложение кандидата на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-success-225">
+                Супер!
+            </button>
+        </div>
+    </div>
+</div>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
 
@@ -799,6 +1164,8 @@
                 <ul class="list-reset modal-body-list">
                     <li class="modal-body-list-item">
                         <article class="card">
+    <a href="#" class="stretched-link"></a>
+
     <div class="card-header">
         <div class="card-header-picture">
             <picture>
@@ -841,6 +1208,8 @@
                     </li>
                     <li class="modal-body-list-item">
                         <article class="card">
+    <a href="#" class="stretched-link"></a>
+
     <div class="card-header">
         <div class="card-header-picture">
             <picture>
@@ -883,6 +1252,8 @@
                     </li>
                     <li class="modal-body-list-item">
                         <article class="card">
+    <a href="#" class="stretched-link"></a>
+
     <div class="card-header">
         <div class="card-header-picture">
             <picture>
@@ -925,6 +1296,8 @@
                     </li>
                     <li class="modal-body-list-item">
                         <article class="card">
+    <a href="#" class="stretched-link"></a>
+
     <div class="card-header">
         <div class="card-header-picture">
             <picture>
@@ -967,6 +1340,8 @@
                     </li>
                     <li class="modal-body-list-item">
                         <article class="card">
+    <a href="#" class="stretched-link"></a>
+
     <div class="card-header">
         <div class="card-header-picture">
             <picture>
@@ -1009,6 +1384,8 @@
                     </li>
                     <li class="modal-body-list-item">
                         <article class="card">
+    <a href="#" class="stretched-link"></a>
+
     <div class="card-header">
         <div class="card-header-picture">
             <picture>
@@ -1051,6 +1428,8 @@
                     </li>
                     <li class="modal-body-list-item">
                         <article class="card">
+    <a href="#" class="stretched-link"></a>
+
     <div class="card-header">
         <div class="card-header-picture">
             <picture>
@@ -1124,7 +1503,7 @@
                         <label class="card-label">
     <input type="radio" class="btn-check" name="vacancy_item">
     <article class="card card--row">
-    <a href="#" class="stretched-link"></a>
+    <a href="product-vacancy.html" class="stretched-link"></a>
 
     <div class="card-header">
         <div class="card-header-picture">
@@ -1165,7 +1544,7 @@
                         <label class="card-label">
     <input type="radio" class="btn-check" name="vacancy_item">
     <article class="card card--row">
-    <a href="#" class="stretched-link"></a>
+    <a href="product-vacancy.html" class="stretched-link"></a>
 
     <div class="card-header">
         <div class="card-header-picture">
@@ -1206,7 +1585,7 @@
                         <label class="card-label">
     <input type="radio" class="btn-check" name="vacancy_item">
     <article class="card card--row">
-    <a href="#" class="stretched-link"></a>
+    <a href="product-vacancy.html" class="stretched-link"></a>
 
     <div class="card-header">
         <div class="card-header-picture">
@@ -1247,7 +1626,7 @@
                         <label class="card-label">
     <input type="radio" class="btn-check" name="vacancy_item">
     <article class="card card--row">
-    <a href="#" class="stretched-link"></a>
+    <a href="product-vacancy.html" class="stretched-link"></a>
 
     <div class="card-header">
         <div class="card-header-picture">
@@ -1288,7 +1667,7 @@
                         <label class="card-label">
     <input type="radio" class="btn-check" name="vacancy_item">
     <article class="card card--row">
-    <a href="#" class="stretched-link"></a>
+    <a href="product-vacancy.html" class="stretched-link"></a>
 
     <div class="card-header">
         <div class="card-header-picture">
@@ -1329,7 +1708,7 @@
                         <label class="card-label">
     <input type="radio" class="btn-check" name="vacancy_item">
     <article class="card card--row">
-    <a href="#" class="stretched-link"></a>
+    <a href="product-vacancy.html" class="stretched-link"></a>
 
     <div class="card-header">
         <div class="card-header-picture">

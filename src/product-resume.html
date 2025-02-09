@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Об исполнителе'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Об исполнителе'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget product">
+          <div class="container">
+            <div class="section-supheader">
+              <button class="btn btn-back">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <h2 class="h5 filter-header-title">
+                  Об исполнителе
+                </h2>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <div class="product-content">
+                @include('partials/card-resume/card-type-readonly.html')
+
+                <button type="button" class="btn btn-lg btn-vacancy">
+                  <span class="content">
+                    <img loading="lazy" src="img/icons/bb.svg" class="image" width="28" height="28" alt="Иконка">
+                    <span>ВкусВилл</span>
+                  </span>
+
+                  <div class="blank blank-payment">
+                    В работе
+                  </div>
+                </button>
+
+                <div class="info-container">
+                  <div class="info-block">
+                    <div class="info-block-item">
+                      <div class="info-block-name">5</div>
+                      <div class="info-block-label">лет опыта</div>
+                    </div>
+                    <div class="info-block-item">
+                      <div class="info-block-name">14</div>
+                      <div class="info-block-label">задач завершено</div>
+                    </div>
+                  </div>
+                  <div class="info-block">
+                    <div class="info-block-item">
+                      <div class="info-block-name">1200</div>
+                      <div class="info-block-label">Оплата, р/ч</div>
+                    </div>
+                  </div>
+                  <div class="info-block">
+                    <div class="info-block-item">
+                      <div class="info-block-name">Москва, Химки, Зеленоград,  Дмитров</div>
+                      <div class="info-block-label">Город(а)</div>
+                    </div>
+                  </div>
+                </div>
+
+                @include('partials/notify/notify--info.html')
+                @include('partials/notify/notify--magenta.html')
+                @include('partials/notify/notify--error.html')
+                @include('partials/notify/notify--success.html')
+
+                <div class="description">
+                  <h3 class="family-default h6 description-title">Про кандидата</h3>
+
+                  <div class="description-content">
+                    <p>
+                      Отработал в сфере менчендайзинга больше 3х лет. Знаю и люблю свою работу. Был опыт работы в таких компаниях как FixPrice, Вкусно и точка, Лента, KFC
+                    </p>
+                    <p>
+                      Буду рад сотрудничеству!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="reviews">
+                  <div class="reviews-header">
+                    <h3 class="family-default h6 reviews-title">
+                      Отзывы
+
+                      <span class="badge badge--gray-125">
+                        60
+                      </span>
+                    </h3>
+
+                    <div class="reviews-rating">
+                      Общий рейтинг: <span>4.9</span>
+                    </div>
+                  </div>
+
+                  <div class="reviews-body">
+                    @include('partials/reviews/review.html')
+                    @include('partials/reviews/review.html')
+                    @include('partials/reviews/review.html')
+                    @include('partials/reviews/review.html')
+                    @include('partials/reviews/review.html')
+                    @include('partials/reviews/review.html')
+                    @include('partials/reviews/review.html')
+                    @include('partials/reviews/review.html')
+                  </div>
+                </div>
+              </div>
+
+              <aside class="product-aside">
+                <a href="#" class="btn btn-lg btn-resume btn-chat is-active">
+                  <span class="user">
+                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
+                    <span class="user-name">Дмитрий</span>
+                  </span>
+                  <span class="content content--user">
+                    <span class="content-toggle">
+                      <span>Выбран специалист</span>
+                      <span>
+                        В чат
+                        <span class="badge badge--md badge--error-500">
+                          1
+                        </span>
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
