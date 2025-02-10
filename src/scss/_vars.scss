@@ -11,6 +11,7 @@
   // sizes
   --fs-base: .875rem;
   --fs-md: .75rem;
+  --fs-sm: .625rem;
   --fw-base: 400;
   --lh-base: normal;
 
@@ -97,5 +98,6 @@
   :root {
     --fs-base: 1rem;
     --fs-md: .875rem;
+    --fs-sm: .75rem;
   }
 }

@@ -14,10 +14,83 @@
 	}
 
 	&-users {
-		padding-block: 1rem;
-		
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+
+		padding: 1rem 1.25rem 1rem 0;
+
 		overflow-y: auto;
 		overflow-x: hidden;
+	}
+
+	&-user {
+		display: flex;
+		gap: 1rem;
+		padding: .75rem 1rem .75rem .75rem;
+
+		&-picture {
+			width: 3rem;
+			height: 3rem;
+			flex-shrink: 0;
+
+			.image {
+				width: 100%;
+				height: 100%;
+				display: block;
+				border-radius: .75rem;
+			}
+		}
+
+		&-content {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: .5rem;
+			overflow: hidden;
+		}
+
+		&-header {
+			display: flex;
+			align-items: center;
+			gap: .375rem;
+		}
+
+		&-name {
+			font-family: var(--font-family);
+			font-size: var(--fs-md);
+		}
+
+		&-fix {
+			--_color: #949494;
+
+			--_icon-size: .75rem;
+		}
+
+		&-message {
+			font-size: var(--fs-md);
+			color: var(--gray-color);
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		&-end {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.badge {
+				align-self: flex-end;
+			}
+		}
+
+		&-time {
+			font-size: var(--fs-sm);
+			font-weight: 500;
+			color: var(--gray-color);
+		}
 	}
 
 	&-message {

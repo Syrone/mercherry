@@ -12760,11 +12760,15 @@ function adjustChatContainerHeight() {
   if (!chatContainer) return;
 
   // Получаем отступ сверху относительно документа
-  const topOffset = chatContainer.getBoundingClientRect().top;
+  const topOffset = chatContainer.getBoundingClientRect().top + window.scrollY;
   const windowHeight = window.innerHeight;
 
+  // Находим header и получаем его высоту, если устройство не мобильное
+  const header = document.querySelector('.header');
+  const headerHeight = !isMobileDevice() && header ? header.offsetHeight + 24 : 0;
+
   // Вычисляем доступную высоту
-  const availableHeight = windowHeight - topOffset;
+  const availableHeight = windowHeight - topOffset - headerHeight;
 
   // Устанавливаем высоту для .chat-container
   chatContainer.style.height = availableHeight + 'px';
@@ -18217,3 +18221,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map
