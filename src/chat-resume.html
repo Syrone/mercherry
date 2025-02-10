@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Чат'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Чат'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget chat">
+          <div class="container">
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <div class="btn-group btn-group--plaintext filter-header-scrollable">
+                  <button type="button" class="btn is-active">
+                    Все чаты <span class="badge badge--gray-125">12</span>
+                  </button>
+                  <button type="button" class="btn collapse-button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse_vacancy"
+                    aria-expanded="false"
+                    aria-controls="collapse_vacancy">
+                    По вакансии
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+  
+                <div class="filter-header-top-selects">
+                  <div class="accordion-collapse" id="collapse_vacancy">
+                    <div class="accordion-body">
+                      <select name="example-name"
+                        data-select-choices="filter default-radio"
+                        data-choices-class="choices--filter choices--radio choices--md">
+                        <option value="">Статус вакансии</option>
+                        <option value="all" selected>Все, кроме "Архив"</option>
+                        <option value="2">Популярные</option>
+                        <option value="3">Уже общались</option>
+                        <option value="4">Уже сотрудничали</option>
+                      </select>
+                    </div>
+                  </div>
+                  <select name="example-name"
+                    data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Сначала показывать</option>
+                    <option value="1" selected>Новые</option>
+                    <option value="2">Популярные</option>
+                    <option value="3">Уже общались</option>
+                    <option value="4">Уже сотрудничали</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-collapse accordion-collapse--vacancy" id="collapse_vacancy">
+            <div class="accordion-body">
+              <div class="container-padding">
+                <div class="swiper swiper--visible swiper-vacancy">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="chat-container">
+              <div class="chat-users">
+                <div class="chat-user">1</div>
+                <div class="chat-user">2</div>
+                <div class="chat-user">3</div>
+                <div class="chat-user">4</div>
+                <div class="chat-user">5</div>
+                <div class="chat-user">6</div>
+                <div class="chat-user">7</div>
+                <div class="chat-user">8</div>
+                <div class="chat-user">9</div>
+                <div class="chat-user">10</div>
+                <div class="chat-user">11</div>
+                <div class="chat-user">12</div>
+                <div class="chat-user">13</div>
+                <div class="chat-user">14</div>
+                <div class="chat-user">15</div>
+                <div class="chat-user">1</div>
+                <div class="chat-user">2</div>
+                <div class="chat-user">3</div>
+                <div class="chat-user">4</div>
+                <div class="chat-user">5</div>
+                <div class="chat-user">6</div>
+                <div class="chat-user">7</div>
+                <div class="chat-user">8</div>
+                <div class="chat-user">9</div>
+                <div class="chat-user">10</div>
+                <div class="chat-user">11</div>
+                <div class="chat-user">12</div>
+                <div class="chat-user">13</div>
+                <div class="chat-user">14</div>
+                <div class="chat-user">15</div>
+                <div class="chat-user">1</div>
+                <div class="chat-user">2</div>
+                <div class="chat-user">3</div>
+                <div class="chat-user">4</div>
+                <div class="chat-user">5</div>
+                <div class="chat-user">6</div>
+                <div class="chat-user">7</div>
+                <div class="chat-user">8</div>
+                <div class="chat-user">9</div>
+                <div class="chat-user">10</div>
+                <div class="chat-user">11</div>
+                <div class="chat-user">12</div>
+                <div class="chat-user">13</div>
+                <div class="chat-user">14</div>
+                <div class="chat-user">15</div>
+              </div>
+              <div class="chat-message">2</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>

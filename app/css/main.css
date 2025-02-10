@@ -421,9 +421,15 @@ p + p {
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+}
+
+.container-padding {
+  width: 100%;
+  padding-inline: max(var(--container-offset), (100% - var(--content-width)) / 2);
 }
 
 .section {
@@ -616,7 +622,7 @@ p + p {
     transform: var(--_transform-hover);
   }
 }
-.btn:is(:active, .is-active) {
+.btn:is(:active, .is-active, [aria-expanded=true]) {
   color: var(--_color-active);
   background-color: var(--_bg-active);
   border-color: var(--_border-color-active);
@@ -2158,6 +2164,14 @@ textarea {
 .card-label {
   cursor: pointer;
   position: relative;
+}
+.card-label .stretched-link {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  z-index: -1;
 }
 .card-label .btn-check:checked + .card {
   border-color: var(--primary-color);
@@ -3806,19 +3820,26 @@ textarea {
   flex-wrap: wrap;
   gap: 0.75rem;
 }
-.filter-header-top-selects .choices {
+.filter-header-top-selects > *:not(.btn) {
   min-width: 16.25rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 @media (min-width: 991.98px) {
-  .filter-header-top-selects .choices {
+  .filter-header-top-selects > *:not(.btn) {
     min-width: initial;
     -webkit-box-flex: initial;
     -ms-flex: initial;
     flex: initial;
   }
+}
+.filter-header-top-selects .accordion-collapse:not(.show) {
+  display: none;
+}
+.filter-header-top-selects .accordion-collapse .accordion-body {
+  margin: 0 -1.5rem -20rem;
+  padding: 0 1.5rem 20rem;
 }
 .filter-header-top-selects .filter-header-scrollable > *:not(.btn-clear) {
   min-width: -webkit-max-content;
@@ -4450,6 +4471,27 @@ textarea {
   --_n-color: var(--success-color);
   --_n-bg: var(--success-color-250);
   --_n-border-color: linear-gradient(180deg, rgba(26, 139, 79, 0.65) -20%, var(--success-color) 120%);
+}
+
+.chat.section {
+  margin-bottom: 0;
+}
+.chat .filter-header {
+  margin-bottom: 0;
+}
+.chat-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 4fr) minmax(0, 8fr);
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+}
+.chat-users {
+  padding-block: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.chat-message {
+  border-left: 1px solid var(--gray-color-400);
 }
 
 .footer {
@@ -5717,4 +5759,175 @@ textarea {
 }
 .modal-alert .modal-body {
   min-height: initial;
+}
+
+.accordion {
+  --bs-accordion-color: inherit;
+  --bs-accordion-bg: var(--body-bg);
+  --bs-accordion-border-color: var(--gray-300);
+  --bs-accordion-border-width: 1px;
+  --bs-accordion-border-radius: .625rem;
+  --bs-accordion-inner-border-radius: .625rem;
+  --bs-accordion-btn-padding-x: 1rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-fs: 1rem;
+  --bs-accordion-btn-color: #707070;
+  --bs-accordion-btn-bg: var(--gray-100);
+  --bs-accordion-btn-icon-width: 1rem;
+  --bs-accordion-btn-icon-transform: rotate(-180deg);
+  --bs-accordion-btn-icon-transition: transform var(--transition-duration) var(--transition-timing-function);
+  --bs-accordion-btn-focus-box-shadow: unset;
+  --bs-accordion-body-padding-x: 0rem;
+  --bs-accordion-body-padding-y: .25rem;
+  --bs-accordion-active-color: var(--light);
+  --bs-accordion-active-bg: var(--secondary);
+}
+@media (min-width: 992px) {
+  .accordion {
+    --bs-accordion-border-radius: 1rem;
+    --bs-accordion-inner-border-radius: 1rem;
+    --bs-accordion-btn-padding-x: 1.25rem;
+    --bs-accordion-btn-fs: 2.25rem;
+    --bs-accordion-body-padding-y: .625rem;
+    font-size: 1.25rem;
+  }
+}
+
+.accordion-button {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  font-size: var(--bs-accordion-btn-fs);
+  letter-spacing: -0.05em;
+  color: var(--bs-accordion-btn-color);
+  text-align: left;
+  background-color: var(--bs-accordion-btn-bg);
+  border: 0;
+  border-radius: var(--bs-accordion-border-radius);
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  overflow-anchor: none;
+  -webkit-transition-property: color, background, border, -webkit-box-shadow;
+  transition-property: color, background, border, -webkit-box-shadow;
+  transition-property: color, background, border, box-shadow;
+  transition-property: color, background, border, box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: var(--transition-duration);
+  transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--transition-timing-function);
+  transition-timing-function: var(--transition-timing-function);
+}
+.accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: var(--bs-accordion-active-bg);
+  -webkit-box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+.accordion-button:not(.collapsed) .accordion-button-icon {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.accordion-button:hover {
+  z-index: 2;
+}
+.accordion-button-icon {
+  --_size: 1.25rem;
+  margin-left: auto;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: var(--transition-duration);
+  transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--transition-timing-function);
+  transition-timing-function: var(--transition-timing-function);
+}
+@media (min-width: 992px) {
+  .accordion-button-icon {
+    --_size: 2.5rem;
+  }
+}
+
+.collapse-button:not(.collapsed) .collapse-button-icon {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.collapse-button-icon {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: var(--_transition-duration);
+  transition-duration: var(--_transition-duration);
+  -webkit-transition-timing-function: var(--_transition-timing-function);
+  transition-timing-function: var(--_transition-timing-function);
+}
+
+.accordion-header {
+  font-family: var(--font-family);
+  margin-bottom: 0;
+}
+
+.accordion-item {
+  color: var(--bs-accordion-color);
+  background-color: var(--bs-accordion-bg);
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+}
+.accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+
+.accordion-collapse {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0fr;
+  grid-template-rows: 0fr;
+  padding: 0 var(--bs-accordion-body-padding-x, 0);
+  -webkit-transition-property: grid-template-rows, padding;
+  transition-property: grid-template-rows, padding;
+  transition-property: grid-template-rows, padding, -ms-grid-rows;
+  -webkit-transition-duration: var(--transition-duration);
+  transition-duration: var(--transition-duration);
+  -webkit-transition-timing-function: var(--transition-timing-function);
+  transition-timing-function: var(--transition-timing-function);
+}
+.accordion-collapse.show {
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  padding: var(--bs-accordion-body-padding-y, 0) var(--bs-accordion-body-padding-x, 0) 0;
+}
+
+.accordion-body {
+  overflow: hidden;
+}
+
+.accordion-flush > .accordion-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.accordion-flush > .accordion-item > .accordion-header .accordion-button, .accordion-flush > .accordion-item > .accordion-header .accordion-button.collapsed {
+  border-radius: 0;
+}
+.accordion-flush > .accordion-item > .accordion-collapse {
+  border-radius: 0;
+}
+
+.accordion-collapse--vacancy .accordion-body .swiper-vacancy {
+  padding-block: 1.5rem;
+  border-bottom: 1px solid var(--gray-color-400);
+}
+
+.swiper--visible {
+  overflow: visible;
 }

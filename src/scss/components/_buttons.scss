@@ -67,7 +67,7 @@
 		}
 	}
 
-	&:is(:active, .is-active) {
+	&:is(:active, .is-active, [aria-expanded="true"]) {
 		color: var(--_color-active);
 		background-color: var(--_bg-active);
 		border-color: var(--_border-color-active);

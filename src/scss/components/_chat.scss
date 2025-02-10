@@ -1,0 +1,26 @@
+.chat {
+	
+	&.section {
+		margin-bottom: 0;
+	}
+
+	.filter-header {
+		margin-bottom: 0;
+	}
+
+	&-container {
+		display: grid;
+		grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+	}
+
+	&-users {
+		padding-block: 1rem;
+		
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	&-message {
+		border-left: 1px solid var(--gray-color-400);
+	}
+}
