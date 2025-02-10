@@ -559,12 +559,12 @@
 	--_fs: var(--fs-base);
 	--_fw: 500;
 	--_rounded: .75rem;
-	--_padding: .5rem 1.5rem;
+	--_padding: .5rem 1.25rem;
 
 	@media (min-width: 991.98px) {
 		--_height: 2.5rem;
 		--_rounded: 1rem;
-		--_padding: .5rem 2rem;
+		--_padding: .5rem 1.5rem;
 	}
 }
 

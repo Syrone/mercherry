@@ -13577,7 +13577,21 @@ __webpack_require__.r(__webpack_exports__);
 document.querySelectorAll('.swiper-vacancy')?.forEach(element => {
   const swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](element, {
     slidesPerView: 3,
-    spaceBetween: 16
+    spaceBetween: 16,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 12
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 12
+      },
+      767: {
+        slidesPerView: 3,
+        spaceBetween: 16
+      }
+    }
   });
 });
 
@@ -18221,4 +18235,3 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map

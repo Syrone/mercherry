@@ -1,0 +1,25 @@
+.user {
+
+	&-status {
+		display: inline-flex;
+		align-items: center;
+		gap: .375rem;
+		font-size: var(--fs-sm);
+		font-weight: 600;
+		line-height: 1.5;
+		color: var(--gray-color);
+
+		&--online {
+
+			&::before {
+				content: '';
+				width: .625rem;
+				height: .625rem;
+				flex-shrink: 0;
+				display: block;
+				background-color: #39CE72;
+				border-radius: 50%;
+			}
+		}
+	}
+}

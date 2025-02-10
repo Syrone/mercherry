@@ -10,6 +10,7 @@
 
   // sizes
   --fs-base: .875rem;
+  --fs-lg: 1rem;
   --fs-md: .75rem;
   --fs-sm: .625rem;
   --fw-base: 400;
@@ -97,6 +98,7 @@
 @media (min-width: 991.98px) {
   :root {
     --fs-base: 1rem;
+    --fs-lg: 1.125rem;
     --fs-md: .875rem;
     --fs-sm: .75rem;
   }
