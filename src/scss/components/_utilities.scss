@@ -37,6 +37,10 @@ a {
   color: var(--magenta-color-450) !important;
 }
 
+.text-gray {
+  color: var(--gray-color) !important;
+}
+
 .stretched-link {
   border-radius: inherit;
 	position: absolute;
@@ -54,7 +58,27 @@ a {
 }
 
 .image-success {
-  filter: drop-shadow(0px 0px 0.75rem var(--success-color-300));
+  filter: drop-shadow(0px 0px .75rem var(--success-color-300));
+}
+
+.image-error {
+  filter: drop-shadow(0px 0px .75rem var(--cold-color));
+}
+
+.image-question {
+  filter: drop-shadow(0px 0px .75rem var(--magenta-color-400));
+}
+
+.image-success-sm {
+  filter: drop-shadow(0px 0px .25rem var(--success-color-300));
+}
+
+.image-error-sm {
+  filter: drop-shadow(0px 0px .25rem var(--cold-color));
+}
+
+.image-question-sm {
+  filter: drop-shadow(0px 0px .25rem var(--magenta-color-400));
 }
 
 .dis-scroll {

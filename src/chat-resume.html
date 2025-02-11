@@ -21,11 +21,8 @@
                   <button type="button" class="btn is-active">
                     Все чаты <span class="badge badge--gray-125">12</span>
                   </button>
-                  <button type="button" class="btn collapse-button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapse_vacancy"
-                    aria-expanded="false"
-                    aria-controls="collapse_vacancy">
+                  <button type="button" class="btn collapse-button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_vacancy" aria-expanded="false" aria-controls="collapse_vacancy">
                     По вакансии
                     <span class="icon collapse-button-icon">
                       <svg>
@@ -34,12 +31,11 @@
                     </span>
                   </button>
                 </div>
-  
+
                 <div class="filter-header-top-selects">
                   <div class="accordion-collapse" id="collapse_vacancy">
                     <div class="accordion-body">
-                      <select name="example-name"
-                        data-select-choices="filter default-radio"
+                      <select name="example-name" data-select-choices="filter default-radio"
                         data-choices-class="choices--filter choices--radio choices--md">
                         <option value="">Статус вакансии</option>
                         <option value="all" selected>Все, кроме "Архив"</option>
@@ -49,8 +45,7 @@
                       </select>
                     </div>
                   </div>
-                  <select name="example-name"
-                    data-select-choices="filter default-radio"
+                  <select name="example-name" data-select-choices="filter default-radio"
                     data-choices-class="choices--filter choices--radio choices--md">
                     <option value="">Сначала показывать</option>
                     <option value="1" selected>Новые</option>
@@ -75,7 +70,10 @@
                       @include('partials/card-vacancy/card-type-label-2.html')
                     </div>
                     <div class="swiper-slide">
-                      @include('partials/card-vacancy/card-type-label-2.html')
+                      @include('partials/card-vacancy/card-type-label-user.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-user.html')
                     </div>
                     <div class="swiper-slide">
                       @include('partials/card-vacancy/card-type-label-2.html')
@@ -84,10 +82,7 @@
                       @include('partials/card-vacancy/card-type-label-2.html')
                     </div>
                     <div class="swiper-slide">
-                      @include('partials/card-vacancy/card-type-label-2.html')
-                    </div>
-                    <div class="swiper-slide">
-                      @include('partials/card-vacancy/card-type-label-2.html')
+                      @include('partials/card-vacancy/card-type-label-user.html')
                     </div>
                   </div>
                 </div>
@@ -110,69 +105,1838 @@
                 @include('partials/chat/chat-user.html')
                 @include('partials/chat/chat-user.html')
                 @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user.html')
               </aside>
               <div class="chat-body">
                 <div class="chat-content">
-                  <div class="chat-header">
-                    <div class="chat-header-user">
-                      <div class="chat-header-user-picture">
-                        <picture>
-                          <source srcset="img/avatar--md.webp" type="image/webp">
-                          <img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
-                        </picture>
-                      </div>
-                      <div class="chat-header-user-content">
-                        <div class="chat-header-user-header">
-                          <h3 class="chat-header-user-name">
-                            Константин Константинопольский
-                          </h3>
+                  <div class="chat-messages">
+                    <p class="chat-messages-empty">
+                      Выберите чат для продолжения беседы
+                    </p>
+                  </div>
+                </div>
+
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
                         </div>
-                        <div class="user-status user-status--online">
-                          В сети
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="chat-header-buttons">
-                      <button type="button" class="btn btn-md btn-primary">
-                        Принять отклик
-                      </button>
-                      <button type="button" class="btn btn-md btn-outline-primary">
-                        Отклонить
-                      </button>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="chat-header-more">
-                      <div class="dropdown dropdown--more">
-                        <button type="button" class="btn dropdown-toggle"
-                          data-bs-toggle="dropdown"
-                          data-bs-auto-close="outside"
-                          aria-expanded="false">
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="img/icons/more.svg#svg-more"></use>
-                            </svg>
-                          </span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                          <li>
-                            <a href="#" class="btn dropdown-item">
-                              Перейти в профиль
-                            </a>
-                          </li>
-                          <li>
-                            <a href="#" class="btn dropdown-item">
-                              Закрепить чат
-                            </a>
-                          </li>
-                        </ul>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
                       </div>
                     </div>
                   </div>
-                  <div class="chat-messages">2</div>
-                  <div class="chat-footer">3</div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html')
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Пишу позадаче раскладки товаров вмагазине «Пятёрочка»
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Когда можно приступить?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Здравствуйте! Хорошо, вам удобно будет работать с 12:00 до 18:00 по мск?
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                В целом удобно, но на постоянку не смогу, есть основная работа
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Могу 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Можем составить договор на 3 дня в неделю
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Новые сообщения</time>
+                      <div class="message">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Супер!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Готов приступать 🔥
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error-2.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success-2.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
                 </div>
               </div>
             </div>
+
+            <!-- Есть глобальная функция window.choiceUserChat('exampleId') куда можешь передавать значение для открытия нужного чата -->
+            <!-- Чтобы сбросить выбор чата window.choiceUserChat('preview') -->
+            <!-- Задаю нужные атрибуты к .chat-user и .chat-content чтобы связать их между собой -->
+            <!-- Вообще, я думаю ты через бэк будешь проставлять атрибуты с нужным значением, ниже же демо-код -->
+            <script>
+              document.querySelectorAll('.chat-content').forEach((content, index) => {
+                content.setAttribute('data-chat-related', index === 0 ? 'preview' : `user${index}`)
+              })
+
+              document.querySelectorAll('.chat-user').forEach((user, index) => {
+                const chatId = `user${index + 1}`
+                user.setAttribute('data-chat-target', chatId)
+
+                const relatedChat = document.querySelectorAll('.chat-content')[index + 1] // Смещение на 1
+                if (relatedChat) {
+                  relatedChat.setAttribute('data-chat-related', chatId)
+                }
+              })
+            </script>
           </div>
         </section>
       </div>

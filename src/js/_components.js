@@ -1,7 +1,9 @@
 import './components/fields.js';
 import './components/form-slider.js';
 import './components/slider.js';
-import './components/chat.js';
+import './components/chat-height.js';
+import './components/chat-textarea.js';
+import './components/chat-tab.js';
 import './components/upload.js';
 import './components/alert.js';
 import './components/choices.js';

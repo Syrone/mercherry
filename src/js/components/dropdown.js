@@ -12,14 +12,29 @@ document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach((element) => {
 })
 
 document.body.addEventListener('click', (event) => {
-	const target = event.target.closest('[data-bs-toggle="dropdown"]')
-	if (!target) return
+	// Ищем ближайший элемент-тогглер dropdown
+	const targetToggle = event.target.closest('[data-bs-toggle="dropdown"]')
 
-	// Проверяем, есть ли уже инстанс
-	if (!dropdownInstances.has(target)) {
-		initializeDropdown(target)
+	if (targetToggle) {
+		// Если для текущего элемента ещё не создан инстанс, создаём его
+		if (!dropdownInstances.has(targetToggle)) {
+			initializeDropdown(targetToggle)
+		}
+
+		// Закрываем все dropdown, кроме того, по которому кликнули
+		dropdownInstances.forEach((dropdownInstance, element) => {
+			if (element !== targetToggle) {
+				dropdownInstance.hide()
+			}
+		})
+
+		// Переключаем состояние текущего dropdown
+		dropdownInstances.get(targetToggle).toggle()
+	} else {
+		// Если клик произошёл вне элемента-тогглера,
+		// закрываем все открытые dropdown
+		dropdownInstances.forEach((dropdownInstance) => {
+			dropdownInstance.hide()
+		})
 	}
-
-	// Переключаем Dropdown
-	dropdownInstances.get(target).toggle()
 })

@@ -83,6 +83,14 @@
               data-bs-toggle="modal" data-bs-target="#modal_created_vacancy">
               Вакансия создана
             </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_remove_question">
+              Удалить фото?
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_remove_success">
+              Фото удалено
+            </button>
           </div>
 
           <div class="ui-item">
@@ -728,6 +736,26 @@
               @include('partials/notify/notify--magenta.html')
               @include('partials/notify/notify--error.html')
               @include('partials/notify/notify--success.html')
+
+              @include('partials/notify/notify--info-2.html')
+              @include('partials/notify/notify--magenta-2.html')
+              @include('partials/notify/notify--error-2.html')
+              @include('partials/notify/notify--success-2.html')
+            </div>
+          </div>
+
+          <div class="ui-item">
+            <h2>
+              Chat Header
+            </h2>
+
+            <div class="ui-col" style="max-width: 50rem; width: 100%">
+              @include('partials/chat/chat-header.html')
+              @include('partials/chat/chat-header--assess.html')
+              @include('partials/chat/chat-header--job.html')
+              @include('partials/chat/chat-header--invite.html')
+              @include('partials/chat/chat-header--job-vacancy.html')
+              @include('partials/chat/chat-header--invite-vacancy.html')
             </div>
           </div>
         </div>

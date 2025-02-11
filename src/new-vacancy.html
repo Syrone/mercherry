@@ -101,7 +101,7 @@
   
                     <label class="label-toggle">
                       <div class="label-toggle-container">
-                        <input type="checkbox" class="btn-toggle">
+                        <input type="radio" name="job" class="btn-toggle">
                         <span class="label-toggle-slider"></span>
                       </div>
                       <div class="label-toggle-content">
@@ -111,7 +111,7 @@
   
                     <label class="label-toggle">
                       <div class="label-toggle-container">
-                        <input type="checkbox" class="btn-toggle">
+                        <input type="radio" name="job" class="btn-toggle">
                         <span class="label-toggle-slider"></span>
                       </div>
                       <div class="label-toggle-content">
@@ -165,11 +165,7 @@
                   <div class="field-toggles">
                     <h4 class="field-toggles-title">Логотип</h4>
   
-                    <div class="upload">
-                      <input type="file" accept="image/png, image/jpeg"
-                        data-upload="file">
-                      <input type="hidden" name="selected_logo"
-                        data-upload="selected">
+                    <div class="upload" data-upload-container="select-one">
                       <div class="upload-container"></div>
                       <div class="upload-footer">
                         <button type="button" class="btn btn-base btn-outline-primary"

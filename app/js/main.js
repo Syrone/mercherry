@@ -12619,15 +12619,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fields_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/fields.js */ "./src/js/components/fields.js");
 /* harmony import */ var _components_form_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/form-slider.js */ "./src/js/components/form-slider.js");
 /* harmony import */ var _components_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/slider.js */ "./src/js/components/slider.js");
-/* harmony import */ var _components_chat_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/chat.js */ "./src/js/components/chat.js");
-/* harmony import */ var _components_upload_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/upload.js */ "./src/js/components/upload.js");
-/* harmony import */ var _components_alert_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/alert.js */ "./src/js/components/alert.js");
-/* harmony import */ var _components_choices_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/choices.js */ "./src/js/components/choices.js");
-/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
-/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
-/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
-/* harmony import */ var _components_accordion_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/accordion.js */ "./src/js/components/accordion.js");
-/* harmony import */ var _components_swiper_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/swiper.js */ "./src/js/components/swiper.js");
+/* harmony import */ var _components_chat_height_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/chat-height.js */ "./src/js/components/chat-height.js");
+/* harmony import */ var _components_chat_textarea_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/chat-textarea.js */ "./src/js/components/chat-textarea.js");
+/* harmony import */ var _components_chat_tab_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/chat-tab.js */ "./src/js/components/chat-tab.js");
+/* harmony import */ var _components_upload_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/upload.js */ "./src/js/components/upload.js");
+/* harmony import */ var _components_alert_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/alert.js */ "./src/js/components/alert.js");
+/* harmony import */ var _components_choices_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/choices.js */ "./src/js/components/choices.js");
+/* harmony import */ var _components_dropdown_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/dropdown.js */ "./src/js/components/dropdown.js");
+/* harmony import */ var _components_offcanvas_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/offcanvas.js */ "./src/js/components/offcanvas.js");
+/* harmony import */ var _components_modal_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/modal.js */ "./src/js/components/modal.js");
+/* harmony import */ var _components_accordion_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/accordion.js */ "./src/js/components/accordion.js");
+/* harmony import */ var _components_swiper_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/swiper.js */ "./src/js/components/swiper.js");
+
+
 
 
 
@@ -12700,7 +12704,7 @@ window.showAlert = (type, message) => {
   // Определяем классы и иконки в зависимости от типа уведомления
   const alertClass = type === 'success' ? 'alert--success' : 'alert--error';
   const iconSrc = type === 'success' ? 'img/icons/success.svg' : 'img/icons/error.svg';
-  const iconClass = type === 'success' ? 'image-success' : 'image-error';
+  const iconClass = type === 'success' ? 'image-success-sm' : 'image-error-sm';
 
   // Создаём элемент уведомления
   const alert = document.createElement('div');
@@ -12743,10 +12747,10 @@ window.showAlert = (type, message) => {
 
 /***/ }),
 
-/***/ "./src/js/components/chat.js":
-/*!***********************************!*\
-  !*** ./src/js/components/chat.js ***!
-  \***********************************/
+/***/ "./src/js/components/chat-height.js":
+/*!******************************************!*\
+  !*** ./src/js/components/chat-height.js ***!
+  \******************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -12796,6 +12800,105 @@ events.forEach(eventObj => {
   eventObj.target.addEventListener(eventObj.type, event => {
     setTimeout(() => adjustChatContainerHeight(), 310);
   });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/chat-tab.js":
+/*!***************************************!*\
+  !*** ./src/js/components/chat-tab.js ***!
+  \***************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const chatContainer = document.querySelector('.chat-container');
+if (chatContainer) {
+  const users = chatContainer.querySelectorAll('.chat-user');
+  const contents = chatContainer.querySelectorAll('.chat-content');
+  function updateChat(target) {
+    contents.forEach(content => {
+      content.classList.toggle('is-visible', content.dataset.chatRelated === target);
+    });
+    users.forEach(user => {
+      user.classList.toggle('is-active', user.dataset.chatTarget === target);
+    });
+  }
+
+  // Если ни один .chat-user не активен, показываем первый chat-content (preview)
+  if (![...users].some(user => user.classList.contains('is-active'))) {
+    updateChat('preview');
+  }
+  chatContainer.addEventListener('click', event => {
+    const user = event.target.closest('.chat-user');
+    const btnBack = event.target.closest('.btn-back');
+    if (user) {
+      updateChat(user.dataset.chatTarget);
+      chatContainer.classList.add('is-chatting');
+    }
+    if (btnBack) {
+      chatContainer.classList.remove('is-chatting');
+      setTimeout(() => {
+        updateChat('preview');
+      }, 300);
+    }
+  });
+
+  // Глобальная функция, доступная через window, для выбора определённого user
+  window.choiceUserChat = function (target) {
+    updateChat(target);
+    chatContainer.classList.add('is-chatting');
+  };
+}
+
+/***/ }),
+
+/***/ "./src/js/components/chat-textarea.js":
+/*!********************************************!*\
+  !*** ./src/js/components/chat-textarea.js ***!
+  \********************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Функция инициализирует синхронизацию значения textarea с data-атрибутом контейнера.
+ * @param {HTMLElement} container - Элемент-контейнер с классом .chat-textarea-container
+ */
+const initSyncTextarea = element => {
+  // Находим textarea внутри контейнера
+  const container = element.querySelector('.chat-textarea-container');
+  const textarea = container.querySelector('textarea');
+  if (!textarea) return;
+
+  // Определяем имя data-атрибута для обновления:
+  // Если у контейнера задан атрибут data-sync-attr, используем его значение, иначе — 'data-message'
+  const dataAttrName = container.getAttribute('data-sync-attr') || 'data-message';
+
+  // Функция для обновления data-атрибута контейнера значением из textarea.
+  const updateDataAttr = () => {
+    // При желании можно добавить дополнительную обработку значения (например, trim)
+    container.setAttribute(dataAttrName, textarea.value);
+  };
+
+  // Сразу устанавливаем значение при загрузке страницы
+  updateDataAttr();
+
+  // Обновляем data-атрибут при каждом изменении содержимого textarea
+  textarea.addEventListener('input', updateDataAttr);
+};
+
+// Ищем все контейнеры на странице с классом .chat-textarea-container
+const chatTextareas = document.querySelectorAll('.chat-textarea');
+chatTextareas.forEach(initSyncTextarea);
+
+// Делегирование событий для установки фокуса
+document.addEventListener('click', event => {
+  const element = event.target.closest('.chat-textarea');
+  if (element) {
+    const textarea = element.querySelector('textarea');
+    if (textarea) textarea.focus();
+  }
 });
 
 /***/ }),
@@ -13274,16 +13377,30 @@ document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(element => {
   initializeDropdown(element);
 });
 document.body.addEventListener('click', event => {
-  const target = event.target.closest('[data-bs-toggle="dropdown"]');
-  if (!target) return;
+  // Ищем ближайший элемент-тогглер dropdown
+  const targetToggle = event.target.closest('[data-bs-toggle="dropdown"]');
+  if (targetToggle) {
+    // Если для текущего элемента ещё не создан инстанс, создаём его
+    if (!dropdownInstances.has(targetToggle)) {
+      initializeDropdown(targetToggle);
+    }
 
-  // Проверяем, есть ли уже инстанс
-  if (!dropdownInstances.has(target)) {
-    initializeDropdown(target);
+    // Закрываем все dropdown, кроме того, по которому кликнули
+    dropdownInstances.forEach((dropdownInstance, element) => {
+      if (element !== targetToggle) {
+        dropdownInstance.hide();
+      }
+    });
+
+    // Переключаем состояние текущего dropdown
+    dropdownInstances.get(targetToggle).toggle();
+  } else {
+    // Если клик произошёл вне элемента-тогглера,
+    // закрываем все открытые dropdown
+    dropdownInstances.forEach(dropdownInstance => {
+      dropdownInstance.hide();
+    });
   }
-
-  // Переключаем Dropdown
-  dropdownInstances.get(target).toggle();
 });
 
 /***/ }),
@@ -13490,7 +13607,7 @@ document.body.addEventListener('click', event => {
   }
 });
 document.addEventListener('show.bs.modal', event => {
-  const modalBodyList = event.delegateTarget.querySelector('.modal-body-list');
+  const modalBodyList = event.srcElement.querySelector('.modal-body-list');
   setTimeout(() => {
     if (modalBodyList) {
       if (modalBodyList.scrollHeight > modalBodyList.clientHeight) {
@@ -13605,68 +13722,211 @@ document.querySelectorAll('.swiper-vacancy')?.forEach(element => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-document.querySelectorAll('.upload').forEach(element => {
-  const logoInput = element.querySelector('[data-upload="file"]');
-  const logoList = element.querySelector('.upload-container');
-  const selectedLogoInput = element.querySelector('[data-upload="selected"]');
-  const uploadButton = element.querySelector('[data-upload="button"]');
+document.querySelectorAll('[data-upload-container]').forEach(container => {
+  let fileItemToRemove = null;
+  const mode = container.getAttribute('data-upload-container');
+
+  // Создаём скрытый инпут для выбора файла(ов)
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  // Задаём допустимые форматы (при необходимости можно добавить иные)
+  fileInput.accept = 'image/png, image/jpeg, image/jpg, image/webp, image/avif';
+  // Скрываем стандартное отображение
+  fileInput.dataset.upload = 'file';
+  // Если режим multiple – разрешаем множественный выбор
+  if (mode === 'multiple') {
+    fileInput.multiple = true;
+  }
+  // Добавляем инпут в контейнер (можно использовать prepend, append или вставить в нужное место)
+  container.appendChild(fileInput);
+
+  // Если режим "select-one", создаём скрытый инпут для хранения выбранного ID файла
+  let selectedInput = null;
+  if (mode === 'select-one') {
+    selectedInput = document.createElement('input');
+    selectedInput.type = 'hidden';
+    selectedInput.name = 'selected_logo';
+    selectedInput.dataset.upload = 'selected';
+    container.appendChild(selectedInput);
+  }
+
+  // Находим контейнер для отображения загруженных файлов и кнопку загрузки
+  const uploadContainer = container.querySelector('.upload-container');
+  const uploadButton = container.querySelector('[data-upload="button"]');
   uploadButton.addEventListener('click', () => {
-    logoInput.click();
+    fileInput.click();
   });
-  logoInput.addEventListener('change', event => {
-    const file = event.target.files[0];
-    const validFormats = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp', 'image/avif'];
-    if (!file) return;
-    if (!validFormats.includes(file.type)) {
-      alert('Неподдерживаемый формат файла.');
-      return;
-    }
-    if (file.size > 4 * 1024 * 1024) {
-      alert('Файл слишком большой. Максимальный размер — 4 MB.');
-      return;
-    }
-    const reader = new FileReader();
-    reader.onload = () => {
-      const logoId = Date.now();
-      const logoHTML = `
-							<label class="upload-item form-check form-radio--default" data-logo-id="${logoId}">
-									<div class="form-check-checkbox">
-											<input type="radio" class="form-check-input" name="logo" value="${logoId}" onchange="selectLogo('${logoId}')">
-											<span class="form-check-checkbox-span"></span>
-									</div>
-									<div class="upload-item-content">
-											<div class="upload-item-picture">
-													<img loading="lazy" src="${reader.result}" class="image" alt="Логотип">
-											</div>
-											<span class="form-check-label">
-													${file.name}
-											</span>
-											<button type="button" class="btn btn-remove" onclick="removeLogo('${logoId}')">
-													<span class="icon">
-															<svg>
-																	<use xlink:href="img/icons/remove.svg#svg-remove"></use>
-															</svg>
-													</span>
-											</button>
-									</div>
-							</label>
-					`;
-      logoList.insertAdjacentHTML('beforeend', logoHTML);
-    };
-    reader.readAsDataURL(file);
-  });
-  window.selectLogo = function (logoId) {
-    selectedLogoInput.value = logoId;
-  };
-  window.removeLogo = function (logoId) {
-    const logoItem = document.querySelector(`[data-logo-id="${logoId}"]`);
-    if (logoItem) {
-      logoItem.remove();
-      if (selectedLogoInput.value === logoId) {
-        selectedLogoInput.value = '';
+
+  // Список допустимых MIME-типов и ограничение по размеру файла (4 MB)
+  const validFormats = ['image/png', 'image/jpeg', 'image/jpg', 'image/webp', 'image/avif'];
+  const maxSize = 4 * 1024 * 1024;
+  fileInput.addEventListener('change', event => {
+    const files = Array.from(event.target.files);
+    if (!files.length) return;
+    files.forEach(file => {
+      if (!validFormats.includes(file.type)) {
+        window.showAlert('error', 'Неподдерживаемый формат файла.');
+        return;
       }
+      if (file.size > maxSize) {
+        window.showAlert('error', 'Файл слишком большой. Максимальный размер — 4 MB.');
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = () => {
+        // Генерируем уникальный ID для элемента (можно использовать Date.now() + случайное число)
+        const fileId = 'file-' + Date.now() + '-' + Math.floor(Math.random() * 10000);
+        let html = '';
+        if (mode === 'select-one') {
+          // Шаблон для режима выбора одного файла (с радио-кнопкой для выбора)
+          html = `
+            <label class="upload-item form-check form-radio--default" data-file-id="${fileId}">
+              <div class="form-check-checkbox">
+                <input type="radio" class="form-check-input" name="logo" value="${fileId}">
+                <span class="form-check-checkbox-span"></span>
+              </div>
+              <div class="upload-item-content">
+                <div class="upload-item-picture">
+                  <img loading="lazy" src="${reader.result}" class="image" alt="Логотип">
+                </div>
+                <span class="form-check-label">${file.name}</span>
+                <button type="button" class="btn btn-remove">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/remove.svg#svg-remove"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </label>
+          `;
+        } else if (mode === 'multiple') {
+          // Шаблон для множественной загрузки – здесь элемент сразу "выбран" для отправки.
+          // В данном примере в форму будет добавлено скрытое поле с base64-представлением файла.
+          html = `
+            <div class="upload-item upload-item--multiple" data-file-id="${fileId}">
+              <div class="upload-item-content">
+                <div class="upload-item-picture">
+                  <img loading="lazy" src="${reader.result}" class="image" alt="Логотип">
+                </div>
+                <button type="button" class="btn btn-remove">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/remove.svg#svg-remove"></use>
+                    </svg>
+                  </span>
+                </button>
+                <input type="hidden" name="logos[]" value="${reader.result}">
+              </div>
+            </div>
+          `;
+        } else {
+          // Другой режим – можно задать свой шаблон
+          html = `
+            <div class="upload-item" data-file-id="${fileId}">
+              <div class="upload-item-content">
+                <div class="upload-item-picture">
+                  <img loading="lazy" src="${reader.result}" class="image" alt="Файл">
+                </div>
+                <span class="file-name">${file.name}</span>
+                <button type="button" class="btn btn-remove">
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="img/icons/remove.svg#svg-remove"></use>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+            </div>
+          `;
+        }
+
+        // Добавляем новый элемент в контейнер с загруженными файлами
+        uploadContainer.insertAdjacentHTML('beforeend', html);
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Очищаем значение инпута, чтобы можно было загрузить тот же файл повторно
+    fileInput.value = '';
+  });
+
+  // Делегирование событий для удаления элемента.
+  // При клике на кнопку "удалить" соответствующий элемент удаляется из списка.
+  container.addEventListener('click', e => {
+    const removeBtn = e.target.closest('.btn-remove');
+    if (!removeBtn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const fileItem = removeBtn.closest('.upload-item');
+    if (!fileItem) return;
+    fileItemToRemove = fileItem;
+
+    // Получаем элемент модального окна
+    const modalElement = document.getElementById('modal_remove_question');
+    if (!modalElement) return;
+
+    // Если для этого модального окна не создан экземпляр, создаём его
+    if (!window.modalInstances.has(modalElement)) {
+      window.initializeModal(modalElement);
     }
-  };
+
+    // Показываем модальное окно
+    window.modalInstances.get(modalElement).show();
+  });
+  document.addEventListener('show.bs.modal', event => {
+    const confirmRemoveBtn = event.srcElement.querySelector('[data-upload-remove="button"]');
+    if (confirmRemoveBtn) {
+      confirmRemoveBtn.addEventListener('click', e => {
+        e.preventDefault();
+
+        // Если элемент для удаления не был сохранён, выходим
+        if (!fileItemToRemove) return;
+
+        // Находим контейнер загрузки, чтобы проверить режим (например, "select-one")
+        const container = fileItemToRemove.closest('[data-upload-container]');
+        if (container) {
+          const mode = container.getAttribute('data-upload-container');
+          if (mode === 'select-one') {
+            // Если элемент выбран (radio-элемент отмечен) – очищаем скрытое поле
+            const radio = fileItemToRemove.querySelector('input[type="radio"]');
+            if (radio && radio.checked) {
+              const selectedInput = container.querySelector('input[data-upload="selected"]');
+              if (selectedInput) {
+                selectedInput.value = '';
+              }
+            }
+          }
+
+          // Удаляем элемент из DOM
+          fileItemToRemove.remove();
+
+          // Если в контейнере больше нет элементов, очищаем область отображения
+          const uploadContainer = container.querySelector('.upload-container');
+          if (uploadContainer && !uploadContainer.querySelector('.upload-item')) {
+            uploadContainer.innerHTML = '';
+          }
+        } else {
+          // Если по какой-то причине контейнер не найден, просто удаляем элемент
+          fileItemToRemove.remove();
+        }
+
+        // Сбрасываем глобальную переменную, чтобы не оставить ссылку на удалённый элемент
+        fileItemToRemove = null;
+      });
+    }
+  });
+
+  // В режиме "select-one" следим за изменением состояния радио-кнопок
+  // и записываем значение выбранного файла в скрытое поле
+  if (mode === 'select-one' && selectedInput) {
+    uploadContainer.addEventListener('change', e => {
+      const radio = e.target.closest('input[type="radio"]');
+      if (radio) {
+        selectedInput.value = radio.value;
+      }
+    });
+  }
 });
 
 /***/ }),

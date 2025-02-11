@@ -1,0 +1,61 @@
+<div class="chat-header">
+	<div class="chat-header-user">
+		<div class="chat-header-user-picture">
+			<picture>
+				<source srcset="img/avatar--md.webp" type="image/webp">
+				<img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+			</picture>
+		</div>
+		<div class="chat-header-user-content">
+			<div class="chat-header-user-header">
+				<h3 class="chat-header-user-name">
+					Константин Константинопольский
+				</h3>
+
+				<div class="blanks">
+					<div class="blank blank-payment">В работе</div>
+				</div>
+			</div>
+			<div class="user-status user-status--online">
+				В сети
+			</div>
+		</div>
+	</div>
+	<div class="chat-header-buttons">
+		<button type="button" class="btn btn-back">
+			<span class="icon">
+				<svg>
+					<use xlink:href="img/icons/back.svg#svg-back"></use>
+				</svg>
+			</span>
+		</button>
+
+		@include('../card-vacancy/card-type-xs.html')
+	</div>
+	<div class="chat-header-more">
+		<div class="dropdown dropdown--more">
+			<button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+				<span class="icon">
+					<svg>
+						<use xlink:href="img/icons/more.svg#svg-more"></use>
+					</svg>
+				</span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-end">
+				<li>
+					<a href="#" class="btn dropdown-item">
+						Перейти в профиль
+					</a>
+				</li>
+				<li>
+					<a href="#" class="btn dropdown-item">
+						Закрепить чат
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

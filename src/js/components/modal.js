@@ -25,7 +25,7 @@ document.body.addEventListener('click', (event) => {
 })
 
 document.addEventListener('show.bs.modal', event => {
-	const modalBodyList = event.delegateTarget.querySelector('.modal-body-list')
+	const modalBodyList = event.srcElement.querySelector('.modal-body-list')
 
 	setTimeout(() => {
 		if (modalBodyList) {

@@ -3,7 +3,7 @@ window.showAlert = (type, message) => {
 	// Определяем классы и иконки в зависимости от типа уведомления
 	const alertClass = type === 'success' ? 'alert--success' : 'alert--error'
 	const iconSrc = type === 'success' ? 'img/icons/success.svg' : 'img/icons/error.svg'
-	const iconClass = type === 'success' ? 'image-success' : 'image-error'
+	const iconClass = type === 'success' ? 'image-success-sm' : 'image-error-sm'
 
 	// Создаём элемент уведомления
 	const alert = document.createElement('div')

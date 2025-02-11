@@ -884,9 +884,11 @@
             <div class="modal-body">
                 <div class="modal-body-alert">
                     <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
-                    <p>
-                        Вакансия создана
-                    </p>
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Вакансия создана
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -910,9 +912,11 @@
             <div class="modal-body">
                 <div class="modal-body-alert">
                     <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
-                    <p>
-                        Приглашение на вакансию отправлено
-                    </p>
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Приглашение на вакансию отправлено
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -920,6 +924,72 @@
                     <button type="button" class="btn btn-base btn-primary"
 						data-bs-dismiss="modal">
                         Прекрасно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_question"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Удалить фото?
+                        </h3>
+                        <p class="text-gray">
+                            Его можно загрузить заново в любой момент
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+                        Нет, отменить
+                    </button>
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_remove_success"
+						data-bs-dismiss="modal"
+						data-upload-remove="button">
+                        Да, удалить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_success"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Фото удалено
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        Ок, спасибо
                     </button>
                 </div>
             </div>

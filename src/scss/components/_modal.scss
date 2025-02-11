@@ -218,9 +218,17 @@
     flex-direction: column;
     align-items: center;
     gap: 1.25rem;
-    
+    text-align: center;
+
     @media (min-width: 991.98px) {
       gap: 1.75rem;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5rem;
     }
   }
 }
@@ -237,6 +245,11 @@
 
   &-buttons {
     display: flex;
+    gap: 1rem;
+
+    @media (min-width: 991.98px) {
+      gap: 1.5rem;
+    }
 
     &,
     .btn {

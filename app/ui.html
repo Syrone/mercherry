@@ -104,6 +104,14 @@
               data-bs-toggle="modal" data-bs-target="#modal_created_vacancy">
               Вакансия создана
             </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_remove_question">
+              Удалить фото?
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_remove_success">
+              Фото удалено
+            </button>
           </div>
 
           <div class="ui-item">
@@ -1134,6 +1142,439 @@
         </div>
     </div>
 </div>
+
+              <div class="notify notify--info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы создали отчёт по данной вакансии. Хотите отправить его работодателю?
+            </p>
+        </div>
+    </div>
+</div>
+              <div class="notify notify--magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Кандидат отправил отклик на вакансию «Перекрёсток»
+            </p>
+        </div>
+    </div>
+</div>
+              <div class="notify notify--error">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы отклонили предложение кандидата на вакансию «Перекрёсток». Можете пригласить кандидата на другую вакансию.
+            </p>
+        </div>
+    </div>
+</div>
+              <div class="notify notify--success">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы приняли предложение кандидата на вакансию «Перекрёсток»
+            </p>
+        </div>
+    </div>
+</div>
+            </div>
+          </div>
+
+          <div class="ui-item">
+            <h2>
+              Chat Header
+            </h2>
+
+            <div class="ui-col" style="max-width: 50rem; width: 100%">
+              <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Константин Константинопольский
+                </h3>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+        <button type="button" class="btn btn-md btn-primary">
+            Принять отклик
+        </button>
+        <button type="button" class="btn btn-md btn-outline-primary">
+            Отклонить
+        </button>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+              <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Константин Константинопольский
+                </h3>
+
+                <div class="blanks">
+                    <div class="blank blank-payment">Работа завершена</div>
+                </div>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+        <button type="button" class="btn btn-md btn-primary">
+            Оценить работу
+        </button>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+              <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Константин Константинопольский
+                </h3>
+
+                <div class="blanks">
+                    <div class="blank blank-payment">В работе</div>
+                </div>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+        <button type="button" class="btn btn-md btn-primary">
+            Просмотреть отчёт
+        </button>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+              <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Константин Константинопольский
+                </h3>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+        <button type="button" class="btn btn-md btn-primary">
+            Пригласить на работу
+        </button>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+              <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Константин Константинопольский
+                </h3>
+
+                <div class="blanks">
+                    <div class="blank blank-payment">В работе</div>
+                </div>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+
+        <div class="vacancy">
+    <div class="vacancy-picture">
+        <picture>
+            <source srcset="img/vacancies/image-3.webp" type="image/webp">
+            <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="36" height="36" alt="Картинка">
+        </picture>
+    </div>
+    <div class="vacancy-content">
+        <h4 class="vacancy-name">Перекрёсток</h4>
+        <p class="vacancy-label">Вакансия</p>
+    </div>
+</div>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+              <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Константин Константинопольский
+                </h3>
+
+                <div class="blanks">
+                    <div class="blank blank-payment">Приглашение отправлено</div>
+                </div>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+
+        <div class="vacancy">
+    <div class="vacancy-picture">
+        <picture>
+            <source srcset="img/vacancies/image-3.webp" type="image/webp">
+            <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="36" height="36" alt="Картинка">
+        </picture>
+    </div>
+    <div class="vacancy-content">
+        <h4 class="vacancy-name">Перекрёсток</h4>
+        <p class="vacancy-label">Вакансия</p>
+    </div>
+</div>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
             </div>
           </div>
         </div>
@@ -1839,9 +2280,11 @@
             <div class="modal-body">
                 <div class="modal-body-alert">
                     <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
-                    <p>
-                        Вакансия создана
-                    </p>
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Вакансия создана
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -1865,9 +2308,11 @@
             <div class="modal-body">
                 <div class="modal-body-alert">
                     <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
-                    <p>
-                        Приглашение на вакансию отправлено
-                    </p>
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Приглашение на вакансию отправлено
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -1875,6 +2320,72 @@
                     <button type="button" class="btn btn-base btn-primary"
 						data-bs-dismiss="modal">
                         Прекрасно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_question"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Удалить фото?
+                        </h3>
+                        <p class="text-gray">
+                            Его можно загрузить заново в любой момент
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+                        Нет, отменить
+                    </button>
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_remove_success"
+						data-bs-dismiss="modal"
+						data-upload-remove="button">
+                        Да, удалить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_success"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Фото удалено
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        Ок, спасибо
                     </button>
                 </div>
             </div>

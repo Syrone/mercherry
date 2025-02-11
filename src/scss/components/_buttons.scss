@@ -529,6 +529,11 @@
 	}
 }
 
+.btn-pin,
+.btn-message {
+	--_icon-size: 1.5rem;
+}
+
 .btn-inherit {
 	--_fs: inherit;
 	--_fw: inherit;

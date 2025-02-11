@@ -5,8 +5,9 @@
 }
 
 .blank {
-	max-width: max-content;
+	min-width: max-content;
 	min-height: 1.25rem;
+	flex-shrink: 0;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
