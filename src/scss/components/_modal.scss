@@ -245,6 +245,7 @@
 
   &-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 
     @media (min-width: 991.98px) {
