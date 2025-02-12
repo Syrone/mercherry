@@ -8,6 +8,7 @@ import './components/upload.js';
 import './components/alert.js';
 import './components/choices.js';
 import './components/dropdown.js';
+import './components/calendar.js';
 import './components/offcanvas.js';
 import './components/modal.js';
 import './components/accordion.js';

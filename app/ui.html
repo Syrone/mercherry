@@ -130,6 +130,15 @@
           </div>
 
           <div class="ui-item">
+            <h2>Vanilla Calendar</h2>
+
+            <div class="ui-col">
+              <div data-calendar="default"></div>
+              <div data-calendar="multiple"></div>
+            </div>
+          </div>
+
+          <div class="ui-item">
             <h2>
               Типографика
             </h2>
@@ -539,7 +548,7 @@
             </h3>
             <div class="ui-col" style="width: 15rem;">
               <div class="dropdown dropdown--filter">
-                <button type="button" class="btn btn-md dropdown-toggle"
+                <div class="btn btn-md dropdown-toggle"
                   data-bs-toggle="dropdown"
                   data-bs-auto-close="outside"
                   aria-expanded="false">
@@ -551,12 +560,12 @@
                     Все
                   </span>
 
-                  <span class="icon">
+                  <span class="icon dropdown-toggle-icon">
                     <svg>
                       <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
                     </svg>
                   </span>
-                </button>
+                </div>
                 <div class="dropdown-menu">
                   <div class="slider-container">
                     <label>Позадачно, от</label>
@@ -581,6 +590,40 @@
                     </div>
                     <div class="slider-value">7 000 ₽</div>
                   </div>
+                </div>
+              </div>
+
+              <div class="dropdown dropdown--filter">
+                <input type="hidden" class="visually-hidden" name="calendar_dates" value="all">
+                <div class="btn btn-md dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside"
+                  aria-expanded="false">
+                  <span class="dropdown-toggle-placeholder">
+                    Период
+                  </span>
+
+                  <span class="dropdown-toggle-content">
+                    <span class="dropdown-toggle-value">
+                      Все
+                    </span>
+                    <button type="button" class="btn btn-sm btn-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-clear.svg#svg-close-clear"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </span>
+
+                  <span class="icon dropdown-toggle-icon">
+                    <svg>
+                      <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
+                    </svg>
+                  </span>
+                </div>
+                <div class="dropdown-menu">
+                  <div data-calendar="multiple"></div>
                 </div>
               </div>
             </div>

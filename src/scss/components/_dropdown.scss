@@ -63,6 +63,22 @@
     left: 0;
     margin-top: var(--bs-dropdown-spacer);
   }
+
+  .vanilla-calendar {
+
+    &,
+    &-controls {
+      padding: 0;
+    }
+
+    &-controls {
+      padding-top: .25rem;
+    }
+
+    @media (min-width: 767.98px) {
+      min-width: max-content;
+    }
+  }
 }
 
 .dropdown-menu-end {
@@ -199,7 +215,7 @@
       color: var(--gray-color);
     }
 
-    .icon {
+    .dropdown-toggle-icon {
       transition-property: transform;
       transition-duration: var(--_transition-duration);
       transition-timing-function: var(--_transition-timing-function);
@@ -211,7 +227,7 @@
       border-color: var(--_border-color-active);
       transform: var(--_transform-active);
 
-      .icon {
+      .dropdown-toggle-icon {
         transform: rotateX(180deg);
       }
     }
@@ -223,4 +239,10 @@
   .dropdown-toggle {
     --_icon-size: 1.5rem;
   }
+}
+
+.dropdown-toggle-content {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
 }

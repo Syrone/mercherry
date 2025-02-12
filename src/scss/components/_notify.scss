@@ -9,15 +9,15 @@
 	--_n-rounded: 1rem;
 	--_n-padding: .75rem 1rem .75rem 1.5rem;
 
+	border-radius: var(--_n-rounded);
+	position: relative;
+	overflow: hidden;
+
 	@media (min-width: 991.98px) {
 		--_n-border-width: .625rem;
 		--_n-rounded: 1.25rem;
 		--_n-padding: 1rem 1.25rem 1rem 2rem;
 	}
-
-	border-radius: var(--_n-rounded);
-	position: relative;
-	overflow: hidden;
 
 	&-body {
 		display: flex;

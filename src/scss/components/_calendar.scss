@@ -1,0 +1,238 @@
+@use "../../../node_modules/vanilla-calendar-pro/build/vanilla-calendar.layout.min";
+@use "../../../node_modules/vanilla-calendar-pro/build/themes/light.min";
+
+[data-calendar-theme=light] {
+
+	.vanilla-calendar-month,
+	.vanilla-calendar-year {
+		color: var(--dark-color-350);
+
+		&:hover {
+			color: var(--magenta-color);
+		}
+	}
+
+	.vanilla-calendar-months {
+
+		&__month {
+			color: var(--dark-color);
+
+			&.vanilla-calendar-months__month_selected {
+				color: var(--light-color);
+				background-color: var(--magenta-color);
+
+				&:hover {
+					color: var(--light-color);
+					background-color: var(--magenta-color-500);
+				}
+			}
+		}
+	}
+
+	.vanilla-calendar-years__year {
+
+		&.vanilla-calendar-years__year_selected {
+			color: var(--light-color);
+			background-color: var(--magenta-color);
+
+			&:hover {
+				color: var(--light-color);
+				background-color: var(--magenta-color-500);
+			}
+		}
+	}
+
+	.vanilla-calendar-day {
+
+		&__btn {
+			color: var(--dark-color-350);
+
+			&_today {
+
+				&:hover {
+					color: var(--magenta-color);
+				}
+			}
+
+			&_selected {
+				color: var(--light-color);
+				background-color: var(--magenta-color);
+
+				&:hover {
+					color: var(--light-color);
+					background-color: var(--magenta-color-500);
+				}
+			}
+		}
+
+		&_selected {
+
+			&-intermediate {
+
+				.vanilla-calendar-day {
+
+					&__btn {
+
+						&_selected {
+							color: var(--dark-color-350);
+							background-color: var(--magenta-color-100);
+
+							&:hover {
+								color: var(--light-color);
+								background-color: var(--magenta-color-500);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.vanilla-calendar-grid {
+
+	.vanilla-calendar-column {
+
+		&:last-child {
+			display: none;
+	
+			@media (min-width: 767.98px) {
+				display: flex;
+			}
+		}
+	}
+}
+
+.vanilla-calendar-arrow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+
+	&::before {
+		all: initial;
+	}
+
+	&:hover {
+		color: var(--magenta-color);
+	}
+
+	&_prev {
+
+		.icon {
+			transform: rotate(90deg);
+		}
+	}
+
+	&_next {
+
+		.icon {
+			transform: rotate(-90deg);
+		}
+	}
+}
+
+.vanilla-calendar-month,
+.vanilla-calendar-year {
+	font-size: var(--fs-base);
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.vanilla-calendar-months__month,
+.vanilla-calendar-years__year {
+	font-weight: 400;
+}
+
+.vanilla-calendar-days {
+	row-gap: .0625rem;
+}
+
+.vanilla-calendar-week__day,
+.vanilla-calendar-day__btn {
+	min-width: 2rem;
+	
+	@media (min-width: 991.98px) {
+		min-width: 2.25rem;
+	}
+}
+
+.vanilla-calendar-week {
+
+	&__day {
+		font-weight: 400;
+		color: var(--gray-color);
+	}
+}
+
+.vanilla-calendar-day {
+
+	&__btn {
+		min-height: 2rem;
+		font-size: var(--fs-md);
+
+		@media (min-width: 991.98px) {
+			min-height: 2.25rem;
+		}
+
+		&_today {
+			font-weight: 400;
+		}
+	}
+
+	&_first,
+	&:nth-child(7n + 1) {
+
+		&.vanilla-calendar-day_hover-intermediate,
+		&.vanilla-calendar-day_selected-intermediate,
+		&.vanilla-calendar-day_selected-last {
+			.vanilla-calendar-day__btn {
+				border-top-left-radius: .5rem;
+				border-bottom-left-radius: .5rem;
+			}
+		}
+	}
+
+	&_last,
+	&:nth-child(7n + 7) {
+
+		&.vanilla-calendar-day_hover-intermediate,
+		&.vanilla-calendar-day_selected-intermediate,
+		&.vanilla-calendar-day_selected-first {
+			.vanilla-calendar-day__btn {
+				border-top-right-radius: .5rem;
+				border-bottom-right-radius: .5rem;
+			}
+		}
+	}
+
+	&_selected {
+
+		&-first {
+
+			.vanilla-calendar-day {
+
+				&__btn {
+
+					&_selected {
+						border-top-left-radius: 1rem;
+						border-bottom-left-radius: 1rem;
+					}
+				}
+			}
+		}
+
+		&-last {
+			.vanilla-calendar-day {
+
+				&__btn {
+
+					&_selected {
+						border-top-right-radius: 1rem;
+						border-bottom-right-radius: 1rem;
+					}
+				}
+			}
+		}
+	}
+}

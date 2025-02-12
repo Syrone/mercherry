@@ -7,7 +7,7 @@
 		gap: 1rem;
 	}
 
-	&:not(.message--user, .message--system) {
+	&:not(.message--user) {
 		padding-right: 3rem;
 
 		@media (min-width: 991.98px) {
