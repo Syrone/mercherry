@@ -62,13 +62,9 @@
 			justify-content: space-between;
 			gap: .25rem;
 			font-family: var(--font-family);
-			font-size: 1rem;
+			font-size: var(--fs-lg);
 			line-height: 1.3;
 			color: var(--dark-color-550);
-			
-			@media (min-width: 991.98px) {
-				font-size: 1.125rem;
-			}
 		}
 
 		&-subtitle {
@@ -270,6 +266,35 @@
 .card--readonly {
 	padding-inline: 0;
 	box-shadow: none;
+}
+
+.card--lg {
+
+	.card-header {
+
+		&-picture {
+
+			.image {
+				width: 5rem;
+				height: 5rem;
+				border-radius: 1.5rem;
+
+				@media (min-width: 991.98px) {
+					width: 8.75rem;
+					height: 8.75rem;
+					border-radius: 1.75rem;
+				}
+			}
+		}
+
+		&-title {
+			font-size: 1.25rem;
+
+			@media (min-width: 991.98px) {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }
 
 .vacancy {

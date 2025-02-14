@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 
-@include('partials/head.html', {title: 'Об исполнителе'})
+@include('partials/head.html', {title: 'Моё резюме'})
 
 <body class="page-body">
-  @include('partials/h1.html', {title: 'Об исполнителе'})
+  @include('partials/h1.html', {title: 'Моё резюме'})
 
   <div class="site-container">
     @include('partials/header-authorized.html')
@@ -27,25 +27,68 @@
             <div class="filter-header">
               <div class="filter-header-top">
                 <h2 class="h5 filter-header-title">
-                  Об исполнителе
+                  Моё резюме
                 </h2>
               </div>
             </div>
 
             <div class="product-body">
               <div class="product-content">
-                @include('partials/card-resume/card-type-readonly.html')
-
-                <button type="button" class="btn btn-lg btn-vacancy">
-                  <span class="content">
-                    <img loading="lazy" src="img/icons/bb.svg" class="image" width="28" height="28" alt="Иконка">
-                    <span>ВкусВилл</span>
-                  </span>
-
-                  <div class="blank blank-payment">
-                    В работе
+                <article class="card card--lg card--row card--readonly">
+                  <div class="card-header">
+                    <div class="card-header-picture"
+                      data-fancybox=""
+                      data-src="img/avatar--xl.webp">
+                      <picture>
+                        <source srcset="img/avatar--md.webp" type="image/webp">
+                        <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+                      </picture>
+                    </div>
+                
+                    <div class="card-header-content">
+                      <h3 class="card-header-title">
+                        Константин, 32
+                      </h3>
+                      <p class="card-header-subtitle">
+                        Мерчендайзер • Интервьюер
+                      </p>
+                
+                      <div class="card-header-bottom">
+                        <div class="blanks">
+                          <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                          <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </button>
+
+                  <div class="card-more">
+                    <div class="dropdown dropdown--more">
+                      <button type="button" class="btn dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside"
+                        aria-expanded="false">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/icons/more.svg#svg-more"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a href="#" class="btn dropdown-item">
+                            Удалить резюме
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn dropdown-item">
+                            Удалить аккаунт
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
 
                 <div class="info-container">
                   <div class="info-block">
@@ -72,13 +115,8 @@
                   </div>
                 </div>
 
-                @include('partials/notify/notify--info.html')
-                @include('partials/notify/notify--magenta.html')
-                @include('partials/notify/notify--error.html')
-                @include('partials/notify/notify--success.html')
-
                 <div class="description">
-                  <h3 class="family-default h6 description-title">Про кандидата</h3>
+                  <h3 class="family-default h6 description-title">Описание</h3>
 
                   <div class="description-content">
                     <p>
@@ -106,6 +144,7 @@
                   </div>
 
                   <div class="reviews-body">
+                    @include('partials/reviews/review-empty.html')
                     @include('partials/reviews/review.html')
                     @include('partials/reviews/review.html')
                     @include('partials/reviews/review.html')
@@ -118,24 +157,22 @@
                 </div>
               </div>
 
-              <aside class="product-aside product-aside--chat">
-                <a href="#" class="btn btn-lg btn-resume btn-chat is-active">
-                  <span class="user">
-                    <img loading="lazy" src="img/avatar--md.webp" class="image" width="28" height="28" alt="avatar">
-                    <span class="user-name">Дмитрий</span>
-                  </span>
-                  <span class="content content--user">
-                    <span class="content-toggle">
-                      <span>Выбран специалист</span>
-                      <span>
-                        В чат
-                        <span class="badge badge--md badge--error-500">
-                          1
-                        </span>
-                      </span>
-                    </span>
-                  </span>
-                </a>
+              <aside class="product-aside">
+                <div class="product-editing">
+                  <button type="button" class="btn btn-md btn-primary">
+                    Редактировать
+                  </button>
+
+                  <div class="product-editing-info">
+                    <p>Опубликовано: 14.10.2024</p>
+                    <p>Последние изменения: 14.10.2024</p>
+                  </div>
+                </div>
+
+                <div class="product-ai">
+                  @include('partials/notify/notify--ai-magenta.html')
+                  @include('partials/notify/notify--ai-info.html')
+                </div>
               </aside>
             </div>
           </div>

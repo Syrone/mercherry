@@ -1,0 +1,13 @@
+@use "../../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
+
+.fancybox__container {
+	--fancybox-bg: rgba(0, 0, 0, .5);
+}
+
+.fancybox-image {
+	border-radius: 4rem;
+
+	@media (min-width: 991.98px) {
+		border-radius: 6.25rem;
+	}
+}

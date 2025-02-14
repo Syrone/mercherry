@@ -57,6 +57,13 @@
 			font: inherit;
 			color: inherit;
 		}
+
+		h3 {
+			font-size: var(--fs-base);
+			font-weight: 600;
+			color: var(--dark-color);
+			margin-bottom: .5rem;
+		}
 	}
 
 	&-buttons {
@@ -77,6 +84,20 @@
 			@media (min-width: 991.98px) {
 				flex: initial;
 			}
+		}
+	}
+
+	&-picture {
+		width: 2.75rem;
+		height: 2.75rem;
+		border-radius: .875rem;
+		padding: .375rem;
+		align-self: start;
+
+		.image {
+			width: 100%;
+			height: 100%;
+			display: block;
 		}
 	}
 }
@@ -102,4 +123,26 @@
 	--_n-color: var(--success-color);
 	--_n-bg: var(--success-color-250);
 	--_n-border-color: linear-gradient(180deg, rgba(26, 139, 79, 0.65) -20%, var(--success-color) 120%);
+}
+
+.notify--ai {
+	--_n-color: var(--gray-color);
+
+	box-shadow: 0 .025rem 0 0 rgba(0, 0, 0, 0.01), 0 .25rem 1.5rem 0 rgba(0, 0, 0, 0.08);
+}
+
+.notify--ai-magenta {
+	--_n-border-color: linear-gradient(180deg, rgba(180, 135, 255, 0.65) -20%, var(--magenta-color) 100%);
+
+	.notify-picture {
+		background-color: var(--magenta-color-100);
+	}
+}
+
+.notify--ai-info {
+	--_n-border-color: linear-gradient(180deg, rgba(30, 67, 196, 0.65) -20%, var(--cold-color) 120%);
+
+	.notify-picture {
+		background-color: var(--cold-color-100);
+	}
 }

@@ -134,3 +134,33 @@
 		}
 	}
 }
+
+.review--empty {
+	border-color: transparent;
+
+	.review-content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		@media (min-width: 991.98px) {
+			align-items: center;
+		}
+	}
+
+	.review-title {
+		font-family: var(--font-family);
+		font-size: var(--fs-base);
+		margin-bottom: .5rem;
+	}
+
+	.review-subtitle {
+		font-size: var(--fs-md);
+		color: var(--gray-color);
+		margin-bottom: 1.25rem;
+		
+		@media (min-width: 991.98px) {
+			margin-bottom: 1.5rem;
+		}
+	}
+}

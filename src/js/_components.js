@@ -13,3 +13,4 @@ import './components/offcanvas.js';
 import './components/modal.js';
 import './components/accordion.js';
 import './components/swiper.js';
+import './components/fancybox.js';

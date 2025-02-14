@@ -10,7 +10,7 @@
   <meta name="format-detection" content="date=no">
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
-  <title>Резюме</title>
+  <title>Моё резюме</title>
   <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -26,7 +26,7 @@
 
 <body class="page-body">
   <h1 class="visually-hidden">
-    Главная страница
+    Моё резюме
 </h1>
 
   <div class="site-container">
@@ -106,694 +106,643 @@
       <div class="alert-container"></div>
 
       <div class="section-container">
-        <section class="section section-widget">
+        <section class="section section-widget product">
           <div class="container">
-            <div class="banner">
-              <ul class="list-reset banner-steps">
-                <li class="banner-steps-item">
-                  <span class="banner-steps-item-step">Шаг </span>
-                  <div class="banner-steps-item-content">
-                    <h2 class="banner-steps-item-title">Создайте свою первую вакансию</h2>
-                    <button type="button" class="btn btn-base btn-primary banner-steps-item-btn">
-                      Создать вакансию
-                    </button>
-                  </div>
-                </li>
-                <li class="banner-steps-item">
-                  <span class="banner-steps-item-step">Шаг </span>
-                  <div class="banner-steps-item-content">
-                    <h2 class="banner-steps-item-title">Опубликуйте вакансию</h2>
-                  </div>
-                </li>
-                <li class="banner-steps-item">
-                  <span class="banner-steps-item-step">Шаг </span>
-                  <div class="banner-steps-item-content">
-                    <h2 class="banner-steps-item-title">Получите отклик</h2>
-                  </div>
-                </li>
-              </ul>
+            <div class="section-supheader">
+              <button class="btn btn-back">
+                <span class="icon">
+                  <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                  </svg>
+                </span>
+              </button>
             </div>
-
             <div class="filter-header">
               <div class="filter-header-top">
-                <div class="btn-group btn-group--plaintext filter-header-scrollable">
-                  <button type="button" class="btn is-active">
-                    Все резюме <span class="badge badge--gray-125">12</span>
-                  </button>
-                  <button type="button" class="btn">
-                    Избранные <span class="badge badge--gray-125">12</span>
-                  </button>
-                  <button type="button" class="btn">
-                    Есть контакт <span class="badge badge--gray-125">12</span>
-                  </button>
-                </div>
-
-                <div class="filter-header-top-selects">
-                  <select name="example-name"
-                    data-select-choices="filter default-radio"
-                    data-choices-class="choices--filter choices--radio choices--md">
-                    <option value="">Сначала показывать</option>
-                    <option value="1" selected>Новые</option>
-                    <option value="2">Популярные</option>
-                    <option value="3">Уже общались</option>
-                    <option value="4">Уже сотрудничали</option>
-                  </select>
-                </div>
+                <h2 class="h5 filter-header-title">
+                  Моё резюме
+                </h2>
               </div>
-              <div class="filter-header-bottom"
-                data-filter-choices="">
-                <div class="filter-header-scrollable">
-                  <button type="button" class="btn btn-md btn-clear filter-header-clear">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="img/icons/close-clear.svg#svg-close-clear"></use>
-                      </svg>
-                    </span>
-                  </button>
+            </div>
 
-                  <select name="example-name" multiple
-                    data-select-choices="filter multiple-checkbox"
-                    data-choices-class="choices--filter choices--checkbox choices--md">
-                    <option value="">Город</option>
-                    <option value="all" selected>Все</option>
-                    <option value="1">Москва</option>
-                    <option value="2">Санкт-Петербург</option>
-                    <option value="3">Казань</option>
-                    <option value="4">Уфа</option>
-                    <option value="5">Пермь</option>
-                    <option value="6">Москва</option>
-                    <option value="7">Санкт-Петербург</option>
-                    <option value="8">Казань</option>
-                    <option value="9">Уфа</option>
-                    <option value="10">Пермь</option>
-                  </select>
-
-                  <select name="example-name"
-                    data-select-choices="filter default-radio"
-                    data-choices-class="choices--filter choices--radio choices--md">
-                    <option value="">Рейтинг</option>
-                    <option value="all" selected>Все</option>
-                    <option value="1">5 звёзд</option>
-                    <option value="2">4 звезды и выше</option>
-                    <option value="3">3 звезды и выше</option>
-                    <option value="4">2 звезды и выше</option>
-                  </select>
-
-                  <select name="example-name" multiple
-                    data-select-choices="filter multiple-checkbox"
-                    data-choices-class="choices--filter choices--checkbox choices--md">
-                    <option value="">Формат работы</option>
-                    <option value="all" selected>Все</option>
-                    <option value="1">Позадачно</option>
-                    <option value="2">Частичная занятость</option>
-                    <option value="3">Полная занятость</option>
-                  </select>
-
-                  <div class="dropdown dropdown--filter">
-                    <div class="btn btn-md dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                      data-bs-auto-close="outside"
-                      aria-expanded="false">
-                      <span class="dropdown-toggle-placeholder">
-                        Оплата
-                      </span>
-
-                      <span class="dropdown-toggle-value">
-                        Все
-                      </span>
-
-                      <span class="icon dropdown-toggle-icon">
-                        <svg>
-                          <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
-                        </svg>
-                      </span>
+            <div class="product-body">
+              <div class="product-content">
+                <article class="card card--lg card--row card--readonly">
+                  <div class="card-header">
+                    <div class="card-header-picture"
+                      data-fancybox=""
+                      data-src="img/avatar--xl.webp">
+                      <picture>
+                        <source srcset="img/avatar--md.webp" type="image/webp">
+                        <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+                      </picture>
                     </div>
-                    <div class="dropdown-menu">
-                      <div class="slider-container">
-                        <label>Позадачно, от</label>
-                        <div class="slider-wrapper">
-                          <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
-                        </div>
-                        <div class="slider-value">7 000 ₽</div>
-                      </div>
 
-                      <div class="slider-container">
-                        <label>Частичная занятость, от</label>
-                        <div class="slider-wrapper">
-                          <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
-                        </div>
-                        <div class="slider-value">7 000 ₽</div>
-                      </div>
+                    <div class="card-header-content">
+                      <h3 class="card-header-title">
+                        Константин, 32
+                      </h3>
+                      <p class="card-header-subtitle">
+                        Мерчендайзер • Интервьюер
+                      </p>
 
-                      <div class="slider-container">
-                        <label>Полная занятость, от</label>
-                        <div class="slider-wrapper">
-                          <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
+                      <div class="card-header-bottom">
+                        <div class="blanks">
+                          <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                          <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
                         </div>
-                        <div class="slider-value">7 000 ₽</div>
                       </div>
                     </div>
                   </div>
 
-                  <select name="example-name"
-                    data-select-choices="filter default-radio"
-                    data-choices-class="choices--filter choices--radio choices--md">
-                    <option value="">Позиция</option>
-                    <option value="all" selected>Все</option>
-                    <option value="1">Мерчендайзер</option>
-                    <option value="2">Интервьюер</option>
-                  </select>
+                  <div class="card-more">
+                    <div class="dropdown dropdown--more">
+                      <button type="button" class="btn dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside"
+                        aria-expanded="false">
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="img/icons/more.svg#svg-more"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a href="#" class="btn dropdown-item">
+                            Удалить резюме
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn dropdown-item">
+                            Удалить аккаунт
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </article>
+
+                <div class="info-container">
+                  <div class="info-block">
+                    <div class="info-block-item">
+                      <div class="info-block-name">5</div>
+                      <div class="info-block-label">лет опыта</div>
+                    </div>
+                    <div class="info-block-item">
+                      <div class="info-block-name">14</div>
+                      <div class="info-block-label">задач завершено</div>
+                    </div>
+                  </div>
+                  <div class="info-block">
+                    <div class="info-block-item">
+                      <div class="info-block-name">1200</div>
+                      <div class="info-block-label">Оплата, р/ч</div>
+                    </div>
+                  </div>
+                  <div class="info-block">
+                    <div class="info-block-item">
+                      <div class="info-block-name">Москва, Химки, Зеленоград, Дмитров</div>
+                      <div class="info-block-label">Город (а)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="description">
+                  <h3 class="family-default h6 description-title">Описание</h3>
+
+                  <div class="description-content">
+                    <p>
+                      Отработал в сфере менчендайзинга больше 3х лет. Знаю и люблю свою работу. Был опыт работы в таких компаниях как FixPrice, Вкусно и точка, Лента, KFC
+                    </p>
+                    <p>
+                      Буду рад сотрудничеству!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="reviews">
+                  <div class="reviews-header">
+                    <h3 class="family-default h6 reviews-title">
+                      Отзывы
+
+                      <span class="badge badge--gray-125">
+                        60
+                      </span>
+                    </h3>
+
+                    <div class="reviews-rating">
+                      Общий рейтинг: <span>4.9</span>
+                    </div>
+                  </div>
+
+                  <div class="reviews-body">
+                    <article class="review review--empty">
+    <div class="review-content">
+        <h3 class="review-title">
+            Отзывов пока нет
+        </h3>
+        <p class="review-subtitle">
+            Начните работу с компаний по вакансии,
+            <br>
+            чтобы получить первый отзыв
+        </p>
+        <a href="#" class="btn btn-base btn-primary">
+            К вакансиям
+        </a>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                    <article class="review">
+    <div class="review-header">
+        <div class="review-info">
+            <div class="review-info-picture">
+                <picture>
+                    <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                    <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Картинка">
+                </picture>
+            </div>
+
+            <div class="review-info-content">
+                <h4 class="review-info-name">Мария Борисова</h4>
+                <div class="review-info-company">«Перекрёсток»</div>
+            </div>
+
+            <time datetime="" class="review-info-date">
+                14.10.2024
+            </time>
+        </div>
+    </div>
+
+    <div class="review-rating">
+        <span class="icon is-active">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/rating.svg#svg-rating"></use>
+            </svg>
+        </span>
+    </div>
+
+    <div class="review-body">
+        <p>
+            Работала с Костей полмесяца, за это время специалист себя показал граммотным и уверенным профессионалом. Рекомендую!
+        </p>
+    </div>
+</article>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="filter-body">
-              <div class="filter-content">
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
+              <aside class="product-aside">
+                <div class="product-editing">
+                  <button type="button" class="btn btn-md btn-primary">
+                    Редактировать
+                  </button>
 
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                        </span>
-                    </button>
-                </label>
-            </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
-                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                  <div class="product-editing-info">
+                    <p>Опубликовано: 14.10.2024</p>
+                    <p>Последние изменения: 14.10.2024</p>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
-
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                        </span>
-                    </button>
-                </label>
+                <div class="product-ai">
+                  <div class="notify notify--ai notify--ai-magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <h3>
+                Общение с заказчиком
             </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--full">Полная занятость</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
+            <p>
+                Что улучшить в коммуникации, чтобы зарабатывать больше?
             </p>
         </div>
-    </div>
-</article>
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
 
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
+        <div class="notify-picture">
+            <img loading="lazy" src="img/icons/ai--magenta.svg" class="image" width="32" height="32" alt="Картинка">
         </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16"
-								alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16"
-								alt="Favorite">
-                        </span>
-                    </button>
-                </label>
+    </div>
+</div>
+                  <div class="notify notify--ai notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <h3>
+                Общение с заказчиком
             </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
+            <p>
+                Что улучшить в коммуникации, чтобы зарабатывать больше?
             </p>
+        </div>
 
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--any">Любая занятость</div>
+        <div class="notify-picture">
+            <img loading="lazy" src="img/icons/ai--cold.svg" class="image" width="32" height="32" alt="Картинка">
+        </div>
+    </div>
+</div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
-
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                        </span>
-                    </button>
-                </label>
-            </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
-                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
-
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                        </span>
-                    </button>
-                </label>
-            </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--full">Полная занятость</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
-
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16"
-								alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16"
-								alt="Favorite">
-                        </span>
-                    </button>
-                </label>
-            </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--any">Любая занятость</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
-
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                        </span>
-                    </button>
-                </label>
-            </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
-                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
-
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
-                        </span>
-                    </button>
-                </label>
-            </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--full">Полная занятость</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-                <article class="card">
-    <a href="#" class="stretched-link"></a>
-
-    <div class="card-header">
-        <div class="card-header-picture">
-            <picture>
-                <source srcset="img/avatar--md.webp" type="image/webp">
-                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
-            </picture>
-        </div>
-
-        <div class="card-header-content">
-            <h3 class="card-header-title">
-                Константин, 32
-
-                <label class="label-check">
-                    <input type="checkbox" class="btn-check" checked>
-                    <button type="button" class="btn">
-                        <span class="icon-container">
-                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16"
-								alt="Favorite">
-                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16"
-								alt="Favorite">
-                        </span>
-                    </button>
-                </label>
-            </h3>
-            <p class="card-header-subtitle">
-                Мерчендайзер • Интервьюер
-            </p>
-
-            <div class="card-header-bottom">
-                <div class="blanks">
-                    <div class="blank blank-employment blank-employment--any">Любая занятость</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="card-footer">
-        <div class="card-price">
-            1500 ₽<span class="card-price-time">/час</span>
-        </div>
-
-        <div class="card-rating">
-            <span class="icon card-rating-icon">
-                <svg>
-                    <use xlink:href="img/icons/rating.svg#svg-rating"></use>
-                </svg>
-            </span>
-            <p class="card-rating-value">
-                4.9
-                <span class="card-rating-current">
-                    (60 отзывов)
-                </span>
-            </p>
-        </div>
-    </div>
-</article>
-              </div>
+              </aside>
             </div>
           </div>
         </section>
