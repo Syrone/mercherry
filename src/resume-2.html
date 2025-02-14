@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Резюме'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget">
+          <div class="container">
+            <div class="banner">
+              <ul class="list-reset banner-steps">
+                <li class="banner-steps-item">
+                  <span class="banner-steps-item-step">Шаг </span>
+                  <div class="banner-steps-item-content">
+                    <h2 class="banner-steps-item-title">Создайте своё первое резюме</h2>
+                    <button type="button" class="btn btn-base btn-primary banner-steps-item-btn">
+                      Создать вакансию
+                    </button>
+                  </div>
+                </li>
+                <li class="banner-steps-item">
+                  <span class="banner-steps-item-step">Шаг </span>
+                  <div class="banner-steps-item-content">
+                    <h2 class="banner-steps-item-title">Опубликуйте вакансию</h2>
+                  </div>
+                </li>
+                <li class="banner-steps-item">
+                  <span class="banner-steps-item-step">Шаг </span>
+                  <div class="banner-steps-item-content">
+                    <h2 class="banner-steps-item-title">Получите отклик</h2>
+                  </div>
+                </li>
+              </ul>
+            </div>
+  
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <div class="btn-group btn-group--plaintext filter-header-scrollable">
+                  <button type="button" class="btn is-active">
+                    Все резюме <span class="badge badge--gray-125">12</span>
+                  </button>
+                  <button type="button" class="btn">
+                    Избранные <span class="badge badge--gray-125">12</span>
+                  </button>
+                  <button type="button" class="btn">
+                    Есть контакт <span class="badge badge--gray-125">12</span>
+                  </button>
+                </div>
+  
+                <div class="filter-header-top-selects">
+                  <select name="example-name"
+                    data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Сначала показывать</option>
+                    <option value="1" selected>Новые</option>
+                    <option value="2">Популярные</option>
+                    <option value="3">Уже общались</option>
+                    <option value="4">Уже сотрудничали</option>
+                  </select>
+                </div>
+              </div>
+              <div class="filter-header-bottom"
+                data-filter-choices="">
+                <div class="filter-header-scrollable">
+                  <button type="button" class="btn btn-md btn-clear filter-header-clear">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="img/icons/close-clear.svg#svg-close-clear"></use>
+                      </svg>
+                    </span>
+                  </button>
+    
+                  <select name="example-name" multiple
+                    data-select-choices="filter multiple-checkbox"
+                    data-choices-class="choices--filter choices--checkbox choices--md">
+                    <option value="">Город</option>
+                    <option value="all" selected>Все</option>
+                    <option value="1">Москва</option>
+                    <option value="2">Санкт-Петербург</option>
+                    <option value="3">Казань</option>
+                    <option value="4">Уфа</option>
+                    <option value="5">Пермь</option>
+                    <option value="6">Москва</option>
+                    <option value="7">Санкт-Петербург</option>
+                    <option value="8">Казань</option>
+                    <option value="9">Уфа</option>
+                    <option value="10">Пермь</option>
+                  </select>
+    
+                  <select name="example-name"
+                    data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Рейтинг</option>
+                    <option value="all" selected>Все</option>
+                    <option value="1">5 звёзд</option>
+                    <option value="2">4 звезды и выше</option>
+                    <option value="3">3 звезды и выше</option>
+                    <option value="4">2 звезды и выше</option>
+                  </select>
+    
+                  <select name="example-name" multiple
+                    data-select-choices="filter multiple-checkbox"
+                    data-choices-class="choices--filter choices--checkbox choices--md">
+                    <option value="">Формат работы</option>
+                    <option value="all" selected>Все</option>
+                    <option value="1">Позадачно</option>
+                    <option value="2">Частичная занятость</option>
+                    <option value="3">Полная занятость</option>
+                  </select>
+    
+                  <div class="dropdown dropdown--filter">
+                    <div class="btn btn-md dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      data-bs-auto-close="outside"
+                      aria-expanded="false">
+                      <span class="dropdown-toggle-placeholder">
+                        Оплата
+                      </span>
+    
+                      <span class="dropdown-toggle-value">
+                        Все
+                      </span>
+    
+                      <span class="icon dropdown-toggle-icon">
+                        <svg>
+                          <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="dropdown-menu">
+                      <div class="slider-container">
+                        <label>Позадачно, от</label>
+                        <div class="slider-wrapper">
+                          <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
+                        </div>
+                        <div class="slider-value">7 000 ₽</div>
+                      </div>
+    
+                      <div class="slider-container">
+                        <label>Частичная занятость, от</label>
+                        <div class="slider-wrapper">
+                          <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
+                        </div>
+                        <div class="slider-value">7 000 ₽</div>
+                      </div>
+    
+                      <div class="slider-container">
+                        <label>Полная занятость, от</label>
+                        <div class="slider-wrapper">
+                          <input type="range" class="slider" min="1000" max="50000" value="7000" data-price>
+                        </div>
+                        <div class="slider-value">7 000 ₽</div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <select name="example-name"
+                    data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Позиция</option>
+                    <option value="all" selected>Все</option>
+                    <option value="1">Мерчендайзер</option>
+                    <option value="2">Интервьюер</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-body">
+              <div class="filter-content">
+                @include('partials/card-vacancy/card-type-3.html')
+                @include('partials/card-vacancy/card-type-3.html')
+                @include('partials/card-vacancy/card-type-3.html')
+  
+                @include('partials/card-vacancy/card-type-3.html')
+                @include('partials/card-vacancy/card-type-chat.html')
+                @include('partials/card-vacancy/card-type-3.html')
+  
+                @include('partials/card-vacancy/card-type-chat.html')
+                @include('partials/card-vacancy/card-type-chat.html')
+                @include('partials/card-vacancy/card-type-3.html')
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

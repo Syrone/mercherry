@@ -108,13 +108,57 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 1rem;
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: .25rem;
+
+			@media (min-width: 991.98px) {
+				gap: .5rem;
+			}
+
+			.card-address {
+				max-width: initial;
+
+				-webkit-line-clamp: 1;
+			}
+		}
 
 		.btn-resume {
 			flex: 1;
 		}
+
+		&--bg {
+			min-height: 3rem;
+			background-color: var(--secondary-color-100);
+			border-radius: 1.25rem;
+			padding: .5rem 1rem;
+
+			@media (min-width: 991.98px) {
+				min-height: 3.875rem;
+			}
+		}
+	}
+
+	&-address {
+		max-width: 12rem;
+
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+
+		font-size: var(--fs-md);
+		font-weight: 500;
+		font-style: normal;
+		color: var(--gray-color);
 	}
 
 	&-price {
+		flex-shrink: 0;
 		font-weight: 600;
 
 		&-time {

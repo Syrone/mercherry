@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Моё резюме'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Моё резюме'})
+
+  <div class="site-container">
+    @include('partials/header-client.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget default">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="h3 section-title">
+                Моё резюме
+              </h2>
+            </div>
+  
+            <div class="section-subheader">
+              <h3 class="h6 section-title">
+                Артём Лукьянов
+              </h3>
+            </div>
+  
+            <form class="section-body">
+              <div class="form default-form">
+                <div class="form-body">
+                  <div class="field-group field-group--floating">
+                    <input type="text" class="field field-has-btn" name="age" placeholder="">
+                    <span class="field-floating">Ваш возраст</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="field-group field-group--floating">
+                    <input type="text" class="field field-has-btn" name="work_experience" placeholder="">
+                    <span class="field-floating">Опыт работы</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <select name="format_work" multiple
+                    data-select-choices="multiple-checkbox"
+                    data-choices-class="choices--floating choices--checkbox">
+                    <option value="">Формат работы</option>
+                    <option value="1">Любая занятость</option>
+                    <option value="2">Полная занятость</option>
+                    <option value="3">Частичная занятость</option>
+                    <option value="4">Позадачно</option>
+                  </select>
+                  <div class="field-group field-group--floating">
+                    <input type="text" class="field field-has-btn" name="payment" placeholder="">
+                    <span class="field-floating">Оплата (нижняя граница, руб/час)</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <select name="town" multiple
+                    data-select-choices="multiple-checkbox"
+                    data-choices-class="choices--floating choices--checkbox">
+                    <option value="">Город</option>
+                    <option value="1">Россия</option>
+                    <option value="2">Химки</option>
+                    <option value="3">Долгопрудный</option>
+                    <option value="4">Красногорск</option>
+                    <option value="5">Зеленоград</option>
+                  </select>
+                  <div class="field-group field-group--floating">
+                    <textarea class="field field-has-btn" name="ui-textarea" placeholder=""></textarea>
+                    <span class="field-floating">Описание задачи</span>
+    
+                    <button type="button" class="btn field-btn field-clear">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                  <div class="field-toggles">
+                    <h4 class="field-toggles-title">Позиция</h4>
+  
+                    <label class="label-toggle">
+                      <div class="label-toggle-container">
+                        <input type="radio" name="job" class="btn-toggle">
+                        <span class="label-toggle-slider"></span>
+                      </div>
+                      <div class="label-toggle-content">
+                        Мерчендайзер
+                      </div>
+                    </label>
+  
+                    <label class="label-toggle">
+                      <div class="label-toggle-container">
+                        <input type="radio" name="job" class="btn-toggle">
+                        <span class="label-toggle-slider"></span>
+                      </div>
+                      <div class="label-toggle-content">
+                        Интервьюер
+                      </div>
+                    </label>
+                  </div>
+                </div>
+    
+                <div class="form-footer">
+                  <div class="form-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                      Создать вакансию
+                    </button>
+                  </div>
+                </div>
+              </div>
+  
+              <aside>
+                <div class="section-subheader">
+                  <h3 class="h6 section-title">
+                    О компании
+                  </h3>
+                  <p class="section-subtitle">
+                    Загрузите фото для резюме
+                  </p>
+                </div>
+  
+                <div class="form-body">
+                  <div class="field-toggles">
+                    <div class="upload" data-upload-container="select-one">
+                      <div class="upload-container"></div>
+                      <div class="upload-footer">
+                        <button type="button" class="btn btn-base btn-outline-primary"
+                          data-upload="button">
+                          Загрузить логотип (png или jpeg, не&nbsp;более 4 mb)
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

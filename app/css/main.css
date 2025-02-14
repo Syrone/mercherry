@@ -510,6 +510,12 @@ p + p {
   line-height: 1.85;
   letter-spacing: 0.02em;
 }
+.section-subtitle {
+  font-size: var(--fs-base);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--gray-color);
+}
 .section.section-widget {
   margin-block: 2.5rem;
 }
@@ -924,11 +930,11 @@ p + p {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
-.btn-resume.btn-base {
+.btn-resume.btn-lg {
   --_padding: .75rem 1rem;
 }
 @media (min-width: 991.98px) {
-  .btn-resume.btn-base {
+  .btn-resume.btn-lg {
     --_padding: 1rem 1.5rem;
   }
 }
@@ -2156,13 +2162,60 @@ textarea {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  gap: 1rem;
+}
+.card-footer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+@media (min-width: 991.98px) {
+  .card-footer-info {
+    gap: 0.5rem;
+  }
+}
+.card-footer-info .card-address {
+  max-width: initial;
+  -webkit-line-clamp: 1;
 }
 .card-footer .btn-resume {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
+.card-footer--bg {
+  min-height: 3rem;
+  background-color: var(--secondary-color-100);
+  border-radius: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+@media (min-width: 991.98px) {
+  .card-footer--bg {
+    min-height: 3.875rem;
+  }
+}
+.card-address {
+  max-width: 12rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: var(--fs-md);
+  font-weight: 500;
+  font-style: normal;
+  color: var(--gray-color);
+}
 .card-price {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   font-weight: 600;
 }
 .card-price-time {
@@ -8979,4 +9032,4 @@ button.swiper-pagination-bullet {
 
 .swiper--visible {
   overflow: visible;
-}
+}/*# sourceMappingURL=main.css.map */

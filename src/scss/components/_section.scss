@@ -41,6 +41,13 @@
 		letter-spacing: .02em;
 	}
 
+	&-subtitle {
+		font-size: var(--fs-base);
+		font-weight: 500;
+		line-height: 1.4;
+		color: var(--gray-color);
+	}
+
 	&.section-widget {
 		margin-block: 2.5rem;
 	}
