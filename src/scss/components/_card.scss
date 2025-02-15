@@ -258,8 +258,30 @@
 		}
 	}
 
+	.card-footer {
+		margin-top: 0;
+		align-items: stretch;
+
+		.btn-md {
+			flex: 1;
+
+			@media (min-width: 991.98px) {
+				flex: initial;
+			}
+		}
+	}
+
 	&-wrap {
 		flex-wrap: wrap;
+
+		.card-footer {
+			width: 100%;
+
+			.info-block {
+				max-width: initial;
+				flex: 1;
+			}
+		}
 	}
 }
 

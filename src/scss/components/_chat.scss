@@ -120,7 +120,6 @@
 		justify-content: initial;
 		text-align: start;
 		gap: .75rem;
-		order: -1;
 		
 		@media (min-width: 991.98px) {
 			--_padding: .75rem 1rem .75rem .75rem;
@@ -129,7 +128,6 @@
 		}
 
 		&:not(.is-active) {
-			order: initial;
 
 			.chat-user-fix {
 				display: none;

@@ -284,7 +284,8 @@
 
 .modal-alert {
 
-  .modal-content {
+  .modal-content,
+  .modal-body {
     gap: 2rem;
 
     @media (min-width: 991.98px) {

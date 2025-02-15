@@ -978,6 +978,123 @@
     </div>
 </div>
 
+<div class="modal modal-list fade"
+	id="modal_write_client"
+	tabindex="-1"
+	aria-labelledby="modal_write_client_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_write_client_label">
+                    Напишите заказчику первое сообщение
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <article class="card card--row card--row-wrap card--readonly">
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">от 700</div>
+            <div class="info-block-label">Стоимость часа ₽</div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <div class="info-block">
+            <div class="info-block-item">
+                <div class="info-block-name">г. Москва, м. Алтуфьево, ул. Пушкина, д 3</div>
+                <div class="info-block-label">Адрес</div>
+            </div>
+        </div>
+    </div>
+</article>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Отправить отклик
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_work_finish"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Завершить работу досрочно?
+                        </h3>
+                        <p class="text-gray">
+                            Работодателю придёт уведомление
+                        </p>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+                        Нет, отменить
+                    </button>
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Да, завершить
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 <div class="modal modal-alert fade"
 	id="modal_created_vacancy"
 	tabindex="-1"
@@ -999,6 +1116,34 @@
                     <a href="#" class="btn btn-base btn-primary"
 						data-bs-dismiss="modal">
                         К просмотру резюме
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_work_completed"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Работа над задачей завершена
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <a href="#" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        К вакансиям
                     </a>
                 </div>
             </div>

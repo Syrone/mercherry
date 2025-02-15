@@ -2311,9 +2311,36 @@ textarea {
 .card--row .card-header .label-check {
   margin: 0 0 0 -0.5rem;
 }
+.card--row .card-footer {
+  margin-top: 0;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.card--row .card-footer .btn-md {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 991.98px) {
+  .card--row .card-footer .btn-md {
+    -webkit-box-flex: initial;
+    -ms-flex: initial;
+    flex: initial;
+  }
+}
 .card--row-wrap {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.card--row-wrap .card-footer {
+  width: 100%;
+}
+.card--row-wrap .card-footer .info-block {
+  max-width: initial;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .card--readonly {
@@ -4986,20 +5013,12 @@ textarea {
   justify-content: initial;
   text-align: start;
   gap: 0.75rem;
-  -webkit-box-ordinal-group: 0;
-  -ms-flex-order: -1;
-  order: -1;
 }
 @media (min-width: 991.98px) {
   .chat-user {
     --_padding: .75rem 1rem .75rem .75rem;
     gap: 1rem;
   }
-}
-.chat-user:not(.is-active) {
-  -webkit-box-ordinal-group: initial;
-  -ms-flex-order: initial;
-  order: initial;
 }
 .chat-user:not(.is-active) .chat-user-fix {
   display: none;
@@ -8139,11 +8158,13 @@ textarea {
   overflow-y: auto;
 }
 
-.modal-alert .modal-content {
+.modal-alert .modal-content,
+.modal-alert .modal-body {
   gap: 2rem;
 }
 @media (min-width: 991.98px) {
-  .modal-alert .modal-content {
+  .modal-alert .modal-content,
+  .modal-alert .modal-body {
     gap: 3rem;
   }
 }
