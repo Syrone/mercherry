@@ -297,3 +297,14 @@
     min-height: initial;
   }
 }
+
+.modal-issue {
+
+  .modal-content {
+    gap: 2rem;
+
+    @media (min-width: 991.98px) {
+      gap: 3rem;
+    }
+  }
+}

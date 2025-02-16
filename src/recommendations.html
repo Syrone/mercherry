@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Моё резюме'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Моё резюме'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget product">
+          <div class="container">
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <h2 class="h5 filter-header-title">
+                  Рекомендации по моему резюме
+                </h2>
+              </div>
+            </div>
+
+            <div class="product-body">
+              <div class="filter-body">
+                <div class="filter-content">
+                  <h3 class="h5 filter-content-title">
+                    Новое
+                    <span class="badge badge--gray-125">
+                      3
+                    </span>
+                  </h3>
+
+                  @include('partials/notify/notify--ai-info-2.html')
+                  @include('partials/notify/notify--ai-info-2.html')
+                </div>
+
+                <div class="filter-content">
+                  <h3 class="h5 filter-content-title">
+                    Архив
+                    <span class="badge badge--gray-125">
+                      3
+                    </span>
+                  </h3>
+
+                  @include('partials/notify/notify--ai-info-3.html')
+                  @include('partials/notify/notify--ai-info-3.html')
+                  @include('partials/notify/notify--ai-info-3.html')
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

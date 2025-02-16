@@ -60,19 +60,6 @@
           или
           showAlert('error', 'Произошла ошибка. Попробуйте ещё раз.');
         -->
-        <div class="alert alert--success">
-          <div class="alert-content">
-            <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="24" height="24" alt="Иконка">
-            <p>Пароль успешно изменён</p>
-          </div>
-          <button type="button" class="btn btn-close">
-            <span class="icon">
-              <svg>
-                <use xlink:href="img/icons/close.svg#svg-close"></use>
-              </svg>
-            </span>
-          </button>
-        </div>
       </div>
 
       <section class="section ui-section">
@@ -123,6 +110,26 @@
             <button type="button" class="btn btn-base btn-primary"
               data-bs-toggle="modal" data-bs-target="#modal_work_completed">
               Работа завершена
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_issue_1">
+              Вопрос 1/20
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_issue_2">
+              Вопрос 2/20
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_send_answer">
+              Отправить ответы?
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_response_success">
+              Ура, ваши баллы — 18 из 20
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_response_error">
+              Увы, ваши баллы — 4 из 20
             </button>
           </div>
 
@@ -1349,6 +1356,86 @@
             <p>
                 Вы приняли предложение кандидата на вакансию «Перекрёсток»
             </p>
+        </div>
+    </div>
+</div>
+
+              <div class="notify notify--ai notify--ai-magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <h3>
+                Общение с заказчиком
+            </h3>
+            <p>
+                Что улучшить в коммуникации, чтобы зарабатывать больше?
+            </p>
+        </div>
+
+        <div class="notify-picture">
+            <img loading="lazy" src="img/icons/ai--magenta.svg" class="image" width="32" height="32" alt="Картинка">
+        </div>
+    </div>
+</div>
+              <div class="notify notify--ai notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <h3>
+                Общение с заказчиком
+            </h3>
+            <p>
+                Что улучшить в коммуникации, чтобы зарабатывать больше?
+            </p>
+        </div>
+
+        <div class="notify-picture">
+            <img loading="lazy" src="img/icons/ai--cold.svg" class="image" width="32" height="32" alt="Картинка">
+        </div>
+    </div>
+</div>
+              <div class="notify notify--ai notify--ai-2 notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <div class="notify-content-header">
+                <h3>
+                    ИИ Елизавета
+                </h3>
+
+                <time datetime="">14.10.2024</time>
+            </div>
+
+            <div class="notify-content-body">
+                <div class="notify-content-content">
+                    <p>
+                        Проанализировав ваше резюме, я сделал вывод, что вам необходимо пройти обучение «Раскладка товаров ёлочкой»
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-md btn-cold-100"
+					data-bs-toggle="modal" data-bs-target="#modal_issue_1">
+                    Пройти тест
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+              <div class="notify notify--ai notify--ai-2 notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <div class="notify-content-header">
+                <h3>
+                    ИИ Антон
+                </h3>
+
+                <time datetime="">14.10.2024</time>
+            </div>
+
+            <div class="notify-content-body">
+                <div class="notify-content-content">
+                    <p>
+                        При общении в чате с компанией «Yotolab» вы допустили ошибку, когда сразу попросили оплату. Работадатели первоначально настроены на результат, а потом на оплату
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -2704,6 +2791,241 @@
                     <button type="button" class="btn btn-base btn-primary"
 						data-bs-dismiss="modal">
                         Ок, спасибо
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-issue fade"
+	id="modal_issue_1"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="issue">
+                    <div class="issue-header">
+                        <h3 class="h5 issue-title">
+                            Вопрос 1/20
+                        </h3>
+                        <p class="issue-subtitle">
+                            Какой товар необходимо выставлять перед входом в магазин?
+                        </p>
+                    </div>
+
+                    <div class="issue-body">
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Фрукты
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Бутафория
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Конфеты
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Хлеб
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						disabled>
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-issue fade"
+	id="modal_issue_2"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="issue">
+                    <div class="issue-header">
+                        <h3 class="h5 issue-title">
+                            Вопрос 2/20
+                        </h3>
+                        <p class="issue-subtitle">
+                            Какой-нибудь вопрос
+                        </p>
+                    </div>
+
+                    <div class="issue-body">
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 1
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 2
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 3
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 4
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary">
+                        Назад
+                    </button>
+                    <button type="submit" class="btn btn-base btn-primary"
+						disabled>
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_send_answer"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Отправить ответы?
+                        </h3>
+                        <p class="text-gray">
+                            Вы ответили на все вопросы
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary">
+                        Назад
+                    </button>
+                    <button type="button" class="btn btn-base btn-primary">
+                        Да, отправить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_response_success"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Ура, ваши баллы — 18 из 20
+                        </h3>
+                        <p class="text-gray">
+                            Вы успешно прошли тестирование. Так держать!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary">
+                        Прекрасно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_response_error"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/error.svg" class="image image-error" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Увы, ваши баллы — 4 из 20
+                        </h3>
+                        <p class="text-gray">
+                            Повторите материал и пройдите тестирование ещё раз
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary">
+                        Хорошо
                     </button>
                 </div>
             </div>

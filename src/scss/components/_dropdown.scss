@@ -154,17 +154,11 @@
   text-align: inherit; // For `<button>`s
   white-space: nowrap; // prevent links from randomly breaking onto new lines
 
-  // &:not(.btn) {
-  //   width: var(--_width);
-  //   font-weight: var(--_fw);
-  //   line-height: var(--_lh);
-  //   color: var(--_color);
-  //   padding: .25rem 1rem;
-
-  //   &:not(:last-child) {
-  //     margin-bottom: 1rem;
-  //   }
-  // }
+  &--remove {
+    --_color: #E61414;
+    --_color-hover: #E61414;
+    --_color-active: #E61414;
+  }
 }
 
 .dropdown-menu.show {

@@ -10,7 +10,7 @@
   <meta name="format-detection" content="date=no">
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
-  <title>Главная</title>
+  <title>Моё резюме</title>
   <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
@@ -26,7 +26,7 @@
 
 <body class="page-body">
   <h1 class="visually-hidden">
-    Главная страница
+    Моё резюме
 </h1>
 
   <div class="site-container">
@@ -56,29 +56,35 @@
         </button>
       </div>
       <div class="offcanvas-body">
-        <nav class="header-nav">
-          <div class="btn-group">
-            <a href="./home-client.html" class="btn btn-md is-active">
-              Я заказчик
+        <div class="header-end">
+          <nav class="header-nav">
+            <a href="#" class="btn">
+              Вакансии
             </a>
-            <a href="./home-performer.html" class="btn btn-md">
-              Я исполнитель
+
+            <a href="#" class="btn">
+              Отчёты
+            </a>
+
+            <a href="#" class="btn">
+              Чаты
+
+              <span class="badge badge--circle badge--error-500">
+                12
+              </span>
+            </a>
+          </nav>
+
+          <div class="header-user">
+            <a href="#" class="btn">
+              <picture>
+                <source srcset="img/avatar.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar.jpg" class="image" width="48" height="48" alt="Аватар">
+              </picture>
+
+              Василиса
             </a>
           </div>
-
-          <a href="./about-client.html" class="btn">
-            О проекте
-          </a>
-        </nav>
-
-        <div class="header-signin">
-          <a href="#" class="btn">
-            Войти
-          </a>
-
-          <a href="#" class="btn btn-base btn-primary">
-            Зарегистрироваться
-          </a>
         </div>
       </div>
     </div>
@@ -100,82 +106,153 @@
       <div class="alert-container"></div>
 
       <div class="section-container">
-        <section class="section section-widget sign">
+        <section class="section section-widget product">
           <div class="container">
-            <div class="sign-content">
-              <form action="#" class="form sign-form">
-                <div class="form-header">
-                  <h2 class="h3 form-title">
-                    Задайте новый пароль
-                  </h2>
-                  <p class="form-subtitle">
-                    Пароль должен содержать не менее 8 символов
-                  </p>
-                </div>
-
-                <div class="form-body">
-                  <div class="field-group field-group--floating">
-                    <input type="password" class="field field-has-btn" name="new-password" placeholder="">
-                    <span class="field-floating">Новый пароль</span>
-
-                    <button type="button" class="btn field-btn field-show">
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="img/icons/visible.svg#svg-visible"></use>
-                        </svg>
-                      </span>
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="img/icons/invisible.svg#svg-invisible"></use>
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                  <div class="field-group field-group--floating">
-                    <input type="password" class="field field-has-btn" name="repeat-password" placeholder="">
-                    <span class="field-floating">Повторите пароль</span>
-
-                    <button type="button" class="btn field-btn field-show">
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="img/icons/visible.svg#svg-visible"></use>
-                        </svg>
-                      </span>
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="img/icons/invisible.svg#svg-invisible"></use>
-                        </svg>
-                      </span>
-                    </button>
-                  </div>
-                  <div class="field-hint">
-                    <label class="form-check">
-                      <div class="form-check-checkbox">
-                        <input type="checkbox" class="form-check-input" name="remember">
-                        <span class="form-check-checkbox-span"></span>
-                      </div>
-                      <span class="form-check-label">
-                        Запомнить меня
-                      </span>
-                    </label>
-                  </div>
-                </div>
-
-                <div class="form-footer">
-                  <div class="form-buttons">
-                    <button type="submit" class="btn btn-base btn-primary">
-                      Войти в аккаунт
-                    </button>
-                  </div>
-                </div>
-              </form>
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <h2 class="h5 filter-header-title">
+                  Рекомендации по моему резюме
+                </h2>
+              </div>
             </div>
 
-            <div class="sign-picture">
-              <picture>
-                <source srcset=".webp" type="image/webp">
-                <img loading="lazy" src="." class="image" width="692" height="595" alt="">
-              </picture>
+            <div class="product-body">
+              <div class="filter-body">
+                <div class="filter-content">
+                  <h3 class="h5 filter-content-title">
+                    Новое
+                    <span class="badge badge--gray-125">
+                      3
+                    </span>
+                  </h3>
+
+                  <div class="notify notify--ai notify--ai-2 notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <div class="notify-content-header">
+                <h3>
+                    ИИ Елизавета
+                </h3>
+
+                <time datetime="">14.10.2024</time>
+            </div>
+
+            <div class="notify-content-body">
+                <div class="notify-content-content">
+                    <p>
+                        Проанализировав ваше резюме, я сделал вывод, что вам необходимо пройти обучение «Раскладка товаров ёлочкой»
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-md btn-cold-100"
+					data-bs-toggle="modal" data-bs-target="#modal_issue_1">
+                    Пройти тест
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+                  <div class="notify notify--ai notify--ai-2 notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <div class="notify-content-header">
+                <h3>
+                    ИИ Елизавета
+                </h3>
+
+                <time datetime="">14.10.2024</time>
+            </div>
+
+            <div class="notify-content-body">
+                <div class="notify-content-content">
+                    <p>
+                        Проанализировав ваше резюме, я сделал вывод, что вам необходимо пройти обучение «Раскладка товаров ёлочкой»
+                    </p>
+                </div>
+
+                <button type="button" class="btn btn-md btn-cold-100"
+					data-bs-toggle="modal" data-bs-target="#modal_issue_1">
+                    Пройти тест
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="filter-content">
+                  <h3 class="h5 filter-content-title">
+                    Архив
+                    <span class="badge badge--gray-125">
+                      3
+                    </span>
+                  </h3>
+
+                  <div class="notify notify--ai notify--ai-2 notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <div class="notify-content-header">
+                <h3>
+                    ИИ Антон
+                </h3>
+
+                <time datetime="">14.10.2024</time>
+            </div>
+
+            <div class="notify-content-body">
+                <div class="notify-content-content">
+                    <p>
+                        При общении в чате с компанией «Yotolab» вы допустили ошибку, когда сразу попросили оплату. Работадатели первоначально настроены на результат, а потом на оплату
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                  <div class="notify notify--ai notify--ai-2 notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <div class="notify-content-header">
+                <h3>
+                    ИИ Антон
+                </h3>
+
+                <time datetime="">14.10.2024</time>
+            </div>
+
+            <div class="notify-content-body">
+                <div class="notify-content-content">
+                    <p>
+                        При общении в чате с компанией «Yotolab» вы допустили ошибку, когда сразу попросили оплату. Работадатели первоначально настроены на результат, а потом на оплату
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                  <div class="notify notify--ai notify--ai-2 notify--ai-info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <div class="notify-content-header">
+                <h3>
+                    ИИ Антон
+                </h3>
+
+                <time datetime="">14.10.2024</time>
+            </div>
+
+            <div class="notify-content-body">
+                <div class="notify-content-content">
+                    <p>
+                        При общении в чате с компанией «Yotolab» вы допустили ошибку, когда сразу попросили оплату. Работадатели первоначально настроены на результат, а потом на оплату
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

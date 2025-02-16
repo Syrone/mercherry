@@ -39,19 +39,6 @@
           или
           showAlert('error', 'Произошла ошибка. Попробуйте ещё раз.');
         -->
-        <div class="alert alert--success">
-          <div class="alert-content">
-            <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="24" height="24" alt="Иконка">
-            <p>Пароль успешно изменён</p>
-          </div>
-          <button type="button" class="btn btn-close">
-            <span class="icon">
-              <svg>
-                <use xlink:href="img/icons/close.svg#svg-close"></use>
-              </svg>
-            </span>
-          </button>
-        </div>
       </div>
 
       <section class="section ui-section">
@@ -102,6 +89,26 @@
             <button type="button" class="btn btn-base btn-primary"
               data-bs-toggle="modal" data-bs-target="#modal_work_completed">
               Работа завершена
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_issue_1">
+              Вопрос 1/20
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_issue_2">
+              Вопрос 2/20
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_send_answer">
+              Отправить ответы?
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_response_success">
+              Ура, ваши баллы — 18 из 20
+            </button>
+            <button type="button" class="btn btn-base btn-primary"
+              data-bs-toggle="modal" data-bs-target="#modal_response_error">
+              Увы, ваши баллы — 4 из 20
             </button>
           </div>
 
@@ -799,6 +806,11 @@
               @include('partials/notify/notify--magenta-2.html')
               @include('partials/notify/notify--error-2.html')
               @include('partials/notify/notify--success-2.html')
+
+              @include('partials/notify/notify--ai-magenta.html')
+              @include('partials/notify/notify--ai-info.html')
+              @include('partials/notify/notify--ai-info-2.html')
+              @include('partials/notify/notify--ai-info-3.html')
             </div>
           </div>
 

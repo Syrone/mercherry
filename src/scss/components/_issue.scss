@@ -1,0 +1,30 @@
+.issue {
+	gap: 1.5rem;
+
+	&,
+	&-header,
+	&-body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-header {
+		gap: .75rem;
+		text-align: center;
+	}
+
+	&-title {
+		font-family: var(--font-family);
+	}
+
+	&-subtitle {
+		color: var(--gray-color);
+	}
+
+	&-body {
+		width: 100%;
+		max-width: 25rem;
+		align-self: center;
+		gap: .5rem;
+	}
+}

@@ -140,11 +140,15 @@
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
+	&-title,
+	.notify {
+		grid-column: -1 / 1;
+	}
+
 	&-title {
 		display: flex;
 		align-items: center;
 		gap: .5rem;
-		grid-column: -1 / 1;
 		margin-bottom: .5rem;
 
 		.image {
