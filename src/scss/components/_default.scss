@@ -20,4 +20,32 @@
 			gap: 8.75rem;
 		}
 	}
+
+	&--report {
+
+
+		.section-body {
+			grid-template-columns: minmax(0, 1fr);
+
+			@media (min-width: 991.98px) {
+				grid-template-columns: minmax(0, 35rem) minmax(0, 1fr);
+			}
+
+			@media (min-width: 1199.98px) {
+				grid-template-columns: minmax(0, 37.5rem) minmax(0, 1fr);
+			}
+
+			@media (min-width: 1399.98px) {
+				grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
+			}
+		}
+
+		.form-body {
+			gap: 1.75rem;
+
+			@media (min-width: 991.98px) {
+				gap: 2.25rem;
+			}
+		}
+	}
 }

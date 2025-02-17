@@ -23,6 +23,14 @@
 		}
 	}
 
+	&-address {
+		font-size: var(--fs-base);
+		font-weight: 500;
+		font-style: normal;
+		line-height: 1.4;
+		color: var(--gray-color);
+	}
+
 	&-subheader {
 		margin-bottom: .75rem;
 

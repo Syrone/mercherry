@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Отклики на вакансию'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Отклики на вакансию'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget">
+          <div class="container">
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <div class="btn-group btn-group--plaintext filter-header-scrollable">
+                  <button type="button" class="btn is-active">
+                    По датам <span class="badge badge--gray-125">12</span>
+                  </button>
+                  <button type="button" class="btn">
+                    По магазину <span class="badge badge--gray-125">12</span>
+                  </button>
+                </div>
+
+                <div class="filter-header-top-selects"
+                  data-filter-choices="">
+                  <div class="filter-header-scrollable">
+                    <select name="performer" multiple
+                      data-select-choices="filter multiple-checkbox"
+                      data-choices-class="choices--filter choices--checkbox choices--md">
+                      <option value="">Торговая марка</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Кирилл Билинович</option>
+                      <option value="2">Станислав Емельяненко</option>
+                      <option value="3">Никита Осипов</option>
+                      <option value="4">Николай Красный</option>
+                      <option value="5">Мария Голубева</option>
+                      <option value="6">Андрей Жуков</option>
+                    </select>
+                    <select name="vacancy" multiple
+                      data-select-choices="filter multiple-checkbox"
+                      data-choices-class="choices--filter choices--checkbox choices--md">
+                      <option value="">Вакансии</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Магнит</option>
+                      <option value="2">Перекрёсток</option>
+                      <option value="3">Пятёрочка</option>
+                      <option value="4">Metro</option>
+                      <option value="5">ВкусВилл</option>
+                      <option value="6">Дикси</option>
+                    </select>
+
+                    <button type="button" class="btn btn-md btn-primary">
+                      Создать отчёт
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-body">
+              <div class="filter-content">
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+                @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

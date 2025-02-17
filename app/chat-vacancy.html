@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <title>Чат</title>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page-body">
+  <h1 class="visually-hidden">
+    Чат
+</h1>
+
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <a href="#" class="btn brand">
+    mercherry
+</a>
+
+    <div class="offcanvas offcanvas-end offcanvas-navbar"
+      id="offcanvas-header"
+      tabindex="-1"
+      aria-labelledby="offcanvas-header-label">
+      <div class="offcanvas-header">
+        <a href="#" class="btn brand">
+    mercherry
+</a>
+
+        <button type="button" class="btn btn-icon btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/close.svg#svg-close"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="header-end">
+          <nav class="header-nav">
+            <a href="#" class="btn">
+              Вакансии
+            </a>
+
+            <a href="#" class="btn">
+              Отчёты
+            </a>
+
+            <a href="#" class="btn">
+              Чаты
+
+              <span class="badge badge--circle badge--error-500">
+                12
+              </span>
+            </a>
+          </nav>
+
+          <div class="header-user">
+            <a href="#" class="btn">
+              <picture>
+                <source srcset="img/avatar.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar.jpg" class="image" width="48" height="48" alt="Аватар">
+              </picture>
+
+              Василиса
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-icon btn-menu"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-header"
+      aria-controls="offcanvas-header">
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/menu.svg#svg-menu"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</header>
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget chat">
+          <div class="container">
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <div class="btn-group btn-group--plaintext filter-header-scrollable">
+                  <button type="button" class="btn is-active">
+                    Все чаты <span class="badge badge--gray-125">12</span>
+                  </button>
+                  <button type="button" class="btn collapse-button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_vacancy" aria-expanded="false" aria-controls="collapse_vacancy">
+                    По вакансии
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="filter-header-top-selects">
+                  <div class="accordion-collapse" id="collapse_vacancy">
+                    <div class="accordion-body">
+                      <select name="example-name" data-select-choices="filter default-radio"
+                        data-choices-class="choices--filter choices--radio choices--md">
+                        <option value="">Статус вакансии</option>
+                        <option value="all" selected>Все, кроме «Архив»</option>
+                        <option value="2">Популярные</option>
+                        <option value="3">Уже общались</option>
+                        <option value="4">Уже сотрудничали</option>
+                      </select>
+                    </div>
+                  </div>
+                  <select name="example-name" data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Сначала показывать</option>
+                    <option value="1" selected>Новые</option>
+                    <option value="2">Популярные</option>
+                    <option value="3">Уже общались</option>
+                    <option value="4">Уже сотрудничали</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-collapse accordion-collapse--vacancy" id="collapse_vacancy">
+            <div class="accordion-body">
+              <div class="container-padding">
+                <div class="swiper swiper--visible swiper-vacancy">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</label>
+                    </div>
+                    <div class="swiper-slide">
+                      <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</label>
+                    </div>
+                    <div class="swiper-slide">
+                      <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--on">В работе</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="user user--md">
+                    <div class="user-picture">
+                        <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="28" height="28" alt="Аватар">
+                        </picture>
+                    </div>
+                    <div class="user-content">
+                        <h4 class="user-name">
+                            Никита
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</label>
+                    </div>
+                    <div class="swiper-slide">
+                      <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--on">В работе</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="user user--md">
+                    <div class="user-picture">
+                        <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="28" height="28" alt="Аватар">
+                        </picture>
+                    </div>
+                    <div class="user-content">
+                        <h4 class="user-name">
+                            Никита
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</label>
+                    </div>
+                    <div class="swiper-slide">
+                      <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</label>
+                    </div>
+                    <div class="swiper-slide">
+                      <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</label>
+                    </div>
+                    <div class="swiper-slide">
+                      <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--on">В работе</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="user user--md">
+                    <div class="user-picture">
+                        <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="28" height="28" alt="Аватар">
+                        </picture>
+                    </div>
+                    <div class="user-content">
+                        <h4 class="user-name">
+                            Никита
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="chat-container">
+              <aside class="chat-users">
+                <button type="button" class="btn chat-user">
+    <div class="chat-user-picture">
+        <picture>
+            <source srcset="img/vacancies/image-1.webp" type="image/webp">
+            <img loading="lazy" src="img/vacancies/image-1.jpg" class="image" width="48" height="48" alt="Аватар">
+        </picture>
+    </div>
+    <div class="chat-user-content">
+        <div class="chat-user-header">
+            <h3 class="chat-user-name">METRO</h3>
+            <span class="icon chat-user-fix">
+                <svg>
+                    <use xlink:href="img/icons/fix.svg#svg-fix"></use>
+                </svg>
+            </span>
+        </div>
+        <p class="chat-user-message">
+            Да, конечно! в это время и расчитываю на дополнительный заработок
+        </p>
+    </div>
+    <div class="chat-user-end">
+        <time datetime="" class="chat-user-time">
+            13:02
+        </time>
+
+        <span class="badge badge--md badge--circle badge--error-500">
+            1
+        </span>
+    </div>
+</button>
+                <button type="button" class="btn chat-user">
+    <div class="chat-user-picture">
+        <picture>
+            <source srcset="img/vacancies/image-3.webp" type="image/webp">
+            <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Аватар">
+        </picture>
+    </div>
+    <div class="chat-user-content">
+        <div class="chat-user-header">
+            <h3 class="chat-user-name">Перекрёсток</h3>
+            <span class="icon chat-user-fix">
+                <svg>
+                    <use xlink:href="img/icons/fix.svg#svg-fix"></use>
+                </svg>
+            </span>
+        </div>
+        <p class="chat-user-message">
+            Готов приступать 🔥
+        </p>
+    </div>
+    <div class="chat-user-end">
+        <time datetime="" class="chat-user-time">
+            13:02
+        </time>
+    </div>
+</button>
+                <button type="button" class="btn chat-user">
+    <div class="chat-user-picture">
+        <picture>
+            <source srcset="img/vacancies/image-5.webp" type="image/webp">
+            <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="48" height="48" alt="Аватар">
+        </picture>
+    </div>
+    <div class="chat-user-content">
+        <div class="chat-user-header">
+            <h3 class="chat-user-name">Магнит</h3>
+            <span class="icon chat-user-fix">
+                <svg>
+                    <use xlink:href="img/icons/fix.svg#svg-fix"></use>
+                </svg>
+            </span>
+        </div>
+        <p class="chat-user-message">
+            Да, конечно! в это время и расчитываю на дополнительный заработок
+        </p>
+    </div>
+    <div class="chat-user-end">
+        <time datetime="" class="chat-user-time">
+            13:02
+        </time>
+    </div>
+</button>
+              </aside>
+              <div class="chat-body">
+                <div class="chat-content">
+                  <div class="chat-messages">
+                    <p class="chat-messages-empty">
+                      Выберите чат для продолжения беседы
+                    </p>
+                  </div>
+                </div>
+
+                <div class="chat-content">
+                  <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/vacancies/image-1.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-1.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Перекрёсток
+                </h3>
+
+                <div class="blanks">
+                    <div class="blank blank-payment">Отклик отправлен</div>
+                </div>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Добрый день! Ваша вакансия заинтересовала. Возможно, вам будет интересен мой опыт и навыки. Пожалуйста, рассмотрите мою кандидатуру!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        <div class="notify notify--info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы создали отчёт по данной вакансии. Хотите отправить его работодателю?
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-cold">
+                Отправить
+            </button>
+            <button type="button" class="btn btn-md btn-cold-225">
+                Редактировать
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Кандидат отправил отклик на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-magenta">
+                Принять отклик
+            </button>
+
+            <button type="button" class="btn btn-md btn-magenta-225">
+                Отклонить
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--error">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы отклонили предложение кандидата на вакансию «Перекрёсток». Можете пригласить кандидата на другую вакансию.
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-error-225">
+                Хорошо
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--success">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы приняли предложение кандидата на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-success-225">
+                Супер!
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="chat-footer" data-upload-container="multiple">
+    <button type="button" class="btn btn-pin"
+		data-upload="button">
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/pin.svg#svg-pin"></use>
+            </svg>
+        </span>
+    </button>
+
+    <div class="chat-textarea">
+        <div class="upload-container"></div>
+
+        <div class="chat-textarea-container">
+            <textarea class="field field--plaintext" name="message" rows="1" placeholder="Сообщение"></textarea>
+        </div>
+
+        <div class="chat-textarea-buttons">
+            <button type="button" class="btn btn-message">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/message.svg#svg-message"></use>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</form>
+                </div>
+
+                <div class="chat-content">
+                  <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/vacancies/image-3.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-3.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Перекрёсток
+                </h3>
+
+                <div class="blanks">
+                    <div class="blank blank-payment">В работе</div>
+                </div>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+        <button type="button" class="btn btn-md btn-primary">
+            Просмотреть отчёт
+        </button>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Добрый день! Ваша вакансия заинтересовала. Возможно, вам будет интересен мой опыт и навыки. Пожалуйста, рассмотрите мою кандидатуру!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        <div class="notify notify--info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы создали отчёт по данной вакансии. Хотите отправить его работодателю?
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-cold">
+                Отправить
+            </button>
+            <button type="button" class="btn btn-md btn-cold-225">
+                Редактировать
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Кандидат отправил отклик на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-magenta">
+                Принять отклик
+            </button>
+
+            <button type="button" class="btn btn-md btn-magenta-225">
+                Отклонить
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--error">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы отклонили предложение кандидата на вакансию «Перекрёсток». Можете пригласить кандидата на другую вакансию.
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-error-225">
+                Хорошо
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--success">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы приняли предложение кандидата на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-success-225">
+                Супер!
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="chat-footer" data-upload-container="multiple">
+    <button type="button" class="btn btn-pin"
+		data-upload="button">
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/pin.svg#svg-pin"></use>
+            </svg>
+        </span>
+    </button>
+
+    <div class="chat-textarea">
+        <div class="upload-container"></div>
+
+        <div class="chat-textarea-container">
+            <textarea class="field field--plaintext" name="message" rows="1" placeholder="Сообщение"></textarea>
+        </div>
+
+        <div class="chat-textarea-buttons">
+            <button type="button" class="btn btn-message">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/message.svg#svg-message"></use>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</form>
+                </div>
+
+                <div class="chat-content">
+                  <div class="chat-header">
+    <div class="chat-header-user">
+        <div class="chat-header-user-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="48" height="48" alt="Аватар">
+            </picture>
+        </div>
+        <div class="chat-header-user-content">
+            <div class="chat-header-user-header">
+                <h3 class="chat-header-user-name">
+                    Магнит
+                </h3>
+            </div>
+            <div class="user-status user-status--online">
+                В сети
+            </div>
+        </div>
+    </div>
+    <div class="chat-header-buttons">
+        <button type="button" class="btn btn-back">
+            <span class="icon">
+                <svg>
+                    <use xlink:href="img/icons/back.svg#svg-back"></use>
+                </svg>
+            </span>
+        </button>
+        <button type="button" class="btn btn-md btn-primary">
+            Принять отклик
+        </button>
+        <button type="button" class="btn btn-md btn-outline-primary">
+            Отклонить
+        </button>
+    </div>
+    <div class="chat-header-more">
+        <div class="dropdown dropdown--more">
+            <button type="button" class="btn dropdown-toggle"
+				data-bs-toggle="dropdown"
+				data-bs-auto-close="outside"
+				aria-expanded="false">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/more.svg#svg-more"></use>
+                    </svg>
+                </span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Перейти в профиль
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="btn dropdown-item">
+                        Закрепить чат
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Добрый день! Ваша вакансия заинтересовала. Возможно, вам будет интересен мой опыт и навыки. Пожалуйста, рассмотрите мою кандидатуру!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        <div class="notify notify--info">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы создали отчёт по данной вакансии. Хотите отправить его работодателю?
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-cold">
+                Отправить
+            </button>
+            <button type="button" class="btn btn-md btn-cold-225">
+                Редактировать
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Кандидат отправил отклик на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-magenta">
+                Принять отклик
+            </button>
+
+            <button type="button" class="btn btn-md btn-magenta-225">
+                Отклонить
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--error">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы отклонили предложение кандидата на вакансию «Перекрёсток». Можете пригласить кандидата на другую вакансию.
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-error-225">
+                Хорошо
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                      <div class="message message--system">
+                        <div class="notify notify--success">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Вы приняли предложение кандидата на вакансию «Перекрёсток»
+            </p>
+        </div>
+
+        <div class="notify-buttons">
+            <button type="button" class="btn btn-md btn-success-225">
+                Супер!
+            </button>
+        </div>
+    </div>
+</div>
+                      </div>
+                    </div>
+                  </div>
+                  <form class="chat-footer" data-upload-container="multiple">
+    <button type="button" class="btn btn-pin"
+		data-upload="button">
+        <span class="icon">
+            <svg>
+                <use xlink:href="img/icons/pin.svg#svg-pin"></use>
+            </svg>
+        </span>
+    </button>
+
+    <div class="chat-textarea">
+        <div class="upload-container"></div>
+
+        <div class="chat-textarea-container">
+            <textarea class="field field--plaintext" name="message" rows="1" placeholder="Сообщение"></textarea>
+        </div>
+
+        <div class="chat-textarea-buttons">
+            <button type="button" class="btn btn-message">
+                <span class="icon">
+                    <svg>
+                        <use xlink:href="img/icons/message.svg#svg-message"></use>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+</form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Есть глобальная функция window.choiceUserChat('exampleId') куда можешь передавать значение для открытия нужного чата -->
+            <!-- Чтобы сбросить выбор чата window.choiceUserChat('preview') -->
+            <!-- Задаю нужные атрибуты к .chat-user и .chat-content чтобы связать их между собой -->
+            <!-- Вообще, я думаю ты через бэк будешь проставлять атрибуты с нужным значением, ниже же демо-код -->
+            <script>
+              document.querySelectorAll('.chat-content').forEach((content, index) => {
+                content.setAttribute('data-chat-related', index === 0 ? 'preview' : `user${index}`)
+              })
+
+              document.querySelectorAll('.chat-user').forEach((user, index) => {
+                const chatId = `user${index + 1}`
+                user.setAttribute('data-chat-target', chatId)
+
+                const relatedChat = document.querySelectorAll('.chat-content')[index + 1] // Смещение на 1
+                if (relatedChat) {
+                  relatedChat.setAttribute('data-chat-related', chatId)
+                }
+              })
+            </script>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal modal-list fade"
+	id="modal_job_responses"
+	tabindex="-1"
+	aria-labelledby="modal_job_responses_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_job_responses_label">
+                    Отклики на вакансию
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-reset modal-body-list">
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-list fade"
+	id="modal_choose_job"
+	tabindex="-1"
+	aria-labelledby="modal_choose_job_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_choose_job_label">
+                    Выберите вакансию
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-reset modal-body-list">
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Готово
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-list fade"
+	id="modal_write_candidate"
+	tabindex="-1"
+	aria-labelledby="modal_write_candidate_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_write_candidate_label">
+                    Напишите кандидату первое сообщение
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <article class="card card--row card--readonly">
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Отправить приглашение
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-list fade"
+	id="modal_write_client"
+	tabindex="-1"
+	aria-labelledby="modal_write_client_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_write_client_label">
+                    Напишите заказчику первое сообщение
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <article class="card card--row card--row-wrap card--readonly">
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">от 700</div>
+            <div class="info-block-label">Стоимость часа ₽</div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <div class="info-block">
+            <div class="info-block-item">
+                <div class="info-block-name">г. Москва, м. Алтуфьево, ул. Пушкина, д 3</div>
+                <div class="info-block-label">Адрес</div>
+            </div>
+        </div>
+    </div>
+</article>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Отправить отклик
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_work_finish"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Завершить работу досрочно?
+                        </h3>
+                        <p class="text-gray">
+                            Работодателю придёт уведомление
+                        </p>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+                        Нет, отменить
+                    </button>
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Да, завершить
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_created_vacancy"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Вакансия создана
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <a href="#" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        К просмотру резюме
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_work_completed"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Работа над задачей завершена
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <a href="#" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        К вакансиям
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_invite_vacancy"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Приглашение на вакансию отправлено
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        Прекрасно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_question"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Удалить фото?
+                        </h3>
+                        <p class="text-gray">
+                            Его можно загрузить заново в любой момент
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+                        Нет, отменить
+                    </button>
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_remove_success"
+						data-bs-dismiss="modal"
+						data-upload-remove="button">
+                        Да, удалить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_success"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Фото удалено
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        Ок, спасибо
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-issue fade"
+	id="modal_issue_1"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="issue">
+                    <div class="issue-header">
+                        <h3 class="h5 issue-title">
+                            Вопрос 1/20
+                        </h3>
+                        <p class="issue-subtitle">
+                            Какой товар необходимо выставлять перед входом в магазин?
+                        </p>
+                    </div>
+
+                    <div class="issue-body">
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Фрукты
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Бутафория
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Конфеты
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Хлеб
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						disabled>
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-issue fade"
+	id="modal_issue_2"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="issue">
+                    <div class="issue-header">
+                        <h3 class="h5 issue-title">
+                            Вопрос 2/20
+                        </h3>
+                        <p class="issue-subtitle">
+                            Какой-нибудь вопрос
+                        </p>
+                    </div>
+
+                    <div class="issue-body">
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 1
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 2
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 3
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 4
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary">
+                        Назад
+                    </button>
+                    <button type="submit" class="btn btn-base btn-primary"
+						disabled>
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_send_answer"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Отправить ответы?
+                        </h3>
+                        <p class="text-gray">
+                            Вы ответили на все вопросы
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary">
+                        Назад
+                    </button>
+                    <button type="button" class="btn btn-base btn-primary">
+                        Да, отправить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_response_success"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Ура, ваши баллы — 18 из 20
+                        </h3>
+                        <p class="text-gray">
+                            Вы успешно прошли тестирование. Так держать!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary">
+                        Прекрасно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_response_error"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/error.svg" class="image image-error" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Увы, ваши баллы — 4 из 20
+                        </h3>
+                        <p class="text-gray">
+                            Повторите материал и пройдите тестирование ещё раз
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary">
+                        Хорошо
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+  </div>
+</body>
+
+</html>

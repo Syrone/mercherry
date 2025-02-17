@@ -1,13 +1,13 @@
 <button type="button" class="btn chat-user">
 	<div class="chat-user-picture">
 		<picture>
-			<source srcset="img/avatar--md.webp" type="image/webp">
-			<img loading="lazy" src="img/avatar--md.jpg" class="image" width="48" height="48" alt="Аватар">
+			<source srcset="@avatar.webp" type="image/webp">
+			<img loading="lazy" src="@avatar.jpg" class="image" width="48" height="48" alt="Аватар">
 		</picture>
 	</div>
 	<div class="chat-user-content">
 		<div class="chat-user-header">
-			<h3 class="chat-user-name">Олеся Казакова</h3>
+			<h3 class="chat-user-name">@name</h3>
 			<span class="icon chat-user-fix">
 				<svg>
 					<use xlink:href="img/icons/fix.svg#svg-fix"></use>
@@ -15,7 +15,7 @@
 			</span>
 		</div>
 		<p class="chat-user-message">
-			Готов приступать 🔥
+			@message
 		</p>
 	</div>
 	<div class="chat-user-end">

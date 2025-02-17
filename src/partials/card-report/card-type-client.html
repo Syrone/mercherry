@@ -1,0 +1,50 @@
+<article class="card card--report">
+	<a href="#" class="stretched-link"></a>
+
+	<div class="card-header">
+		<div class="card-header-picture">
+			<picture>
+				<source srcset="@avatar.webp" type="image/webp">
+				<img loading="lazy" src="@avatar.jpg" class="image" width="52" height="52" alt="Avatar">
+			</picture>
+		</div>
+
+		<div class="card-header-content">
+			<h3 class="card-header-title">
+				@name
+
+				<div class="dropdown dropdown--more">
+					<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+						aria-expanded="false">
+						<span class="icon">
+							<svg>
+								<use xlink:href="img/icons/more.svg#svg-more"></use>
+							</svg>
+						</span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a href="#" class="btn dropdown-item">
+								Редактировать отчёт
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn dropdown-item">
+								Удалить отчёт
+							</a>
+						</li>
+					</ul>
+				</div>
+			</h3>
+			<p class="card-header-staff">
+				Сотрудников: <span>@staff</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="card-body">
+		<p class="card-header-vacancy">
+			Вакансия: <span>@work</span> <span>@work</span>
+		</p>
+	</div>
+</article>

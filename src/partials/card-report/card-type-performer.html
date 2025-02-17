@@ -1,0 +1,118 @@
+<article class="card card--report">
+	<a href="#" class="stretched-link"></a>
+
+	<div class="card-header">
+		<div class="card-header-picture">
+			<picture>
+				<source srcset="@avatar.webp" type="image/webp">
+				<img loading="lazy" src="@avatar.jpg" class="image" width="52" height="52" alt="Avatar">
+			</picture>
+		</div>
+
+		<div class="card-header-content">
+			<h3 class="card-header-title">
+				@name
+
+				<div class="dropdown dropdown--more">
+					<button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+						aria-expanded="false">
+						<span class="icon">
+							<svg>
+								<use xlink:href="img/icons/more.svg#svg-more"></use>
+							</svg>
+						</span>
+					</button>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a href="#" class="btn dropdown-item">
+								В профиль исполнителя
+							</a>
+						</li>
+						<li>
+							<a href="#" class="btn dropdown-item">
+								В чат с исполнителем
+							</a>
+						</li>
+					</ul>
+				</div>
+			</h3>
+			<p class="card-header-vacancy">
+				Вакансия: <span>@work</span>
+			</p>
+		</div>
+	</div>
+
+	<div class="card-body">
+		<ul class="list-reset card-list">
+			<li class="card-list-item">
+				<h4 class="card-list-item-value">
+					5
+				</h4>
+				<p class="card-list-item-label">
+					заполнено полок
+				</p>
+			</li>
+			<li class="card-list-item">
+				<h4 class="card-list-item-value">
+					10
+				</h4>
+				<p class="card-list-item-label">
+					рядов с товарами
+				</p>
+			</li>
+			<li class="card-list-item">
+				<h4 class="card-list-item-value">
+					10
+				</h4>
+				<p class="card-list-item-label">
+					товаров с шок-ценой
+				</p>
+			</li>
+			<li class="card-list-item">
+				<h4 class="card-list-item-value">
+					10
+				</h4>
+				<p class="card-list-item-label">
+					время работы/ч
+				</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="card-footer">
+		<div class="card-pictures">
+			<button type="button" class="btn card-pictures-item"
+				data-src="img/pictures/image-512h-1.webp" data-fancybox="@fancybox">
+				<picture>
+					<source srcset="img/pictures/image-1.webp" type="image/webp">
+					<img loading="lazy" src="img/pictures/image-1.jpg" class="image" width="80" height="80" alt="Картинка">
+				</picture>
+			</button>
+			<button type="button" class="btn card-pictures-item"
+				data-src="img/pictures/image-512h-2.webp" data-fancybox="@fancybox">
+				<picture>
+					<source srcset="img/pictures/image-2.webp" type="image/webp">
+					<img loading="lazy" src="img/pictures/image-2.jpg" class="image" width="80" height="80" alt="Картинка">
+				</picture>
+			</button>
+			<button type="button" class="btn card-pictures-item"
+				data-src="img/pictures/image-512h-3.webp" data-fancybox="@fancybox">
+				<picture>
+					<source srcset="img/pictures/image-3.webp" type="image/webp">
+					<img loading="lazy" src="img/pictures/image-3.jpg" class="image" width="80" height="80" alt="Картинка">
+				</picture>
+			</button>
+			<button type="button" class="btn card-pictures-item"
+				data-src="img/pictures/image-512h-4.webp" data-fancybox="@fancybox">
+				<picture>
+					<source srcset="img/pictures/image-4.webp" type="image/webp">
+					<img loading="lazy" src="img/pictures/image-4.jpg" class="image" width="80" height="80" alt="Картинка">
+				</picture>
+			</button>
+		</div>
+
+		<address class="card-address">
+			Магазин: г. Москва, ул. Пушкина, 16  
+		</address>
+	</div>
+</article>

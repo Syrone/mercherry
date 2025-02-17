@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Отклики на вакансию'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Отклики на вакансию'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget">
+          <div class="container">
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <div class="btn-group btn-group--plaintext filter-header-scrollable">
+                  <button type="button" class="btn is-active">
+                    По датам <span class="badge badge--gray-125">12</span>
+                  </button>
+                  <button type="button" class="btn">
+                    По марке <span class="badge badge--gray-125">12</span>
+                  </button>
+                </div>
+
+                <div class="filter-header-top-selects"
+                  data-filter-choices="">
+                  <div class="filter-header-scrollable">
+                    <div class="dropdown dropdown--filter">
+                      <input type="hidden" class="visually-hidden" name="calendar_dates" value="all">
+                      <div class="btn btn-md dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        data-bs-auto-close="outside"
+                        aria-expanded="false">
+                        <span class="dropdown-toggle-placeholder">
+                          Период
+                        </span>
+      
+                        <span class="dropdown-toggle-content">
+                          <span class="dropdown-toggle-value">
+                            Все
+                          </span>
+                          <button type="button" class="btn btn-sm btn-clear">
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="img/icons/close-clear.svg#svg-close-clear"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </span>
+      
+                        <span class="icon dropdown-toggle-icon">
+                          <svg>
+                            <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
+                          </svg>
+                        </span>
+                      </div>
+                      <div class="dropdown-menu">
+                        <div data-calendar="multiple"></div>
+                      </div>
+                    </div>
+
+                    <select name="vacancy" multiple
+                      data-select-choices="filter multiple-checkbox"
+                      data-choices-class="choices--filter choices--checkbox choices--md">
+                      <option value="">Вакансии</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Магнит</option>
+                      <option value="2">Перекрёсток</option>
+                      <option value="3">Пятёрочка</option>
+                      <option value="4">Metro</option>
+                      <option value="5">ВкусВилл</option>
+                      <option value="6">Дикси</option>
+                    </select>
+                    <select name="performer" multiple
+                      data-select-choices="filter multiple-checkbox"
+                      data-choices-class="choices--filter choices--checkbox choices--md">
+                      <option value="">Специалисты</option>
+                      <option value="all" selected>Все</option>
+                      <option value="1">Кирилл Билинович</option>
+                      <option value="2">Станислав Емельяненко</option>
+                      <option value="3">Никита Осипов</option>
+                      <option value="4">Николай Красный</option>
+                      <option value="5">Мария Голубева</option>
+                      <option value="6">Андрей Жуков</option>
+                    </select>
+
+                    <button type="button" class="btn btn-md btn-primary">
+                      Создать отчёт
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter-body">
+              <div class="filter-content">
+                <time class="filter-content-time">
+                  24.12.2024
+                </time>
+
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-1'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-2'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-3'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-4'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-5'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-6'})
+              </div>
+              <div class="filter-content">
+                <time class="filter-content-time">
+                  24.12.2024
+                </time>
+
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-7'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-8'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-9'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-10'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-11'})
+                @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-12'})
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

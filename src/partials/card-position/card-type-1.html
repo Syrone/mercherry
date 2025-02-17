@@ -1,0 +1,59 @@
+<article class="card card--position">
+	<div class="card-header">
+		<h3 class="card-header-title">
+			Позиция №1
+		</h3>
+	</div>
+	<div class="card-body">
+		<dl class="card-dl">
+			<dt>Товар</dt>
+			<dd>Молоко</dd>
+		
+			<dt>Позиция</dt>
+			<dd>Простоквашино 2.5%</dd>
+		</dl>
+
+		<div class="form-body">
+			<select name="sku"
+				data-select-choices="default-radio"
+				data-choices-class="choices--floating choices--radio">
+				<option value="">SKU</option>
+				<option value="1">Москва</option>
+				<option value="2">Санкт-Петербург</option>
+				<option value="3">Казань</option>
+				<option value="4">Уфа</option>
+				<option value="5">Пермь</option>
+			</select>
+
+			<div class="field-group field-group--floating">
+				<input type="text" class="field field-has-btn" name="price" placeholder="">
+				<span class="field-floating">Цена, ₽</span>
+
+				<button type="button" class="btn field-btn field-clear">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="card-upload" data-upload-container="multiple">
+			<h4 class="card-upload-title">
+				Прикрепите фото
+			</h4>
+
+			<div class="card-upload-container">
+				<div class="upload-container"></div>
+				<button type="button" class="btn btn-add" data-upload="button">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/plus.svg#svg-plus"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</article>

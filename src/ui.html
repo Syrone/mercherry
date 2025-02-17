@@ -768,7 +768,7 @@
               Card
             </h2>
 
-            <div class="ui-col" style="max-width: 416px; width: 100%;">
+            <div class="filter-content" style="width: 100%;">
               @include('partials/card-resume/card-type-1.html')
               @include('partials/card-resume/card-type-chat.html')
               @include('partials/card-vacancy/card-type-1.html')
@@ -777,6 +777,18 @@
               @include('partials/card-vacancy/card-type-chat.html')
               @include('partials/card-resume/card-type-readonly.html')
               @include('partials/card-vacancy/card-type-readonly.html')
+            </div>
+            
+            <div class="filter-content" style="width: 100%;">
+              @include('partials/card-report/card-type-performer.html', {avatar: 'img/avatar--md', name: 'Артём Лукьянов', work: 'Магнит', fancybox: 'card-1'})
+            </div>
+
+            <div class="filter-content" style="width: 100%;">
+              @include('partials/card-report/card-type-client.html', {avatar: 'img/pictures/image-1', name: '«Слобода»', work: 'Магнит', staff: '3'})
+            </div>
+
+            <div class="ui-col" style="max-width: 416px; width: 100%;">
+              @include('partials/card-position/card-type-1.html')
             </div>
           </div>
 
@@ -803,7 +815,7 @@
               @include('partials/notify/notify--success.html')
 
               @include('partials/notify/notify--info-2.html')
-              @include('partials/notify/notify--magenta-2.html')
+              @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
               @include('partials/notify/notify--error-2.html')
               @include('partials/notify/notify--success-2.html')
 
@@ -820,12 +832,12 @@
             </h2>
 
             <div class="ui-col" style="max-width: 50rem; width: 100%">
-              @include('partials/chat/chat-header.html')
-              @include('partials/chat/chat-header--assess.html')
-              @include('partials/chat/chat-header--job.html')
-              @include('partials/chat/chat-header--invite.html')
-              @include('partials/chat/chat-header--job-vacancy.html')
-              @include('partials/chat/chat-header--invite-vacancy.html')
+              @include('partials/chat/chat-header.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
+              @include('partials/chat/chat-header--assess.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
+              @include('partials/chat/chat-header--job.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
+              @include('partials/chat/chat-header--invite.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
+              @include('partials/chat/chat-header--job-vacancy.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
+              @include('partials/chat/chat-header--invite-vacancy.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
             </div>
           </div>
         </div>

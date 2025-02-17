@@ -93,18 +93,18 @@
           <div class="container">
             <div class="chat-container">
               <aside class="chat-users">
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user-2.html')
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user-2.html')
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user-2.html')
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user.html')
-                @include('partials/chat/chat-user.html')
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Алексей Казанцев', message: 'Да, конечно! в это время и расчитываю на дополнительный заработок'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Константин Константинопольский', message: 'Готов приступать 🔥'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Мария Попова', message: 'Да, конечно! в это время и расчитываю на дополнительный заработок'})
+                @include('partials/chat/chat-user-2.html', {avatar: 'img/avatar--md', name: 'Наталья Смирнова', message: 'Да, конечно! в это время и расчитываю на дополнительный заработок'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Мария Попова', message: 'Да, конечно! в это время и расчитываю на дополнительный заработок'})
+                @include('partials/chat/chat-user-2.html', {avatar: 'img/avatar--md', name: 'Наталья Смирнова', message: 'Можем составить договор на 3 дня в неделю'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Мария Попова', message: 'Можем составить договор на 3 дня в неделю'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова', message: 'Можем составить договор на 3 дня в неделю'})
+                @include('partials/chat/chat-user-2.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова', message: 'Можем составить договор на 3 дня в неделю'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова', message: 'Можем составить договор на 3 дня в неделю'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова', message: 'Можем составить договор на 3 дня в неделю'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова', message: 'Можем составить договор на 3 дня в неделю'})
               </aside>
               <div class="chat-body">
                 <div class="chat-content">
@@ -116,7 +116,7 @@
                 </div>
 
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header.html', {avatar: 'img/avatar--md', name: 'Алексей Казанцев'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -253,7 +253,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -266,7 +266,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header--send.html', {avatar: 'img/avatar--md', name: 'Константин Константинопольский'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -403,7 +403,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -416,7 +416,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header--job.html', {avatar: 'img/avatar--md', name: 'Мария Попова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -553,7 +553,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -566,7 +566,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header--job-vacancy.html', {avatar: 'img/avatar--md', name: 'Наталья Смирнова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -703,7 +703,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -716,7 +716,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header--invite.html', {avatar: 'img/avatar--md', name: 'Мария Попова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -853,7 +853,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -866,7 +866,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header--invite-vacancy.html', {avatar: 'img/avatar--md', name: 'Наталья Смирнова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -1003,7 +1003,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -1016,7 +1016,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header--assess.html', {avatar: 'img/avatar--md', name: 'Мария Попова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -1153,7 +1153,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -1166,7 +1166,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -1303,7 +1303,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -1316,7 +1316,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -1453,7 +1453,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -1466,7 +1466,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -1603,7 +1603,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -1616,7 +1616,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -1753,7 +1753,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')
@@ -1766,7 +1766,7 @@
                   @include('partials/chat/chat-footer.html')
                 </div>
                 <div class="chat-content">
-                  @include('partials/chat/chat-header.html')
+                  @include('partials/chat/chat-header.html', {avatar: 'img/avatar--md', name: 'Олеся Казакова'})
                   <div class="chat-messages">
                     <div class="chat-messages-item">
                       <time datetime="" class="chat-messages-day">23 октября</time>
@@ -1903,7 +1903,7 @@
                         @include('partials/notify/notify--info-2.html')
                       </div>
                       <div class="message message--system">
-                        @include('partials/notify/notify--magenta-2.html')
+                        @include('partials/notify/notify--magenta-2.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
                       </div>
                       <div class="message message--system">
                         @include('partials/notify/notify--error-2.html')

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Чат'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Чат'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget chat">
+          <div class="container">
+            <div class="filter-header">
+              <div class="filter-header-top">
+                <div class="btn-group btn-group--plaintext filter-header-scrollable">
+                  <button type="button" class="btn is-active">
+                    Все чаты <span class="badge badge--gray-125">12</span>
+                  </button>
+                  <button type="button" class="btn collapse-button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse_vacancy" aria-expanded="false" aria-controls="collapse_vacancy">
+                    По вакансии
+                    <span class="icon collapse-button-icon">
+                      <svg>
+                        <use xlink:href="img/icons/dropdown.svg#svg-dropdown"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="filter-header-top-selects">
+                  <div class="accordion-collapse" id="collapse_vacancy">
+                    <div class="accordion-body">
+                      <select name="example-name" data-select-choices="filter default-radio"
+                        data-choices-class="choices--filter choices--radio choices--md">
+                        <option value="">Статус вакансии</option>
+                        <option value="all" selected>Все, кроме "Архив"</option>
+                        <option value="2">Популярные</option>
+                        <option value="3">Уже общались</option>
+                        <option value="4">Уже сотрудничали</option>
+                      </select>
+                    </div>
+                  </div>
+                  <select name="example-name" data-select-choices="filter default-radio"
+                    data-choices-class="choices--filter choices--radio choices--md">
+                    <option value="">Сначала показывать</option>
+                    <option value="1" selected>Новые</option>
+                    <option value="2">Популярные</option>
+                    <option value="3">Уже общались</option>
+                    <option value="4">Уже сотрудничали</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-collapse accordion-collapse--vacancy" id="collapse_vacancy">
+            <div class="accordion-body">
+              <div class="container-padding">
+                <div class="swiper swiper--visible swiper-vacancy">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-user.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-user.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-2.html')
+                    </div>
+                    <div class="swiper-slide">
+                      @include('partials/card-vacancy/card-type-label-user.html')
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="chat-container">
+              <aside class="chat-users">
+                @include('partials/chat/chat-user-2.html', {avatar: 'img/vacancies/image-1', name: 'METRO', message: 'Да, конечно! в это время и расчитываю на дополнительный заработок'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/vacancies/image-3', name: 'Перекрёсток', message: 'Готов приступать 🔥'})
+                @include('partials/chat/chat-user.html', {avatar: 'img/vacancies/image-5', name: 'Магнит', message: 'Да, конечно! в это время и расчитываю на дополнительный заработок'})
+              </aside>
+              <div class="chat-body">
+                <div class="chat-content">
+                  <div class="chat-messages">
+                    <p class="chat-messages-empty">
+                      Выберите чат для продолжения беседы
+                    </p>
+                  </div>
+                </div>
+
+                <div class="chat-content">
+                  @include('partials/chat/chat-header--send.html', {avatar: 'img/vacancies/image-1', name: 'Перекрёсток'})
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Добрый день! Ваша вакансия заинтересовала. Возможно, вам будет интересен мой опыт и навыки. Пожалуйста, рассмотрите мою кандидатуру!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+
+                <div class="chat-content">
+                  @include('partials/chat/chat-header--job.html', {avatar: 'img/vacancies/image-3', name: 'Перекрёсток'})
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Добрый день! Ваша вакансия заинтересовала. Возможно, вам будет интересен мой опыт и навыки. Пожалуйста, рассмотрите мою кандидатуру!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+
+                <div class="chat-content">
+                  @include('partials/chat/chat-header.html', {avatar: 'img/vacancies/image-5', name: 'Магнит'})
+                  <div class="chat-messages">
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">23 октября</time>
+
+                      <div class="message message--user">
+                        <div class="message-picture">
+                          <picture>
+                            <source srcset="img/avatar--md.webp" type="image/webp">
+                            <img loading="lazy" src="img/avatar--md.jpg" class="image" width="40" height="40"
+                              alt="Аватар">
+                          </picture>
+                        </div>
+                        <div class="message-body">
+                          <div class="message-item">
+                            <div class="message-item-content">
+                              <p>
+                                Добрый день! Ваша вакансия заинтересовала. Возможно, вам будет интересен мой опыт и навыки. Пожалуйста, рассмотрите мою кандидатуру!
+                              </p>
+                            </div>
+                            <time datetime="" class="message-item-time">21:30</time>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chat-messages-item">
+                      <time datetime="" class="chat-messages-day">Системное сообщение, 12:30</time>
+
+                      <div class="message message--system">
+                        @include('partials/notify/notify--info.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--magenta.html', {text: 'Кандидат отправил отклик на вакансию «Перекрёсток»'})
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--error.html')
+                      </div>
+                      <div class="message message--system">
+                        @include('partials/notify/notify--success.html')
+                      </div>
+                    </div>
+                  </div>
+                  @include('partials/chat/chat-footer.html')
+                </div>
+              </div>
+            </div>
+
+            <!-- Есть глобальная функция window.choiceUserChat('exampleId') куда можешь передавать значение для открытия нужного чата -->
+            <!-- Чтобы сбросить выбор чата window.choiceUserChat('preview') -->
+            <!-- Задаю нужные атрибуты к .chat-user и .chat-content чтобы связать их между собой -->
+            <!-- Вообще, я думаю ты через бэк будешь проставлять атрибуты с нужным значением, ниже же демо-код -->
+            <script>
+              document.querySelectorAll('.chat-content').forEach((content, index) => {
+                content.setAttribute('data-chat-related', index === 0 ? 'preview' : `user${index}`)
+              })
+
+              document.querySelectorAll('.chat-user').forEach((user, index) => {
+                const chatId = `user${index + 1}`
+                user.setAttribute('data-chat-target', chatId)
+
+                const relatedChat = document.querySelectorAll('.chat-content')[index + 1] // Смещение на 1
+                if (relatedChat) {
+                  relatedChat.setAttribute('data-chat-related', chatId)
+                }
+              })
+            </script>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+  </div>
+</body>
+
+</html>

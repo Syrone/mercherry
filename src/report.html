@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Резюме'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget default default--report">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="h3 section-title">
+                Отчёт по вакансии Перекрёсток
+              </h2>
+              <address class="section-address">
+                г. Москва, Пролетарская 10
+              </address>
+            </div>
+
+            <div class="section-body">
+              <form class="form default-form">
+                <div class="form-body">
+                  @include('partials/notify/notify--magenta-2.html', {text: 'Заполните данные покаждой позиции— только так работодатель сможет принять отчёт'})
+
+                  @include('partials/card-position/card-type-1.html')
+                  @include('partials/card-position/card-type-1.html')
+                </div>
+
+                <div class="form-footer">
+                  <div class="form-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                      Создать отчёт
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -45,7 +45,7 @@
 		border-bottom: 1px solid var(--gray-color-400);
 		padding-bottom: 1.125rem;
 
-		@media (min-width: 991.98px) {
+		@media (min-width: 1199.98px) {
 			flex-direction: row;
 			align-items: center;
 		}
@@ -73,7 +73,7 @@
 				min-width: 16.25rem;
 				flex: 1;
 
-				@media (min-width: 991.98px) {
+				@media (min-width: 1199.98px) {
 					min-width: initial;
 					flex: initial;
 				}
@@ -141,6 +141,7 @@
 	}
 
 	&-title,
+	&-time,
 	.notify {
 		grid-column: -1 / 1;
 	}
@@ -161,5 +162,13 @@
 				height: 2rem;
 			}
 		}
+	}
+
+	&-time {
+		font-size: var(--fs-lg);
+		font-weight: 600;
+		font-style: normal;
+		line-height: normal;
+		color: var(--dark-color);
 	}
 }

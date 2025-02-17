@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+  <title>Резюме</title>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/InterTight-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page-body">
+  <h1 class="visually-hidden">
+    Главная страница
+</h1>
+
+  <div class="site-container">
+    <header class="header">
+  <div class="container">
+    <a href="#" class="btn brand">
+    mercherry
+</a>
+
+    <div class="offcanvas offcanvas-end offcanvas-navbar"
+      id="offcanvas-header"
+      tabindex="-1"
+      aria-labelledby="offcanvas-header-label">
+      <div class="offcanvas-header">
+        <a href="#" class="btn brand">
+    mercherry
+</a>
+
+        <button type="button" class="btn btn-icon btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close">
+          <span class="icon">
+            <svg>
+              <use xlink:href="img/icons/close.svg#svg-close"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="header-end">
+          <nav class="header-nav">
+            <a href="#" class="btn">
+              Вакансии
+            </a>
+
+            <a href="#" class="btn">
+              Отчёты
+            </a>
+
+            <a href="#" class="btn">
+              Чаты
+
+              <span class="badge badge--circle badge--error-500">
+                12
+              </span>
+            </a>
+          </nav>
+
+          <div class="header-user">
+            <a href="#" class="btn">
+              <picture>
+                <source srcset="img/avatar.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar.jpg" class="image" width="48" height="48" alt="Аватар">
+              </picture>
+
+              Василиса
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-icon btn-menu"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvas-header"
+      aria-controls="offcanvas-header">
+      <span class="icon">
+        <svg>
+          <use xlink:href="img/icons/menu.svg#svg-menu"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</header>
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget default default--report">
+          <div class="container">
+            <div class="section-header">
+              <h2 class="h3 section-title">
+                Отчёт по вакансии Перекрёсток
+              </h2>
+              <address class="section-address">
+                г. Москва, Пролетарская 10
+              </address>
+            </div>
+
+            <div class="section-body">
+              <form class="form default-form">
+                <div class="form-body">
+                  <div class="notify notify--magenta">
+    <div class="notify-body">
+        <div class="notify-content">
+            <p>
+                Заполните данные покаждой позиции— только так работодатель сможет принять отчёт
+            </p>
+        </div>
+    </div>
+</div>
+
+                  <article class="card card--position">
+    <div class="card-header">
+        <h3 class="card-header-title">
+            Позиция № 1
+        </h3>
+    </div>
+    <div class="card-body">
+        <dl class="card-dl">
+            <dt>Товар</dt>
+            <dd>Молоко</dd>
+
+            <dt>Позиция</dt>
+            <dd>Простоквашино 2,5%</dd>
+        </dl>
+
+        <div class="form-body">
+            <select name="sku"
+				data-select-choices="default-radio"
+				data-choices-class="choices--floating choices--radio">
+                <option value="">SKU</option>
+                <option value="1">Москва</option>
+                <option value="2">Санкт-Петербург</option>
+                <option value="3">Казань</option>
+                <option value="4">Уфа</option>
+                <option value="5">Пермь</option>
+            </select>
+
+            <div class="field-group field-group--floating">
+                <input type="text" class="field field-has-btn" name="price" placeholder="">
+                <span class="field-floating">Цена, ₽</span>
+
+                <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-upload" data-upload-container="multiple">
+            <h4 class="card-upload-title">
+                Прикрепите фото
+            </h4>
+
+            <div class="card-upload-container">
+                <div class="upload-container"></div>
+                <button type="button" class="btn btn-add" data-upload="button">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/plus.svg#svg-plus"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</article>
+                  <article class="card card--position">
+    <div class="card-header">
+        <h3 class="card-header-title">
+            Позиция № 1
+        </h3>
+    </div>
+    <div class="card-body">
+        <dl class="card-dl">
+            <dt>Товар</dt>
+            <dd>Молоко</dd>
+
+            <dt>Позиция</dt>
+            <dd>Простоквашино 2,5%</dd>
+        </dl>
+
+        <div class="form-body">
+            <select name="sku"
+				data-select-choices="default-radio"
+				data-choices-class="choices--floating choices--radio">
+                <option value="">SKU</option>
+                <option value="1">Москва</option>
+                <option value="2">Санкт-Петербург</option>
+                <option value="3">Казань</option>
+                <option value="4">Уфа</option>
+                <option value="5">Пермь</option>
+            </select>
+
+            <div class="field-group field-group--floating">
+                <input type="text" class="field field-has-btn" name="price" placeholder="">
+                <span class="field-floating">Цена, ₽</span>
+
+                <button type="button" class="btn field-btn field-clear">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+
+        <div class="card-upload" data-upload-container="multiple">
+            <h4 class="card-upload-title">
+                Прикрепите фото
+            </h4>
+
+            <div class="card-upload-container">
+                <div class="upload-container"></div>
+                <button type="button" class="btn btn-add" data-upload="button">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/plus.svg#svg-plus"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</article>
+                </div>
+
+                <div class="form-footer">
+                  <div class="form-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                      Создать отчёт
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="modal modal-list fade"
+	id="modal_job_responses"
+	tabindex="-1"
+	aria-labelledby="modal_job_responses_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_job_responses_label">
+                    Отклики на вакансию
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-reset modal-body-list">
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <article class="card">
+    <a href="#" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/avatar--md.webp" type="image/webp">
+                <img loading="lazy" src="img/avatar--md.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Константин, 32
+
+                <label class="label-check">
+                    <input type="checkbox" class="btn-check">
+                    <button type="button" class="btn">
+                        <span class="icon-container">
+                            <img loading="lazy" src="./img/icons/favorite-default.svg" class="image" width="16" height="16" alt="Favorite">
+                            <img loading="lazy" src="./img/icons/favorite-active.svg" class="image" width="16" height="16" alt="Favorite">
+                        </span>
+                    </button>
+                </label>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                    <div class="blank blank-employment blank-employment--tasks">Позадачно</div>
+                </div>
+
+                <div class="card-header-town">
+                    Москва
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-list fade"
+	id="modal_choose_job"
+	tabindex="-1"
+	aria-labelledby="modal_choose_job_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_choose_job_label">
+                    Выберите вакансию
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ul class="list-reset modal-body-list">
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                    <li class="modal-body-list-item">
+                        <label class="card-label">
+    <input type="radio" class="btn-check" name="vacancy_item">
+    <article class="card card--row">
+    <a href="product-vacancy.html" class="stretched-link"></a>
+
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+</label>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Готово
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-list fade"
+	id="modal_write_candidate"
+	tabindex="-1"
+	aria-labelledby="modal_write_candidate_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_write_candidate_label">
+                    Напишите кандидату первое сообщение
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <article class="card card--row card--readonly">
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+
+                <div class="blank blank-jobs blank-jobs--search">Поиск</div>
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-payment">Почасовая оплата</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">Москва</div>
+            <div class="info-block-label">Город вакансии</div>
+        </div>
+    </div>
+</article>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Отправить приглашение
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-list fade"
+	id="modal_write_client"
+	tabindex="-1"
+	aria-labelledby="modal_write_client_label"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal_write_client_label">
+                    Напишите заказчику первое сообщение
+                </h5>
+                <button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+                    <span class="icon">
+                        <svg>
+                            <use xlink:href="img/icons/close.svg#svg-close"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <article class="card card--row card--row-wrap card--readonly">
+    <div class="card-header">
+        <div class="card-header-picture">
+            <picture>
+                <source srcset="img/vacancies/image-5.webp" type="image/webp">
+                <img loading="lazy" src="img/vacancies/image-5.jpg" class="image" width="88" height="88" alt="Avatar">
+            </picture>
+        </div>
+
+        <div class="card-header-content">
+            <h3 class="card-header-title">
+                Магнит
+            </h3>
+            <p class="card-header-subtitle">
+                Мерчендайзер • Интервьюер
+            </p>
+
+            <div class="card-header-bottom">
+                <div class="blanks">
+                    <div class="blank blank-employment blank-employment--partly">Частичная занятость</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-block">
+        <div class="info-block-item">
+            <div class="info-block-name">от 700</div>
+            <div class="info-block-label">Стоимость часа ₽</div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <div class="info-block">
+            <div class="info-block-item">
+                <div class="info-block-name">г. Москва, м. Алтуфьево, ул. Пушкина, д 3</div>
+                <div class="info-block-label">Адрес</div>
+            </div>
+        </div>
+    </div>
+</article>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Отправить отклик
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_work_finish"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Завершить работу досрочно?
+                        </h3>
+                        <p class="text-gray">
+                            Работодателю придёт уведомление
+                        </p>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <textarea class="field" name="message" rows="3" placeholder="Сообщение"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+                        Нет, отменить
+                    </button>
+                    <button type="submit" class="btn btn-base btn-primary">
+                        Да, завершить
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_created_vacancy"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Вакансия создана
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <a href="#" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        К просмотру резюме
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_work_completed"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Работа над задачей завершена
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <a href="#" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        К вакансиям
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_invite_vacancy"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <p>
+                            Приглашение на вакансию отправлено
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        Прекрасно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_question"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Удалить фото?
+                        </h3>
+                        <p class="text-gray">
+                            Его можно загрузить заново в любой момент
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+                        Нет, отменить
+                    </button>
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_remove_success"
+						data-bs-dismiss="modal"
+						data-upload-remove="button">
+                        Да, удалить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_success"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Фото удалено
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+                        Ок, спасибо
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-issue fade"
+	id="modal_issue_1"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="issue">
+                    <div class="issue-header">
+                        <h3 class="h5 issue-title">
+                            Вопрос 1/20
+                        </h3>
+                        <p class="issue-subtitle">
+                            Какой товар необходимо выставлять перед входом в магазин?
+                        </p>
+                    </div>
+
+                    <div class="issue-body">
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Фрукты
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Бутафория
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Конфеты
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-1">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Хлеб
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						disabled>
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-issue fade"
+	id="modal_issue_2"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <form class="modal-content">
+            <div class="modal-body">
+                <div class="issue">
+                    <div class="issue-header">
+                        <h3 class="h5 issue-title">
+                            Вопрос 2/20
+                        </h3>
+                        <p class="issue-subtitle">
+                            Какой-нибудь вопрос
+                        </p>
+                    </div>
+
+                    <div class="issue-body">
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 1
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 2
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 3
+                            </span>
+                        </label>
+                        <label class="form-check form-radio--default">
+                            <div class="form-check-checkbox">
+                                <input type="radio" class="form-check-input" name="issue-2">
+                                <span class="form-check-checkbox-span"></span>
+                            </div>
+                            <span class="form-check-label">
+                                Ответ 4
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary">
+                        Назад
+                    </button>
+                    <button type="submit" class="btn btn-base btn-primary"
+						disabled>
+                        Далее
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_send_answer"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Отправить ответы?
+                        </h3>
+                        <p class="text-gray">
+                            Вы ответили на все вопросы
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-secondary">
+                        Назад
+                    </button>
+                    <button type="button" class="btn btn-base btn-primary">
+                        Да, отправить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_response_success"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Ура, ваши баллы — 18 из 20
+                        </h3>
+                        <p class="text-gray">
+                            Вы успешно прошли тестирование. Так держать!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary">
+                        Прекрасно
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_response_error"
+	tabindex="-1"
+	aria-hidden="true">
+    <div class="modal-dialog modal-dialog-md modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-body-alert">
+                    <img loading="lazy" src="img/icons/error.svg" class="image image-error" width="60" height="60" alt="Иконка">
+                    <div class="modal-body-alert-content">
+                        <h3 class="h5">
+                            Увы, ваши баллы — 4 из 20
+                        </h3>
+                        <p class="text-gray">
+                            Повторите материал и пройдите тестирование ещё раз
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-footer-buttons">
+                    <button type="button" class="btn btn-base btn-primary">
+                        Хорошо
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <nav class="footer-navbar">
+      <ul class="list-reset footer-list">
+        <li class="footer-list-item">
+          <h2 class="footer-list-item-title">
+            Полезное
+          </h2>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            О проекте
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            База знаний
+          </a>
+        </li>
+      </ul>
+
+      <ul class="list-reset footer-list">
+        <li class="footer-list-item">
+          <h2 class="footer-list-item-title">
+            Инструкции
+          </h2>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Как создать вакансию
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Как выбрать специалиста
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Как оплатить работу
+          </a>
+        </li>
+      </ul>
+
+      <ul class="list-reset footer-list">
+        <li class="footer-list-item">
+          <h2 class="footer-list-item-title">
+            Информация
+          </h2>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Политика конфиденциальности
+          </a>
+        </li>
+        <li class="footer-list-item">
+          <a href="#" class="btn footer-list-item-link">
+            Пользовательское соглашение
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        2024 ООО Мерчерри
+      </p>
+    </div>
+  </div>
+</footer>
+
+  </div>
+</body>
+
+</html>
