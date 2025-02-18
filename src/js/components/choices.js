@@ -1,9 +1,5 @@
 import Choices from 'choices.js'
 
-window.choiceElements = Array.from(document.querySelectorAll('[data-select-choices]')).map(select => ({
-	element: select,
-}))
-
 window.getChoiceValue = (choice) => {
 	return Array.isArray(choice.getValue())
 		? choice.getValue()
@@ -292,6 +288,10 @@ window.initializeChoices = () => {
 			clearButton.classList.add('is-hidden')
 		}
 	}
+
+	window.choiceElements = Array.from(document.querySelectorAll('[data-select-choices]')).map(select => ({
+		element: select,
+	}))
 
 	window.choiceElements?.forEach((select) => {
 

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html', {title: 'Резюме'})
+
+<body class="page-body">
+  @include('partials/h1.html', {title: 'Главная страница'})
+
+  <div class="site-container">
+    @include('partials/header-authorized.html')
+
+    <main class="main">
+      <div class="alert-container"></div>
+
+      <div class="section-container">
+        <section class="section section-widget default">
+          <form class="container">
+            <div class="section-header">
+              <div class="editable-container">
+                <input type="text" class="editable-input" placeholder="Новый отчёт" value="">
+              </div>
+            </div>
+
+            <div class="section-body">
+              <div class="form default-form">
+                <div class="form-body">
+                  <select name="vacancy"
+                    data-select-choices="default-radio"
+                    data-choices-class="choices--floating choices--radio">
+                    <option value="">Вакансия</option>
+                    <option value="1">Магнит</option>
+                    <option value="2">Пятёрочка</option>
+                    <option value="3">Перекрёсток</option>
+                    <option value="4">ВкусВилл</option>
+                    <option value="5">Metro</option>
+                  </select>
+                  <div class="create-field-container"
+                    data-create-field="main-container"></div>
+
+                  <div class="btn-create-field-container">
+                    <button type="button" class="btn btn-md btn-create-field"
+                      data-create-field="main"
+                      data-bs-toggle="modal" data-bs-target="#modal_choice_field_type">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="img/icons/plus-fill.svg#svg-plus-fill"></use>
+                        </svg>
+                      </span>
+
+                      Поле
+                    </button>
+                  </div>
+                </div>
+
+                <div class="form-footer">
+                  <div class="form-buttons">
+                    <button type="submit" class="btn btn-base btn-primary">
+                      Создать отчёт
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      @include('partials/modals.html')
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -21,6 +21,16 @@
 		@media (min-width: 991.98px) {
 			margin-bottom: 1.5rem;
 		}
+
+		.editable-input {
+			font-family: var(--font-secondary);
+			font-size: 1.75rem;
+			font-weight: 600;
+
+			@media (min-width: 991.98px) {
+				font-size: 2.5rem;
+			}
+		}
 	}
 
 	&-address {

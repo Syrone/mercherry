@@ -169,14 +169,11 @@
 
 // Title text within header
 .modal-title {
-  font-size: 1rem;
+  font-family: var(--font-family);
+  font-size: var(--fs-lg);
   font-weight: 600;
   line-height: var(--bs-modal-title-line-height);
   margin-bottom: 0;
-
-  @media (min-width: 991.98px) {
-    font-size: 1.125rem;
-  }
 }
 
 // Modal body
@@ -306,5 +303,38 @@
     @media (min-width: 991.98px) {
       gap: 3rem;
     }
+  }
+}
+
+.modal-choice {
+
+  &-field {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .75rem 0 1rem;
+
+    @media (min-width: 991.98px) {
+      gap: .75rem;
+      padding: .75rem 1rem 1.25rem;
+    }
+  }
+}
+
+.modal-create {
+
+  &-field {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+
+    @media (min-width: 991.98px) {
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  .modal-body {
+    min-height: initial;
   }
 }

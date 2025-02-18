@@ -608,3 +608,511 @@
 		</div>
 	</div>
 </div>
+
+
+
+<div class="modal modal-choice fade"
+	id="modal_choice_field_type"
+	tabindex="-1"
+	aria-labelledby="modal_choice_field_type_label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<form class="modal-content"
+			data-form-validate=""
+			data-choice-current-modal="">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_choice_field_type_label">
+					Шаг 1/2: выберите тип поля
+				</h5>
+				<button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-choice-field">
+					<label class="form-check form-radio--default">
+						<div class="form-check-checkbox">
+							<input type="radio" class="form-check-input" name="field_type" value="modal_create_field_image" required>
+							<span class="form-check-checkbox-span"></span>
+						</div>
+						<span class="form-check-label">
+							Изображение
+						</span>
+					</label>
+					<label class="form-check form-radio--default">
+						<div class="form-check-checkbox">
+							<input type="radio" class="form-check-input" name="field_type" value="modal_create_field_text" required>
+							<span class="form-check-checkbox-span"></span>
+						</div>
+						<span class="form-check-label">
+							Текст
+						</span>
+					</label>
+					<label class="form-check form-radio--default">
+						<div class="form-check-checkbox">
+							<input type="radio" class="form-check-input" name="field_type" value="modal_create_field_number" required>
+							<span class="form-check-checkbox-span"></span>
+						</div>
+						<span class="form-check-label">
+							Число
+						</span>
+					</label>
+					<label class="form-check form-radio--default">
+						<div class="form-check-checkbox">
+							<input type="radio" class="form-check-input" name="field_type" value="modal_create_field_select" required>
+							<span class="form-check-checkbox-span"></span>
+						</div>
+						<span class="form-check-label">
+							Список
+						</span>
+					</label>
+					<label class="form-check form-radio--default">
+						<div class="form-check-checkbox">
+							<input type="radio" class="form-check-input" name="field_type" value="modal_create_field_constant" required>
+							<span class="form-check-checkbox-span"></span>
+						</div>
+						<span class="form-check-label">
+							Постоянное поле
+						</span>
+					</label>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="submit" class="btn btn-base btn-primary">
+						Далее
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div class="modal modal-create fade"
+	id="modal_create_field_image"
+	tabindex="-1"
+	aria-labelledby="modal_create_field_image_label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<form class="modal-content"
+			data-form-validate="">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_create_field_image_label">
+					Шаг 2/2: уточните подробности
+				</h5>
+				<button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-create-field">
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="placeholder" placeholder="" required>
+						<span class="field-floating">Название поля</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="quantity" placeholder="" required>
+						<span class="field-floating">Количество изображений</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_choice_field_type">
+						Назад
+					</button>
+					<button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						data-create-field="button">
+						Создать поле
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal modal-create fade"
+	id="modal_create_field_text"
+	tabindex="-1"
+	aria-labelledby="modal_create_field_text_label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<form class="modal-content"
+			data-form-validate="">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_create_field_text_label">
+					Шаг 2/2: уточните подробности
+				</h5>
+				<button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-create-field">
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="placeholder" placeholder="" required>
+						<span class="field-floating">Название поля</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_choice_field_type">
+						Назад
+					</button>
+					<button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						data-create-field="button">
+						Создать поле
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal modal-create fade"
+	id="modal_create_field_number"
+	tabindex="-1"
+	aria-labelledby="modal_create_field_number_label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<form class="modal-content"
+			data-form-validate="">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_create_field_number_label">
+					Шаг 2/2: уточните подробности
+				</h5>
+				<button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-create-field">
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="placeholder" placeholder="" required>
+						<span class="field-floating">Название поля</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_choice_field_type">
+						Назад
+					</button>
+					<button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						data-create-field="button">
+						Создать поле
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal modal-create fade"
+	id="modal_create_field_select"
+	tabindex="-1"
+	aria-labelledby="modal_create_field_select_label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<form class="modal-content"
+			data-form-validate="">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_create_field_select_label">
+					Шаг 2/2: уточните подробности
+				</h5>
+				<button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-create-field">
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="placeholder" placeholder="" required>
+						<span class="field-floating">Название поля</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<select name="type" required
+						data-select-choices="default-radio"
+						data-choices-class="choices--floating choices--radio">
+						<option value="">Тип поля</option>
+						<option value="single">Выбор одиночный</option>
+						<option value="multiple">Выбор множественный</option>
+					</select>
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="value" placeholder="" required>
+						<span class="field-floating">Элемент списка 1</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="value" placeholder="" required>
+						<span class="field-floating">Элемент списка 2</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+
+					<div class="btn-create-field-container">
+						<button type="button" class="btn btn-md btn-create-field">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/plus-fill.svg#svg-plus-fill"></use>
+								</svg>
+							</span>
+
+							Элемент списка
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_choice_field_type">
+						Назад
+					</button>
+					<button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						data-create-field="button">
+						Создать поле
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="modal modal-create fade"
+	id="modal_create_field_constant"
+	tabindex="-1"
+	aria-labelledby="modal_create_field_constant_label"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<form class="modal-content"
+			data-form-validate="">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modal_create_field_constant_label">
+					Шаг 2/2: уточните подробности
+				</h5>
+				<button type="button" class="btn btn-close"
+					data-bs-dismiss="modal" 
+					aria-label="Close">
+					<span class="icon">
+						<svg>
+							<use xlink:href="img/icons/close.svg#svg-close"></use>
+						</svg>
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="modal-create-field">
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="placeholder" placeholder="" required>
+						<span class="field-floating">Название поля</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div class="field-group field-group--floating">
+						<input type="text" class="field field-has-btn" name="value" placeholder="" required>
+						<span class="field-floating">Значение</span>
+
+						<button type="button" class="btn field-btn field-clear">
+							<span class="icon">
+								<svg>
+									<use xlink:href="img/icons/close-fill.svg#svg-close-fill"></use>
+								</svg>
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_choice_field_type">
+						Назад
+					</button>
+					<button type="submit" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal"
+						data-create-field="button">
+						Создать поле
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+<div class="modal modal-alert fade"
+	id="modal_remove_field_question"
+	tabindex="-1"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="modal-body-alert">
+					<img loading="lazy" src="img/icons/question.svg" class="image image-question" width="60" height="60" alt="Иконка">
+					<div class="modal-body-alert-content">
+						<h3 class="h5"
+							data-title-field="">
+							Точно удалить поле «Товар»?
+						</h3>
+						<p class="text-gray"
+							data-text-field="">
+							Данное поле родительское. Вместе с ним удалятся дочерние поля «Позиция», «SKU», «Цена»
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="button" class="btn btn-base btn-secondary"
+						data-bs-dismiss="modal">
+						Нет, отменить
+					</button>
+					<button type="button" class="btn btn-base btn-primary"
+						data-bs-toggle="modal"
+						data-bs-target="#modal_remove_field_success"
+						data-bs-dismiss="modal"
+						data-remove-field="">
+						Да, удалить
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal modal-alert fade"
+	id="modal_remove_field_success"
+	tabindex="-1"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-md modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="modal-body-alert">
+					<img loading="lazy" src="img/icons/success.svg" class="image image-success" width="60" height="60" alt="Иконка">
+					<div class="modal-body-alert-content">
+						<h3 class="h5">
+							Поле удалено
+						</h3>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="modal-footer-buttons">
+					<button type="button" class="btn btn-base btn-primary"
+						data-bs-dismiss="modal">
+						Спасибо
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

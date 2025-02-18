@@ -1,4 +1,4 @@
-function checkFieldInput(input) {
+window.checkFieldInput = (input) => {
 	if (input.value.trim()) {
 		input.classList.add('is-input')
 	} else {
@@ -28,7 +28,7 @@ document.addEventListener('click', (event) => {
 			if (input) {
 				input.value = ''
 				checkFieldInput(input)
-				input.dispatchEvent(new Event('input'))
+				input.dispatchEvent(new Event('input', { bubbles: true }))
 			}
 		}
 
