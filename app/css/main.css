@@ -5448,7 +5448,6 @@ textarea {
 .chat-user-fix {
   --_icon-size: .75rem;
   --_icon-color: #949494;
-  display: none;
 }
 .chat-user-message {
   font-size: var(--fs-md);
